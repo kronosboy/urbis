@@ -1,0 +1,168 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    >
+
+    <!-- LOGO-BANNER -->
+    <ImageView
+        android:id="@+id/logoBannerImg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" 
+        android:adjustViewBounds="true" 
+        android:contentDescription="@string/nodesc"
+        android:src="@drawable/banner"
+        />
+    
+    <!-- Login progress -->
+    <LinearLayout
+        android:id="@+id/signupStatusLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/signupStatusMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/signupProgressText"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+    
+    <!-- MAIN SCROLL VIEW -->
+    <ScrollView
+        android:id="@+id/mainScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        
+        
+        <LinearLayout 
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="4dp"
+            android:padding="2dp"
+            >
+            
+            <TextView
+		        android:id="@+id/surveyLabel"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/signupHeaderLabel"
+		        android:layout_gravity="center_horizontal"
+		        android:padding="5dp"
+		        android:textAppearance="@style/headerText"
+			/>
+            
+            <!-- FIXED FIELD -->
+            <LinearLayout 
+	            android:id="@+id/formLayout"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:paddingTop="20dp"
+	            android:paddingBottom="20dp"
+	            android:paddingLeft="40dp"
+	            android:paddingRight="40dp"
+	            >
+            
+                
+                <EditText
+	                android:id="@+id/userText"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:hint="@string/prompt_user"
+	                android:inputType="text"
+	                android:maxLines="1"
+	                android:singleLine="true" />
+                
+                <EditText
+	                android:id="@+id/emailText"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:hint="@string/prompt_email"
+	                android:inputType="textEmailAddress"
+	                android:maxLines="1"
+	                android:singleLine="true" />
+
+	            <EditText
+	                android:id="@+id/passwordText"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:hint="@string/prompt_password"
+	                android:imeActionId="@+id/login"
+	                android:imeActionLabel="@string/action_sign_in_short"
+	                android:imeOptions="actionUnspecified"
+	                android:inputType="textPassword"
+	                android:maxLines="1"
+	                android:singleLine="true" />
+	            
+	            <EditText
+	                android:id="@+id/passwordRepeatText"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:hint="@string/prompt_repeat_password"
+	                android:imeActionId="@+id/login"
+	                android:imeActionLabel="@string/action_sign_in_short"
+	                android:imeOptions="actionUnspecified"
+	                android:inputType="textPassword"
+	                android:maxLines="1"
+	                android:singleLine="true" />
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+	            android:id="@+id/formVariableFieldsLayout"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:paddingTop="20dp"
+	            android:paddingLeft="30dp"
+	            android:paddingRight="30dp"
+	            >
+	            
+                <!-- Set of TEXTVIEW and COMBOBOX inserted programmatically -->
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+	            android:id="@+id/buttonsLayout"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:paddingTop="20dp"
+	            android:paddingLeft="40dp"
+	            android:paddingRight="40dp"
+	            >
+                <Button
+		            android:id="@+id/signupButton"
+		            android:layout_width="120dp"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_horizontal"
+		            android:text="@string/signupLabel" />
+            </LinearLayout>
+            
+            
+        </LinearLayout>
+        
+    </ScrollView>
+        
+    
+
+</LinearLayout>

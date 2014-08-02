@@ -1,0 +1,158 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    >
+
+    <!-- LOGO-BANNER -->
+    <ImageView
+        android:id="@+id/logoBannerImg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" 
+        android:adjustViewBounds="true" 
+        android:contentDescription="@string/nodesc"
+        android:src="@drawable/banner"
+        />
+    
+    <!-- send survey progress -->
+    <LinearLayout
+        android:id="@+id/sendSurveyStatusLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+        
+        <TextView
+            android:id="@+id/sendSurveyStatusMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/sendSurveyProgressText"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+    
+    <!-- get describe feature progress -->
+    <LinearLayout
+        android:id="@+id/getDescribeFeatureLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/getDescribeFeatureStatusMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/fileWFSProgressText"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/mainLayoutTab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    
+    <TabHost
+        android:id="@+id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="0dip" 
+        android:layout_weight="1"
+        >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="65dp"
+            >
+            
+			<LinearLayout 
+			    android:id="@+id/mainlayoutTab"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		         android:gravity="center_vertical"
+		        android:orientation="vertical">
+			</LinearLayout>
+            
+        </FrameLayout>
+     </TabHost>
+     
+    
+    <LinearLayout
+        android:id="@+id/mainBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
+        <TextView 
+            android:id="@+id/legendText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="5dp"
+            android:text="@string/mandatoryFieldslegend"
+            />
+        
+        <LinearLayout
+	        android:id="@+id/buttonslayout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_horizontal"
+	        style="?android:attr/buttonBarStyle"
+	        android:orientation="horizontal" >
+	
+	        <!--  
+	        <Button 
+	            android:id="@+id/saveButton"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/saveLabel"
+	        	style="?android:attr/buttonBarButtonStyle"
+	            />
+	            -->
+	        <Button 
+	            android:id="@+id/sendButton"
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="@string/sendLabel"
+	        	style="?android:attr/buttonBarButtonStyle"
+	            />
+        
+    </LinearLayout>
+    
+    </LinearLayout>
+        
+    
+    
+
+    </LinearLayout>
+</LinearLayout>

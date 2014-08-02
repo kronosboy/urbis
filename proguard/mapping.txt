@@ -1,0 +1,3159 @@
+android.support.v4.app.ActivityCompatHoneycomb -> android.support.v4.app.a:
+    void invalidateOptionsMenu(android.app.Activity) -> a
+android.support.v4.app.BackStackRecord -> android.support.v4.app.b:
+    android.support.v4.app.FragmentManagerImpl mManager -> a
+    android.support.v4.app.BackStackRecord$Op mHead -> b
+    android.support.v4.app.BackStackRecord$Op mTail -> c
+    int mNumOp -> d
+    int mEnterAnim -> e
+    int mExitAnim -> f
+    int mPopEnterAnim -> g
+    int mPopExitAnim -> h
+    int mTransition -> i
+    int mTransitionStyle -> j
+    boolean mAddToBackStack -> k
+    boolean mAllowAddToBackStack -> l
+    java.lang.String mName -> m
+    boolean mCommitted -> n
+    int mIndex -> o
+    int mBreadCrumbTitleRes -> p
+    java.lang.CharSequence mBreadCrumbTitleText -> q
+    int mBreadCrumbShortTitleRes -> r
+    java.lang.CharSequence mBreadCrumbShortTitleText -> s
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    void dump(java.lang.String,java.io.PrintWriter,boolean) -> a
+    void addOp(android.support.v4.app.BackStackRecord$Op) -> a
+    android.support.v4.app.FragmentTransaction add(int,android.support.v4.app.Fragment,java.lang.String) -> a
+    void doAddOp(int,android.support.v4.app.Fragment,java.lang.String,int) -> a
+    android.support.v4.app.FragmentTransaction detach(android.support.v4.app.Fragment) -> a
+    android.support.v4.app.FragmentTransaction attach(android.support.v4.app.Fragment) -> b
+    void bumpBackStackNesting(int) -> a
+    int commit() -> a
+    int commitInternal(boolean) -> a
+    void run() -> run
+    void popFromBackStack(boolean) -> b
+    java.lang.String getName() -> b
+android.support.v4.app.BackStackRecord$Op -> android.support.v4.app.c:
+    android.support.v4.app.BackStackRecord$Op next -> a
+    android.support.v4.app.BackStackRecord$Op prev -> b
+    int cmd -> c
+    android.support.v4.app.Fragment fragment -> d
+    int enterAnim -> e
+    int exitAnim -> f
+    int popEnterAnim -> g
+    int popExitAnim -> h
+    java.util.ArrayList removed -> i
+android.support.v4.app.BackStackState -> android.support.v4.app.BackStackState:
+    int[] mOps -> a
+    int mTransition -> b
+    int mTransitionStyle -> c
+    java.lang.String mName -> d
+    int mIndex -> e
+    int mBreadCrumbTitleRes -> f
+    java.lang.CharSequence mBreadCrumbTitleText -> g
+    int mBreadCrumbShortTitleRes -> h
+    java.lang.CharSequence mBreadCrumbShortTitleText -> i
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    android.support.v4.app.BackStackRecord instantiate(android.support.v4.app.FragmentManagerImpl) -> a
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.BackStackState$1 -> android.support.v4.app.d:
+    android.support.v4.app.BackStackState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.BackStackState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.Fragment -> android.support.v4.app.Fragment:
+    android.support.v4.util.SimpleArrayMap sClassMap -> P
+    int mState -> a
+    android.view.View mAnimatingAway -> b
+    int mStateAfterAnimating -> c
+    android.os.Bundle mSavedFragmentState -> d
+    android.util.SparseArray mSavedViewState -> e
+    int mIndex -> f
+    java.lang.String mWho -> g
+    android.os.Bundle mArguments -> h
+    android.support.v4.app.Fragment mTarget -> i
+    int mTargetIndex -> j
+    int mTargetRequestCode -> k
+    boolean mAdded -> l
+    boolean mRemoving -> m
+    boolean mResumed -> n
+    boolean mFromLayout -> o
+    boolean mInLayout -> p
+    boolean mRestored -> q
+    int mBackStackNesting -> r
+    android.support.v4.app.FragmentManagerImpl mFragmentManager -> s
+    android.support.v4.app.FragmentActivity mActivity -> t
+    android.support.v4.app.FragmentManagerImpl mChildFragmentManager -> u
+    android.support.v4.app.Fragment mParentFragment -> v
+    int mFragmentId -> w
+    int mContainerId -> x
+    java.lang.String mTag -> y
+    boolean mHidden -> z
+    boolean mDetached -> A
+    boolean mRetainInstance -> B
+    boolean mRetaining -> C
+    boolean mHasMenu -> D
+    boolean mMenuVisible -> E
+    boolean mCalled -> F
+    int mNextAnim -> G
+    android.view.ViewGroup mContainer -> H
+    android.view.View mView -> I
+    android.view.View mInnerView -> J
+    boolean mDeferStart -> K
+    boolean mUserVisibleHint -> L
+    android.support.v4.app.LoaderManagerImpl mLoaderManager -> M
+    boolean mLoadersStarted -> N
+    boolean mCheckedForLoaderManager -> O
+    android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String) -> a
+    android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String,android.os.Bundle) -> a
+    boolean isSupportFragmentClass(android.content.Context,java.lang.String) -> b
+    void restoreViewState(android.os.Bundle) -> a
+    void setIndex(int,android.support.v4.app.Fragment) -> a
+    boolean isInBackStack() -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    android.support.v4.app.FragmentActivity getActivity() -> b
+    android.content.res.Resources getResources() -> c
+    boolean isDetached() -> d
+    void onHiddenChanged(boolean) -> a
+    void onActivityResult(int,int,android.content.Intent) -> a
+    android.view.LayoutInflater getLayoutInflater(android.os.Bundle) -> b
+    void onInflate(android.app.Activity,android.util.AttributeSet,android.os.Bundle) -> a
+    void onAttach(android.app.Activity) -> a
+    android.view.animation.Animation onCreateAnimation(int,boolean,int) -> a
+    void onCreate(android.os.Bundle) -> c
+    android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> a
+    void onViewCreated(android.view.View,android.os.Bundle) -> a
+    void onActivityCreated(android.os.Bundle) -> d
+    void onViewStateRestored(android.os.Bundle) -> e
+    void onStart() -> e
+    void onResume() -> f
+    void onSaveInstanceState(android.os.Bundle) -> f
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    void onPause() -> g
+    void onStop() -> h
+    void onLowMemory() -> onLowMemory
+    void onDestroyView() -> i
+    void onDestroy() -> j
+    void initState() -> k
+    void onDetach() -> l
+    void onCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
+    void onPrepareOptionsMenu(android.view.Menu) -> a
+    void onDestroyOptionsMenu() -> m
+    boolean onOptionsItemSelected(android.view.MenuItem) -> a
+    void onOptionsMenuClosed(android.view.Menu) -> b
+    void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo) -> onCreateContextMenu
+    boolean onContextItemSelected(android.view.MenuItem) -> b
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    void instantiateChildFragmentManager() -> n
+    void performCreate(android.os.Bundle) -> g
+    android.view.View performCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> b
+    void performActivityCreated(android.os.Bundle) -> h
+    void performStart() -> o
+    void performResume() -> p
+    void performConfigurationChanged(android.content.res.Configuration) -> a
+    void performLowMemory() -> q
+    boolean performCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> b
+    boolean performPrepareOptionsMenu(android.view.Menu) -> c
+    boolean performOptionsItemSelected(android.view.MenuItem) -> c
+    boolean performContextItemSelected(android.view.MenuItem) -> d
+    void performOptionsMenuClosed(android.view.Menu) -> d
+    void performSaveInstanceState(android.os.Bundle) -> i
+    void performPause() -> r
+    void performStop() -> s
+    void performReallyStop() -> t
+    void performDestroyView() -> u
+    void performDestroy() -> v
+android.support.v4.app.Fragment$1 -> android.support.v4.app.e:
+    android.support.v4.app.Fragment this$0 -> a
+    android.view.View findViewById(int) -> a
+android.support.v4.app.Fragment$InstantiationException -> android.support.v4.app.f:
+android.support.v4.app.Fragment$SavedState -> android.support.v4.app.Fragment$SavedState:
+    android.os.Bundle mState -> a
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.Fragment$SavedState$1 -> android.support.v4.app.g:
+    android.support.v4.app.Fragment$SavedState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.Fragment$SavedState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentActivity -> android.support.v4.app.h:
+    android.os.Handler mHandler -> a
+    android.support.v4.app.FragmentManagerImpl mFragments -> b
+    android.support.v4.app.FragmentContainer mContainer -> c
+    boolean mCreated -> d
+    boolean mResumed -> e
+    boolean mStopped -> f
+    boolean mReallyStopped -> g
+    boolean mRetaining -> h
+    boolean mOptionsMenuInvalidated -> i
+    boolean mCheckedForLoaderManager -> j
+    boolean mLoadersStarted -> k
+    android.support.v4.util.SimpleArrayMap mAllLoaderManagers -> l
+    android.support.v4.app.LoaderManagerImpl mLoaderManager -> m
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void onBackPressed() -> onBackPressed
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreatePanelMenu(int,android.view.Menu) -> onCreatePanelMenu
+    android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet) -> onCreateView
+    void onDestroy() -> onDestroy
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void onLowMemory() -> onLowMemory
+    boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
+    void onPanelClosed(int,android.view.Menu) -> onPanelClosed
+    void onPause() -> onPause
+    void onNewIntent(android.content.Intent) -> onNewIntent
+    void onResume() -> onResume
+    void onPostResume() -> onPostResume
+    void onResumeFragments() -> a
+    boolean onPreparePanel(int,android.view.View,android.view.Menu) -> onPreparePanel
+    boolean onPrepareOptionsPanel(android.view.View,android.view.Menu) -> a
+    java.lang.Object onRetainNonConfigurationInstance() -> onRetainNonConfigurationInstance
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    void onStart() -> onStart
+    void onStop() -> onStop
+    java.lang.Object onRetainCustomNonConfigurationInstance() -> b
+    void supportInvalidateOptionsMenu() -> c
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> dump
+    java.lang.String viewToString(android.view.View) -> a
+    void dumpViewHierarchy(java.lang.String,java.io.PrintWriter,android.view.View) -> a
+    void doReallyStop(boolean) -> a
+    void onReallyStop() -> d
+    void onAttachFragment(android.support.v4.app.Fragment) -> a
+    void startActivityForResult(android.content.Intent,int) -> startActivityForResult
+    void invalidateSupportFragment(java.lang.String) -> a
+    android.support.v4.app.LoaderManagerImpl getLoaderManager(java.lang.String,boolean,boolean) -> a
+android.support.v4.app.FragmentActivity$FragmentTag -> android.support.v4.app.i:
+    int[] Fragment -> a
+android.support.v4.app.FragmentActivity$NonConfigurationInstances -> android.support.v4.app.j:
+    java.lang.Object activity -> a
+    java.lang.Object custom -> b
+    android.support.v4.util.SimpleArrayMap children -> c
+    java.util.ArrayList fragments -> d
+    android.support.v4.util.SimpleArrayMap loaders -> e
+android.support.v4.app.FragmentContainer -> android.support.v4.app.k:
+    android.view.View findViewById(int) -> a
+android.support.v4.app.FragmentManager -> android.support.v4.app.l:
+    android.support.v4.app.FragmentTransaction beginTransaction() -> a
+    boolean executePendingTransactions() -> b
+    android.support.v4.app.Fragment findFragmentByTag(java.lang.String) -> a
+android.support.v4.app.FragmentManager$OnBackStackChangedListener -> android.support.v4.app.m:
+    void onBackStackChanged() -> a
+android.support.v4.app.FragmentManagerImpl -> android.support.v4.app.n:
+    boolean DEBUG -> a
+    boolean HONEYCOMB -> b
+    java.util.ArrayList mPendingActions -> c
+    java.lang.Runnable[] mTmpActions -> d
+    boolean mExecutingActions -> e
+    java.util.ArrayList mActive -> f
+    java.util.ArrayList mAdded -> g
+    java.util.ArrayList mAvailIndices -> h
+    java.util.ArrayList mBackStack -> i
+    java.util.ArrayList mCreatedMenus -> j
+    java.util.ArrayList mBackStackIndices -> k
+    java.util.ArrayList mAvailBackStackIndices -> l
+    java.util.ArrayList mBackStackChangeListeners -> m
+    int mCurState -> n
+    android.support.v4.app.FragmentActivity mActivity -> o
+    android.support.v4.app.FragmentContainer mContainer -> p
+    android.support.v4.app.Fragment mParent -> q
+    boolean mNeedMenuInvalidate -> r
+    boolean mStateSaved -> s
+    boolean mDestroyed -> t
+    java.lang.String mNoTransactionsBecause -> u
+    boolean mHavePendingDeferredStart -> v
+    android.os.Bundle mStateBundle -> w
+    android.util.SparseArray mStateArray -> x
+    java.lang.Runnable mExecCommit -> y
+    android.view.animation.Interpolator DECELERATE_QUINT -> z
+    android.view.animation.Interpolator DECELERATE_CUBIC -> A
+    android.view.animation.Interpolator ACCELERATE_QUINT -> B
+    android.view.animation.Interpolator ACCELERATE_CUBIC -> C
+    void throwException(java.lang.RuntimeException) -> a
+    android.support.v4.app.FragmentTransaction beginTransaction() -> a
+    boolean executePendingTransactions() -> b
+    boolean popBackStackImmediate() -> c
+    void putFragment(android.os.Bundle,java.lang.String,android.support.v4.app.Fragment) -> a
+    android.support.v4.app.Fragment getFragment(android.os.Bundle,java.lang.String) -> a
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    android.view.animation.Animation makeOpenCloseAnimation(android.content.Context,float,float,float,float) -> a
+    android.view.animation.Animation makeFadeAnimation(android.content.Context,float,float) -> a
+    android.view.animation.Animation loadAnimation(android.support.v4.app.Fragment,int,boolean,int) -> a
+    void performPendingDeferredStart(android.support.v4.app.Fragment) -> a
+    void moveToState(android.support.v4.app.Fragment,int,int,int,boolean) -> a
+    void moveToState(android.support.v4.app.Fragment) -> b
+    void moveToState(int,boolean) -> a
+    void moveToState(int,int,int,boolean) -> a
+    void startPendingDeferredFragments() -> d
+    void makeActive(android.support.v4.app.Fragment) -> c
+    void makeInactive(android.support.v4.app.Fragment) -> d
+    void addFragment(android.support.v4.app.Fragment,boolean) -> a
+    void removeFragment(android.support.v4.app.Fragment,int,int) -> a
+    void hideFragment(android.support.v4.app.Fragment,int,int) -> b
+    void showFragment(android.support.v4.app.Fragment,int,int) -> c
+    void detachFragment(android.support.v4.app.Fragment,int,int) -> d
+    void attachFragment(android.support.v4.app.Fragment,int,int) -> e
+    android.support.v4.app.Fragment findFragmentById(int) -> a
+    android.support.v4.app.Fragment findFragmentByTag(java.lang.String) -> a
+    void checkStateLoss() -> t
+    void enqueueAction(java.lang.Runnable,boolean) -> a
+    int allocBackStackIndex(android.support.v4.app.BackStackRecord) -> a
+    void setBackStackIndex(int,android.support.v4.app.BackStackRecord) -> a
+    void freeBackStackIndex(int) -> b
+    boolean execPendingActions() -> e
+    void reportBackStackChanged() -> f
+    void addBackStackState(android.support.v4.app.BackStackRecord) -> b
+    boolean popBackStackState(android.os.Handler,java.lang.String,int,int) -> a
+    java.util.ArrayList retainNonConfig() -> g
+    void saveFragmentViewState(android.support.v4.app.Fragment) -> e
+    android.os.Bundle saveFragmentBasicState(android.support.v4.app.Fragment) -> f
+    android.os.Parcelable saveAllState() -> h
+    void restoreAllState(android.os.Parcelable,java.util.ArrayList) -> a
+    void attachActivity(android.support.v4.app.FragmentActivity,android.support.v4.app.FragmentContainer,android.support.v4.app.Fragment) -> a
+    void noteStateNotSaved() -> i
+    void dispatchCreate() -> j
+    void dispatchActivityCreated() -> k
+    void dispatchStart() -> l
+    void dispatchResume() -> m
+    void dispatchPause() -> n
+    void dispatchStop() -> o
+    void dispatchReallyStop() -> p
+    void dispatchDestroyView() -> q
+    void dispatchDestroy() -> r
+    void dispatchConfigurationChanged(android.content.res.Configuration) -> a
+    void dispatchLowMemory() -> s
+    boolean dispatchCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
+    boolean dispatchPrepareOptionsMenu(android.view.Menu) -> a
+    boolean dispatchOptionsItemSelected(android.view.MenuItem) -> a
+    boolean dispatchContextItemSelected(android.view.MenuItem) -> b
+    void dispatchOptionsMenuClosed(android.view.Menu) -> b
+    int reverseTransit(int) -> c
+    int transitToStyleIndex(int,boolean) -> b
+android.support.v4.app.FragmentManagerImpl$1 -> android.support.v4.app.o:
+    android.support.v4.app.FragmentManagerImpl this$0 -> a
+    void run() -> run
+android.support.v4.app.FragmentManagerImpl$5 -> android.support.v4.app.p:
+    android.support.v4.app.Fragment val$fragment -> a
+    android.support.v4.app.FragmentManagerImpl this$0 -> b
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+android.support.v4.app.FragmentManagerState -> android.support.v4.app.FragmentManagerState:
+    android.support.v4.app.FragmentState[] mActive -> a
+    int[] mAdded -> b
+    android.support.v4.app.BackStackState[] mBackStack -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.FragmentManagerState$1 -> android.support.v4.app.q:
+    android.support.v4.app.FragmentManagerState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.FragmentManagerState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentState -> android.support.v4.app.FragmentState:
+    java.lang.String mClassName -> a
+    int mIndex -> b
+    boolean mFromLayout -> c
+    int mFragmentId -> d
+    int mContainerId -> e
+    java.lang.String mTag -> f
+    boolean mRetainInstance -> g
+    boolean mDetached -> h
+    android.os.Bundle mArguments -> i
+    android.os.Bundle mSavedFragmentState -> j
+    android.support.v4.app.Fragment mInstance -> k
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    android.support.v4.app.Fragment instantiate(android.support.v4.app.FragmentActivity,android.support.v4.app.Fragment) -> a
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.FragmentState$1 -> android.support.v4.app.r:
+    android.support.v4.app.FragmentState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.FragmentState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentTabHost -> android.support.v4.app.FragmentTabHost:
+    java.util.ArrayList mTabs -> a
+    android.content.Context mContext -> b
+    android.support.v4.app.FragmentManager mFragmentManager -> c
+    int mContainerId -> d
+    android.widget.TabHost$OnTabChangeListener mOnTabChangeListener -> e
+    android.support.v4.app.FragmentTabHost$TabInfo mLastTab -> f
+    boolean mAttached -> g
+    void setup() -> setup
+    void setOnTabChangedListener(android.widget.TabHost$OnTabChangeListener) -> setOnTabChangedListener
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onDetachedFromWindow() -> onDetachedFromWindow
+    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    void onTabChanged(java.lang.String) -> onTabChanged
+    android.support.v4.app.FragmentTransaction doTabChanged(java.lang.String,android.support.v4.app.FragmentTransaction) -> a
+android.support.v4.app.FragmentTabHost$1 -> android.support.v4.app.s:
+android.support.v4.app.FragmentTabHost$SavedState -> android.support.v4.app.FragmentTabHost$SavedState:
+    java.lang.String curTab -> a
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    java.lang.String toString() -> toString
+android.support.v4.app.FragmentTabHost$SavedState$1 -> android.support.v4.app.t:
+    android.support.v4.app.FragmentTabHost$SavedState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.FragmentTabHost$SavedState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentTabHost$TabInfo -> android.support.v4.app.u:
+    java.lang.String tag -> a
+    java.lang.Class clss -> b
+    android.os.Bundle args -> c
+    android.support.v4.app.Fragment fragment -> d
+    android.support.v4.app.Fragment access$102(android.support.v4.app.FragmentTabHost$TabInfo,android.support.v4.app.Fragment) -> a
+    android.support.v4.app.Fragment access$100(android.support.v4.app.FragmentTabHost$TabInfo) -> a
+    java.lang.String access$200(android.support.v4.app.FragmentTabHost$TabInfo) -> b
+    java.lang.Class access$300(android.support.v4.app.FragmentTabHost$TabInfo) -> c
+    android.os.Bundle access$400(android.support.v4.app.FragmentTabHost$TabInfo) -> d
+android.support.v4.app.FragmentTransaction -> android.support.v4.app.v:
+    android.support.v4.app.FragmentTransaction add(int,android.support.v4.app.Fragment,java.lang.String) -> a
+    android.support.v4.app.FragmentTransaction detach(android.support.v4.app.Fragment) -> a
+    android.support.v4.app.FragmentTransaction attach(android.support.v4.app.Fragment) -> b
+    int commit() -> a
+android.support.v4.app.LoaderManager -> android.support.v4.app.w:
+    boolean hasRunningLoaders() -> a
+android.support.v4.app.LoaderManager$LoaderCallbacks -> android.support.v4.app.x:
+    android.support.v4.content.Loader onCreateLoader(int,android.os.Bundle) -> a
+    void onLoadFinished(android.support.v4.content.Loader,java.lang.Object) -> a
+    void onLoaderReset(android.support.v4.content.Loader) -> a
+android.support.v4.app.LoaderManagerImpl -> android.support.v4.app.y:
+    boolean DEBUG -> a
+    android.support.v4.util.SparseArrayCompat mLoaders -> b
+    android.support.v4.util.SparseArrayCompat mInactiveLoaders -> c
+    java.lang.String mWho -> d
+    android.support.v4.app.FragmentActivity mActivity -> e
+    boolean mStarted -> f
+    boolean mRetaining -> g
+    void updateActivity(android.support.v4.app.FragmentActivity) -> a
+    void doStart() -> b
+    void doStop() -> c
+    void doRetain() -> d
+    void finishRetain() -> e
+    void doReportNextStart() -> f
+    void doReportStart() -> g
+    void doDestroy() -> h
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    boolean hasRunningLoaders() -> a
+android.support.v4.app.LoaderManagerImpl$LoaderInfo -> android.support.v4.app.z:
+    int mId -> a
+    android.os.Bundle mArgs -> b
+    android.support.v4.app.LoaderManager$LoaderCallbacks mCallbacks -> c
+    android.support.v4.content.Loader mLoader -> d
+    boolean mHaveData -> e
+    boolean mDeliveredData -> f
+    java.lang.Object mData -> g
+    boolean mStarted -> h
+    boolean mRetaining -> i
+    boolean mRetainingStarted -> j
+    boolean mReportNextStart -> k
+    boolean mDestroyed -> l
+    boolean mListenerRegistered -> m
+    android.support.v4.app.LoaderManagerImpl$LoaderInfo mPendingLoader -> n
+    android.support.v4.app.LoaderManagerImpl this$0 -> o
+    void start() -> a
+    void retain() -> b
+    void finishRetain() -> c
+    void reportStart() -> d
+    void stop() -> e
+    void destroy() -> f
+    void callOnLoadFinished(android.support.v4.content.Loader,java.lang.Object) -> a
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+android.support.v4.app.NoSaveStateFrameLayout -> android.support.v4.app.aa:
+    android.view.ViewGroup wrap(android.view.View) -> a
+    void dispatchSaveInstanceState(android.util.SparseArray) -> dispatchSaveInstanceState
+    void dispatchRestoreInstanceState(android.util.SparseArray) -> dispatchRestoreInstanceState
+android.support.v4.app.SuperNotCalledException -> android.support.v4.app.ab:
+android.support.v4.content.Loader -> android.support.v4.a.a:
+    int mId -> a
+    android.support.v4.content.Loader$OnLoadCompleteListener mListener -> b
+    boolean mStarted -> c
+    boolean mAbandoned -> d
+    boolean mReset -> e
+    boolean mContentChanged -> f
+    boolean mProcessingChange -> g
+    void registerListener(int,android.support.v4.content.Loader$OnLoadCompleteListener) -> a
+    void unregisterListener(android.support.v4.content.Loader$OnLoadCompleteListener) -> a
+    void startLoading() -> a
+    void onStartLoading() -> b
+    void stopLoading() -> c
+    void onStopLoading() -> d
+    void reset() -> e
+    void onReset() -> f
+    java.lang.String dataToString(java.lang.Object) -> a
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+android.support.v4.content.Loader$OnLoadCompleteListener -> android.support.v4.a.b:
+android.support.v4.os.ParcelableCompat -> android.support.v4.b.a:
+    android.os.Parcelable$Creator newCreator(android.support.v4.os.ParcelableCompatCreatorCallbacks) -> a
+android.support.v4.os.ParcelableCompat$CompatCreator -> android.support.v4.b.b:
+    android.support.v4.os.ParcelableCompatCreatorCallbacks mCallbacks -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+android.support.v4.os.ParcelableCompatCreatorCallbacks -> android.support.v4.b.c:
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> a
+    java.lang.Object[] newArray(int) -> a
+android.support.v4.os.ParcelableCompatCreatorHoneycombMR2 -> android.support.v4.b.d:
+    android.support.v4.os.ParcelableCompatCreatorCallbacks mCallbacks -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+android.support.v4.os.ParcelableCompatCreatorHoneycombMR2Stub -> android.support.v4.b.e:
+    android.os.Parcelable$Creator instantiate(android.support.v4.os.ParcelableCompatCreatorCallbacks) -> a
+android.support.v4.util.ArrayMap -> android.support.v4.c.a:
+    android.support.v4.util.MapCollections mCollections -> a
+    android.support.v4.util.MapCollections getCollection() -> b
+    void putAll(java.util.Map) -> putAll
+    java.util.Set entrySet() -> entrySet
+    java.util.Set keySet() -> keySet
+    java.util.Collection values() -> values
+android.support.v4.util.ArrayMap$1 -> android.support.v4.c.b:
+    android.support.v4.util.ArrayMap this$0 -> a
+    int colGetSize() -> a
+    java.lang.Object colGetEntry(int,int) -> a
+    int colIndexOfKey(java.lang.Object) -> a
+    int colIndexOfValue(java.lang.Object) -> b
+    java.util.Map colGetMap() -> b
+    void colPut(java.lang.Object,java.lang.Object) -> a
+    java.lang.Object colSetValue(int,java.lang.Object) -> a
+    void colRemoveAt(int) -> a
+    void colClear() -> c
+android.support.v4.util.ContainerHelpers -> android.support.v4.c.c:
+    int[] EMPTY_INTS -> a
+    long[] EMPTY_LONGS -> b
+    java.lang.Object[] EMPTY_OBJECTS -> c
+    int idealIntArraySize(int) -> a
+    int idealByteArraySize(int) -> b
+    boolean equal(java.lang.Object,java.lang.Object) -> a
+    int binarySearch(int[],int,int) -> a
+android.support.v4.util.DebugUtils -> android.support.v4.c.d:
+    void buildShortClassTag(java.lang.Object,java.lang.StringBuilder) -> a
+android.support.v4.util.LogWriter -> android.support.v4.c.e:
+    java.lang.String mTag -> a
+    java.lang.StringBuilder mBuilder -> b
+    void close() -> close
+    void flush() -> flush
+    void write(char[],int,int) -> write
+    void flushBuilder() -> a
+android.support.v4.util.MapCollections -> android.support.v4.c.f:
+    android.support.v4.util.MapCollections$EntrySet mEntrySet -> b
+    android.support.v4.util.MapCollections$KeySet mKeySet -> c
+    android.support.v4.util.MapCollections$ValuesCollection mValues -> d
+    boolean containsAllHelper(java.util.Map,java.util.Collection) -> a
+    boolean removeAllHelper(java.util.Map,java.util.Collection) -> b
+    boolean retainAllHelper(java.util.Map,java.util.Collection) -> c
+    java.lang.Object[] toArrayHelper(int) -> b
+    java.lang.Object[] toArrayHelper(java.lang.Object[],int) -> a
+    boolean equalsSetHelper(java.util.Set,java.lang.Object) -> a
+    java.util.Set getEntrySet() -> d
+    java.util.Set getKeySet() -> e
+    java.util.Collection getValues() -> f
+    int colGetSize() -> a
+    java.lang.Object colGetEntry(int,int) -> a
+    int colIndexOfKey(java.lang.Object) -> a
+    int colIndexOfValue(java.lang.Object) -> b
+    java.util.Map colGetMap() -> b
+    void colPut(java.lang.Object,java.lang.Object) -> a
+    java.lang.Object colSetValue(int,java.lang.Object) -> a
+    void colRemoveAt(int) -> a
+    void colClear() -> c
+android.support.v4.util.MapCollections$ArrayIterator -> android.support.v4.c.g:
+    int mOffset -> a
+    int mSize -> b
+    int mIndex -> c
+    boolean mCanRemove -> d
+    android.support.v4.util.MapCollections this$0 -> e
+    boolean hasNext() -> hasNext
+    java.lang.Object next() -> next
+    void remove() -> remove
+android.support.v4.util.MapCollections$EntrySet -> android.support.v4.c.h:
+    android.support.v4.util.MapCollections this$0 -> a
+    boolean add(java.util.Map$Entry) -> a
+    boolean addAll(java.util.Collection) -> addAll
+    void clear() -> clear
+    boolean contains(java.lang.Object) -> contains
+    boolean containsAll(java.util.Collection) -> containsAll
+    boolean isEmpty() -> isEmpty
+    java.util.Iterator iterator() -> iterator
+    boolean remove(java.lang.Object) -> remove
+    boolean removeAll(java.util.Collection) -> removeAll
+    boolean retainAll(java.util.Collection) -> retainAll
+    int size() -> size
+    java.lang.Object[] toArray() -> toArray
+    java.lang.Object[] toArray(java.lang.Object[]) -> toArray
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    boolean add(java.lang.Object) -> add
+android.support.v4.util.MapCollections$KeySet -> android.support.v4.c.i:
+    android.support.v4.util.MapCollections this$0 -> a
+    boolean add(java.lang.Object) -> add
+    boolean addAll(java.util.Collection) -> addAll
+    void clear() -> clear
+    boolean contains(java.lang.Object) -> contains
+    boolean containsAll(java.util.Collection) -> containsAll
+    boolean isEmpty() -> isEmpty
+    java.util.Iterator iterator() -> iterator
+    boolean remove(java.lang.Object) -> remove
+    boolean removeAll(java.util.Collection) -> removeAll
+    boolean retainAll(java.util.Collection) -> retainAll
+    int size() -> size
+    java.lang.Object[] toArray() -> toArray
+    java.lang.Object[] toArray(java.lang.Object[]) -> toArray
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+android.support.v4.util.MapCollections$MapIterator -> android.support.v4.c.j:
+    int mEnd -> a
+    int mIndex -> b
+    boolean mEntryValid -> c
+    android.support.v4.util.MapCollections this$0 -> d
+    boolean hasNext() -> hasNext
+    java.util.Map$Entry next() -> a
+    void remove() -> remove
+    java.lang.Object getKey() -> getKey
+    java.lang.Object getValue() -> getValue
+    java.lang.Object setValue(java.lang.Object) -> setValue
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    java.lang.Object next() -> next
+android.support.v4.util.MapCollections$ValuesCollection -> android.support.v4.c.k:
+    android.support.v4.util.MapCollections this$0 -> a
+    boolean add(java.lang.Object) -> add
+    boolean addAll(java.util.Collection) -> addAll
+    void clear() -> clear
+    boolean contains(java.lang.Object) -> contains
+    boolean containsAll(java.util.Collection) -> containsAll
+    boolean isEmpty() -> isEmpty
+    java.util.Iterator iterator() -> iterator
+    boolean remove(java.lang.Object) -> remove
+    boolean removeAll(java.util.Collection) -> removeAll
+    boolean retainAll(java.util.Collection) -> retainAll
+    int size() -> size
+    java.lang.Object[] toArray() -> toArray
+    java.lang.Object[] toArray(java.lang.Object[]) -> toArray
+android.support.v4.util.SimpleArrayMap -> android.support.v4.c.l:
+    java.lang.Object[] mBaseCache -> b
+    int mBaseCacheSize -> c
+    java.lang.Object[] mTwiceBaseCache -> d
+    int mTwiceBaseCacheSize -> e
+    int[] mHashes -> f
+    java.lang.Object[] mArray -> g
+    int mSize -> h
+    int indexOf(java.lang.Object,int) -> a
+    int indexOfNull() -> a
+    void allocArrays(int) -> e
+    void freeArrays(int[],java.lang.Object[],int) -> a
+    void clear() -> clear
+    void ensureCapacity(int) -> a
+    boolean containsKey(java.lang.Object) -> containsKey
+    int indexOfValue(java.lang.Object) -> a
+    boolean containsValue(java.lang.Object) -> containsValue
+    java.lang.Object get(java.lang.Object) -> get
+    java.lang.Object keyAt(int) -> b
+    java.lang.Object valueAt(int) -> c
+    java.lang.Object setValueAt(int,java.lang.Object) -> a
+    boolean isEmpty() -> isEmpty
+    java.lang.Object put(java.lang.Object,java.lang.Object) -> put
+    java.lang.Object remove(java.lang.Object) -> remove
+    java.lang.Object removeAt(int) -> d
+    int size() -> size
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+android.support.v4.util.SparseArrayCompat -> android.support.v4.c.m:
+    java.lang.Object DELETED -> a
+    boolean mGarbage -> b
+    int[] mKeys -> c
+    java.lang.Object[] mValues -> d
+    int mSize -> e
+    android.support.v4.util.SparseArrayCompat clone() -> a
+    void gc() -> d
+    int size() -> b
+    int keyAt(int) -> a
+    java.lang.Object valueAt(int) -> b
+    void clear() -> c
+    java.lang.String toString() -> toString
+    java.lang.Object clone() -> clone
+android.support.v4.view.GravityCompat -> android.support.v4.view.a:
+    android.support.v4.view.GravityCompat$GravityCompatImpl IMPL -> a
+    int getAbsoluteGravity(int,int) -> a
+android.support.v4.view.GravityCompat$GravityCompatImpl -> android.support.v4.view.b:
+    int getAbsoluteGravity(int,int) -> a
+android.support.v4.view.GravityCompat$GravityCompatImplBase -> android.support.v4.view.c:
+    int getAbsoluteGravity(int,int) -> a
+android.support.v4.view.GravityCompat$GravityCompatImplJellybeanMr1 -> android.support.v4.view.d:
+    int getAbsoluteGravity(int,int) -> a
+android.support.v4.view.GravityCompatJellybeanMr1 -> android.support.v4.view.e:
+    int getAbsoluteGravity(int,int) -> a
+android.support.v4.view.KeyEventCompat -> android.support.v4.view.f:
+    android.support.v4.view.KeyEventCompat$KeyEventVersionImpl IMPL -> a
+    boolean hasModifiers(android.view.KeyEvent,int) -> a
+    boolean hasNoModifiers(android.view.KeyEvent) -> a
+    void startTracking(android.view.KeyEvent) -> b
+android.support.v4.view.KeyEventCompat$BaseKeyEventVersionImpl -> android.support.v4.view.g:
+    int metaStateFilterDirectionalModifiers(int,int,int,int,int) -> a
+    int normalizeMetaState(int) -> a
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+    void startTracking(android.view.KeyEvent) -> a
+android.support.v4.view.KeyEventCompat$EclairKeyEventVersionImpl -> android.support.v4.view.h:
+    void startTracking(android.view.KeyEvent) -> a
+android.support.v4.view.KeyEventCompat$HoneycombKeyEventVersionImpl -> android.support.v4.view.i:
+    int normalizeMetaState(int) -> a
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.KeyEventCompat$KeyEventVersionImpl -> android.support.v4.view.j:
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+    void startTracking(android.view.KeyEvent) -> a
+android.support.v4.view.KeyEventCompatEclair -> android.support.v4.view.k:
+    void startTracking(android.view.KeyEvent) -> a
+android.support.v4.view.KeyEventCompatHoneycomb -> android.support.v4.view.l:
+    int normalizeMetaState(int) -> a
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.MotionEventCompat -> android.support.v4.view.m:
+    android.support.v4.view.MotionEventCompat$MotionEventVersionImpl IMPL -> a
+    int getActionMasked(android.view.MotionEvent) -> a
+    int getActionIndex(android.view.MotionEvent) -> b
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+    int getPointerCount(android.view.MotionEvent) -> c
+android.support.v4.view.MotionEventCompat$BaseMotionEventVersionImpl -> android.support.v4.view.n:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+    int getPointerCount(android.view.MotionEvent) -> a
+android.support.v4.view.MotionEventCompat$EclairMotionEventVersionImpl -> android.support.v4.view.o:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+    int getPointerCount(android.view.MotionEvent) -> a
+android.support.v4.view.MotionEventCompat$MotionEventVersionImpl -> android.support.v4.view.p:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+    int getPointerCount(android.view.MotionEvent) -> a
+android.support.v4.view.MotionEventCompatEclair -> android.support.v4.view.q:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+    int getPointerCount(android.view.MotionEvent) -> a
+android.support.v4.view.PagerAdapter -> android.support.v4.view.r:
+    android.database.DataSetObservable mObservable -> a
+    int getCount() -> a
+    void startUpdate(android.view.ViewGroup) -> a
+    java.lang.Object instantiateItem(android.view.ViewGroup,int) -> a
+    void destroyItem(android.view.ViewGroup,int,java.lang.Object) -> a
+    void setPrimaryItem(android.view.ViewGroup,int,java.lang.Object) -> b
+    void finishUpdate(android.view.ViewGroup) -> b
+    void startUpdate(android.view.View) -> a
+    java.lang.Object instantiateItem(android.view.View,int) -> a
+    void destroyItem(android.view.View,int,java.lang.Object) -> a
+    void setPrimaryItem(android.view.View,int,java.lang.Object) -> b
+    void finishUpdate(android.view.View) -> b
+    boolean isViewFromObject(android.view.View,java.lang.Object) -> a
+    android.os.Parcelable saveState() -> b
+    void restoreState(android.os.Parcelable,java.lang.ClassLoader) -> a
+    int getItemPosition(java.lang.Object) -> a
+    void registerDataSetObserver(android.database.DataSetObserver) -> a
+    void unregisterDataSetObserver(android.database.DataSetObserver) -> b
+    float getPageWidth(int) -> a
+android.support.v4.view.VelocityTrackerCompat -> android.support.v4.view.s:
+    android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl IMPL -> a
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+    float getYVelocity(android.view.VelocityTracker,int) -> b
+android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl -> android.support.v4.view.t:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+    float getYVelocity(android.view.VelocityTracker,int) -> b
+android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl -> android.support.v4.view.u:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+    float getYVelocity(android.view.VelocityTracker,int) -> b
+android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl -> android.support.v4.view.v:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+    float getYVelocity(android.view.VelocityTracker,int) -> b
+android.support.v4.view.VelocityTrackerCompatHoneycomb -> android.support.v4.view.w:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+    float getYVelocity(android.view.VelocityTracker,int) -> b
+android.support.v4.view.ViewCompat -> android.support.v4.view.x:
+    android.support.v4.view.ViewCompat$ViewCompatImpl IMPL -> a
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+    void postInvalidateOnAnimation(android.view.View,int,int,int,int) -> a
+    void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+    void setLayerType(android.view.View,int,android.graphics.Paint) -> a
+    int getLayerType(android.view.View) -> c
+    void setLayerPaint(android.view.View,android.graphics.Paint) -> a
+    int getLayoutDirection(android.view.View) -> d
+    boolean isOpaque(android.view.View) -> e
+android.support.v4.view.ViewCompat$BaseViewCompatImpl -> android.support.v4.view.y:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+    void postInvalidateOnAnimation(android.view.View,int,int,int,int) -> a
+    void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+    long getFrameTime() -> a
+    void setLayerType(android.view.View,int,android.graphics.Paint) -> a
+    int getLayerType(android.view.View) -> c
+    void setLayerPaint(android.view.View,android.graphics.Paint) -> a
+    int getLayoutDirection(android.view.View) -> d
+    boolean isOpaque(android.view.View) -> e
+android.support.v4.view.ViewCompat$EclairMr1ViewCompatImpl -> android.support.v4.view.z:
+    boolean isOpaque(android.view.View) -> e
+android.support.v4.view.ViewCompat$GBViewCompatImpl -> android.support.v4.view.aa:
+    int getOverScrollMode(android.view.View) -> a
+android.support.v4.view.ViewCompat$HCViewCompatImpl -> android.support.v4.view.ab:
+    long getFrameTime() -> a
+    void setLayerType(android.view.View,int,android.graphics.Paint) -> a
+    int getLayerType(android.view.View) -> c
+    void setLayerPaint(android.view.View,android.graphics.Paint) -> a
+android.support.v4.view.ViewCompat$ICSViewCompatImpl -> android.support.v4.view.ac:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+android.support.v4.view.ViewCompat$JBViewCompatImpl -> android.support.v4.view.ad:
+    void postInvalidateOnAnimation(android.view.View) -> b
+    void postInvalidateOnAnimation(android.view.View,int,int,int,int) -> a
+    void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+android.support.v4.view.ViewCompat$JbMr1ViewCompatImpl -> android.support.v4.view.ae:
+    void setLayerPaint(android.view.View,android.graphics.Paint) -> a
+    int getLayoutDirection(android.view.View) -> d
+android.support.v4.view.ViewCompat$KitKatViewCompatImpl -> android.support.v4.view.af:
+android.support.v4.view.ViewCompat$ViewCompatImpl -> android.support.v4.view.ag:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+    void postInvalidateOnAnimation(android.view.View,int,int,int,int) -> a
+    void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+    void setLayerType(android.view.View,int,android.graphics.Paint) -> a
+    int getLayerType(android.view.View) -> c
+    void setLayerPaint(android.view.View,android.graphics.Paint) -> a
+    int getLayoutDirection(android.view.View) -> d
+    boolean isOpaque(android.view.View) -> e
+android.support.v4.view.ViewCompatEclairMr1 -> android.support.v4.view.ah:
+    boolean isOpaque(android.view.View) -> a
+android.support.v4.view.ViewCompatGingerbread -> android.support.v4.view.ai:
+    int getOverScrollMode(android.view.View) -> a
+android.support.v4.view.ViewCompatHC -> android.support.v4.view.aj:
+    long getFrameTime() -> a
+    void setLayerType(android.view.View,int,android.graphics.Paint) -> a
+    int getLayerType(android.view.View) -> a
+android.support.v4.view.ViewCompatICS -> android.support.v4.view.ak:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+android.support.v4.view.ViewCompatJB -> android.support.v4.view.al:
+    void postInvalidateOnAnimation(android.view.View) -> a
+    void postInvalidateOnAnimation(android.view.View,int,int,int,int) -> a
+    void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+android.support.v4.view.ViewCompatJellybeanMr1 -> android.support.v4.view.am:
+    void setLayerPaint(android.view.View,android.graphics.Paint) -> a
+    int getLayoutDirection(android.view.View) -> a
+android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
+    int[] LAYOUT_ATTRS -> a
+    int mExpectedAdapterCount -> b
+    java.util.Comparator COMPARATOR -> c
+    android.view.animation.Interpolator sInterpolator -> d
+    java.util.ArrayList mItems -> e
+    android.support.v4.view.ViewPager$ItemInfo mTempItem -> f
+    android.graphics.Rect mTempRect -> g
+    android.support.v4.view.PagerAdapter mAdapter -> h
+    int mCurItem -> i
+    int mRestoredCurItem -> j
+    android.os.Parcelable mRestoredAdapterState -> k
+    java.lang.ClassLoader mRestoredClassLoader -> l
+    android.widget.Scroller mScroller -> m
+    android.support.v4.view.ViewPager$PagerObserver mObserver -> n
+    int mPageMargin -> o
+    android.graphics.drawable.Drawable mMarginDrawable -> p
+    int mTopPageBounds -> q
+    int mBottomPageBounds -> r
+    float mFirstOffset -> s
+    float mLastOffset -> t
+    int mChildWidthMeasureSpec -> u
+    int mChildHeightMeasureSpec -> v
+    boolean mInLayout -> w
+    boolean mScrollingCacheEnabled -> x
+    boolean mPopulatePending -> y
+    int mOffscreenPageLimit -> z
+    boolean mIsBeingDragged -> A
+    boolean mIsUnableToDrag -> B
+    int mDefaultGutterSize -> C
+    int mGutterSize -> D
+    int mTouchSlop -> E
+    float mLastMotionX -> F
+    float mLastMotionY -> G
+    float mInitialMotionX -> H
+    float mInitialMotionY -> I
+    int mActivePointerId -> J
+    android.view.VelocityTracker mVelocityTracker -> K
+    int mMinimumVelocity -> L
+    int mMaximumVelocity -> M
+    int mFlingDistance -> N
+    int mCloseEnough -> O
+    boolean mFakeDragging -> P
+    android.support.v4.widget.EdgeEffectCompat mLeftEdge -> Q
+    android.support.v4.widget.EdgeEffectCompat mRightEdge -> R
+    boolean mFirstLayout -> S
+    boolean mNeedCalculatePageOffsets -> T
+    boolean mCalledSuper -> U
+    int mDecorChildCount -> V
+    android.support.v4.view.ViewPager$OnPageChangeListener mOnPageChangeListener -> W
+    android.support.v4.view.ViewPager$OnPageChangeListener mInternalPageChangeListener -> Z
+    android.support.v4.view.ViewPager$OnAdapterChangeListener mAdapterChangeListener -> aa
+    android.support.v4.view.ViewPager$PageTransformer mPageTransformer -> ab
+    java.lang.reflect.Method mSetChildrenDrawingOrderEnabled -> ac
+    int mDrawingOrder -> ad
+    java.util.ArrayList mDrawingOrderedChildren -> ae
+    android.support.v4.view.ViewPager$ViewPositionComparator sPositionComparator -> af
+    java.lang.Runnable mEndScrollRunnable -> ag
+    int mScrollState -> ah
+    void onDetachedFromWindow() -> onDetachedFromWindow
+    void setScrollState(int) -> setScrollState
+    void setAdapter(android.support.v4.view.PagerAdapter) -> setAdapter
+    void removeNonDecorViews() -> f
+    android.support.v4.view.PagerAdapter getAdapter() -> getAdapter
+    void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener) -> setOnAdapterChangeListener
+    int getClientWidth() -> getClientWidth
+    void setCurrentItem(int) -> setCurrentItem
+    void setCurrentItem(int,boolean) -> a
+    int getCurrentItem() -> getCurrentItem
+    void setCurrentItemInternal(int,boolean,boolean) -> a
+    void setCurrentItemInternal(int,boolean,boolean,int) -> a
+    void scrollToItem(int,boolean,int,boolean) -> a
+    void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener) -> setOnPageChangeListener
+    void setChildrenDrawingOrderEnabledCompat(boolean) -> setChildrenDrawingOrderEnabledCompat
+    int getChildDrawingOrder(int,int) -> getChildDrawingOrder
+    int getOffscreenPageLimit() -> getOffscreenPageLimit
+    void setOffscreenPageLimit(int) -> setOffscreenPageLimit
+    void setPageMargin(int) -> setPageMargin
+    int getPageMargin() -> getPageMargin
+    void setPageMarginDrawable(android.graphics.drawable.Drawable) -> setPageMarginDrawable
+    void setPageMarginDrawable(int) -> setPageMarginDrawable
+    boolean verifyDrawable(android.graphics.drawable.Drawable) -> verifyDrawable
+    void drawableStateChanged() -> drawableStateChanged
+    float distanceInfluenceForSnapDuration(float) -> a
+    void smoothScrollTo(int,int,int) -> a
+    android.support.v4.view.ViewPager$ItemInfo addNewItem(int,int) -> a
+    void dataSetChanged() -> a
+    void populate() -> b
+    void populate(int) -> a
+    void sortChildDrawingOrder() -> g
+    void calculatePageOffsets(android.support.v4.view.ViewPager$ItemInfo,int,android.support.v4.view.ViewPager$ItemInfo) -> a
+    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    void addView(android.view.View,int,android.view.ViewGroup$LayoutParams) -> addView
+    void removeView(android.view.View) -> removeView
+    android.support.v4.view.ViewPager$ItemInfo infoForChild(android.view.View) -> a
+    android.support.v4.view.ViewPager$ItemInfo infoForAnyChild(android.view.View) -> b
+    android.support.v4.view.ViewPager$ItemInfo infoForPosition(int) -> b
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onMeasure(int,int) -> onMeasure
+    void onSizeChanged(int,int,int,int) -> onSizeChanged
+    void recomputeScrollPosition(int,int,int,int) -> a
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    void computeScroll() -> computeScroll
+    boolean pageScrolled(int) -> d
+    void onPageScrolled(int,float,int) -> a
+    void completeScroll(boolean) -> a
+    boolean isGutterDrag(float,float) -> a
+    void enableLayers(boolean) -> b
+    boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    void requestParentDisallowInterceptTouchEvent(boolean) -> c
+    boolean performDrag(float) -> b
+    android.support.v4.view.ViewPager$ItemInfo infoForCurrentScrollPosition() -> h
+    int determineTargetPage(int,float,int,int) -> a
+    void draw(android.graphics.Canvas) -> draw
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void onSecondaryPointerUp(android.view.MotionEvent) -> a
+    void endDrag() -> i
+    void setScrollingCacheEnabled(boolean) -> setScrollingCacheEnabled
+    boolean canScrollHorizontally(int) -> canScrollHorizontally
+    boolean canScroll(android.view.View,boolean,int,int,int) -> a
+    boolean dispatchKeyEvent(android.view.KeyEvent) -> dispatchKeyEvent
+    boolean executeKeyEvent(android.view.KeyEvent) -> a
+    boolean arrowScroll(int) -> c
+    android.graphics.Rect getChildRectInPagerCoordinates(android.graphics.Rect,android.view.View) -> a
+    boolean pageLeft() -> c
+    boolean pageRight() -> d
+    void addFocusables(java.util.ArrayList,int,int) -> addFocusables
+    void addTouchables(java.util.ArrayList) -> addTouchables
+    boolean onRequestFocusInDescendants(int,android.graphics.Rect) -> onRequestFocusInDescendants
+    boolean dispatchPopulateAccessibilityEvent(android.view.accessibility.AccessibilityEvent) -> dispatchPopulateAccessibilityEvent
+    android.view.ViewGroup$LayoutParams generateDefaultLayoutParams() -> generateDefaultLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.view.ViewGroup$LayoutParams) -> generateLayoutParams
+    boolean checkLayoutParams(android.view.ViewGroup$LayoutParams) -> checkLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet) -> generateLayoutParams
+    int[] access$400() -> e
+android.support.v4.view.ViewPager$1 -> android.support.v4.view.an:
+    int compare(android.support.v4.view.ViewPager$ItemInfo,android.support.v4.view.ViewPager$ItemInfo) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+android.support.v4.view.ViewPager$2 -> android.support.v4.view.ao:
+    float getInterpolation(float) -> getInterpolation
+android.support.v4.view.ViewPager$Decor -> android.support.v4.view.ap:
+android.support.v4.view.ViewPager$ItemInfo -> android.support.v4.view.aq:
+    java.lang.Object object -> a
+    int position -> b
+    boolean scrolling -> c
+    float widthFactor -> d
+    float offset -> e
+android.support.v4.view.ViewPager$LayoutParams -> android.support.v4.view.ar:
+    boolean isDecor -> a
+    int gravity -> b
+    float widthFactor -> c
+    boolean needsMeasure -> d
+    int position -> e
+    int childIndex -> f
+android.support.v4.view.ViewPager$OnAdapterChangeListener -> android.support.v4.view.as:
+    void onAdapterChanged(android.support.v4.view.PagerAdapter,android.support.v4.view.PagerAdapter) -> a
+android.support.v4.view.ViewPager$OnPageChangeListener -> android.support.v4.view.at:
+    void onPageScrolled(int,float,int) -> a
+    void onPageSelected(int) -> a
+    void onPageScrollStateChanged(int) -> b
+android.support.v4.view.ViewPager$PageTransformer -> android.support.v4.view.au:
+    void transformPage(android.view.View,float) -> a
+android.support.v4.view.ViewPager$PagerObserver -> android.support.v4.view.av:
+    android.support.v4.view.ViewPager this$0 -> a
+    void onChanged() -> onChanged
+    void onInvalidated() -> onInvalidated
+android.support.v4.view.ViewPager$SavedState -> android.support.v4.view.ViewPager$SavedState:
+    int position -> a
+    android.os.Parcelable adapterState -> b
+    java.lang.ClassLoader loader -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    java.lang.String toString() -> toString
+android.support.v4.view.ViewPager$SavedState$1 -> android.support.v4.view.aw:
+    android.support.v4.view.ViewPager$SavedState createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> b
+    android.support.v4.view.ViewPager$SavedState[] newArray(int) -> b
+    java.lang.Object[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> a
+android.support.v4.view.ViewPager$ViewPositionComparator -> android.support.v4.view.ax:
+    int compare(android.view.View,android.view.View) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+android.support.v4.widget.DrawerLayout -> android.support.v4.widget.DrawerLayout:
+    int[] LAYOUT_ATTRS -> a
+    int mMinDrawerMargin -> b
+    int mScrimColor -> c
+    float mScrimOpacity -> d
+    android.graphics.Paint mScrimPaint -> e
+    android.support.v4.widget.ViewDragHelper mLeftDragger -> f
+    android.support.v4.widget.ViewDragHelper mRightDragger -> g
+    android.support.v4.widget.DrawerLayout$ViewDragCallback mLeftCallback -> h
+    android.support.v4.widget.DrawerLayout$ViewDragCallback mRightCallback -> i
+    int mDrawerState -> j
+    boolean mInLayout -> k
+    boolean mFirstLayout -> l
+    int mLockModeLeft -> m
+    int mLockModeRight -> n
+    boolean mDisallowInterceptRequested -> o
+    boolean mChildrenCanceledTouch -> p
+    android.support.v4.widget.DrawerLayout$DrawerListener mListener -> q
+    float mInitialMotionX -> r
+    float mInitialMotionY -> s
+    android.graphics.drawable.Drawable mShadowLeft -> t
+    android.graphics.drawable.Drawable mShadowRight -> u
+    void setScrimColor(int) -> setScrimColor
+    void setDrawerListener(android.support.v4.widget.DrawerLayout$DrawerListener) -> setDrawerListener
+    void setDrawerLockMode(int) -> setDrawerLockMode
+    void setDrawerLockMode(int,int) -> a
+    int getDrawerLockMode(android.view.View) -> a
+    void updateDrawerState(int,int,android.view.View) -> a
+    void dispatchOnDrawerClosed(android.view.View) -> b
+    void dispatchOnDrawerOpened(android.view.View) -> c
+    void dispatchOnDrawerSlide(android.view.View,float) -> a
+    void setDrawerViewOffset(android.view.View,float) -> b
+    float getDrawerViewOffset(android.view.View) -> d
+    int getDrawerViewAbsoluteGravity(android.view.View) -> e
+    boolean checkDrawerViewAbsoluteGravity(android.view.View,int) -> a
+    android.view.View findOpenDrawer() -> a
+    android.view.View findDrawerWithGravity(int) -> a
+    java.lang.String gravityToString(int) -> b
+    void onDetachedFromWindow() -> onDetachedFromWindow
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onMeasure(int,int) -> onMeasure
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    void requestLayout() -> requestLayout
+    void computeScroll() -> computeScroll
+    boolean hasOpaqueBackground(android.view.View) -> k
+    boolean drawChild(android.graphics.Canvas,android.view.View,long) -> drawChild
+    boolean isContentView(android.view.View) -> f
+    boolean isDrawerView(android.view.View) -> g
+    boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    void requestDisallowInterceptTouchEvent(boolean) -> requestDisallowInterceptTouchEvent
+    void closeDrawers() -> b
+    void closeDrawers(boolean) -> a
+    void openDrawer(android.view.View) -> h
+    void closeDrawer(android.view.View) -> i
+    boolean isDrawerVisible(android.view.View) -> j
+    boolean hasPeekingDrawer() -> d
+    android.view.ViewGroup$LayoutParams generateDefaultLayoutParams() -> generateDefaultLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.view.ViewGroup$LayoutParams) -> generateLayoutParams
+    boolean checkLayoutParams(android.view.ViewGroup$LayoutParams) -> checkLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet) -> generateLayoutParams
+    boolean hasVisibleDrawer() -> e
+    android.view.View findVisibleDrawer() -> f
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    boolean onKeyUp(int,android.view.KeyEvent) -> onKeyUp
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    int[] access$100() -> c
+android.support.v4.widget.DrawerLayout$DrawerListener -> android.support.v4.widget.a:
+    void onDrawerSlide(android.view.View,float) -> a
+    void onDrawerOpened(android.view.View) -> a
+    void onDrawerClosed(android.view.View) -> b
+    void onDrawerStateChanged(int) -> a
+android.support.v4.widget.DrawerLayout$LayoutParams -> android.support.v4.widget.b:
+    int gravity -> a
+    float onScreen -> b
+    boolean isPeeking -> c
+    boolean knownOpen -> d
+android.support.v4.widget.DrawerLayout$SavedState -> android.support.v4.widget.DrawerLayout$SavedState:
+    int openDrawerGravity -> a
+    int lockModeLeft -> b
+    int lockModeRight -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.widget.DrawerLayout$SavedState$1 -> android.support.v4.widget.c:
+    android.support.v4.widget.DrawerLayout$SavedState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.widget.DrawerLayout$SavedState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.widget.DrawerLayout$ViewDragCallback -> android.support.v4.widget.d:
+    int mAbsGravity -> b
+    android.support.v4.widget.ViewDragHelper mDragger -> c
+    java.lang.Runnable mPeekRunnable -> d
+    android.support.v4.widget.DrawerLayout this$0 -> a
+    void removeCallbacks() -> a
+    boolean tryCaptureView(android.view.View,int) -> a
+    void onViewDragStateChanged(int) -> a
+    void onViewPositionChanged(android.view.View,int,int,int,int) -> a
+    void onViewCaptured(android.view.View,int) -> b
+    void closeOtherDrawer() -> b
+    void onViewReleased(android.view.View,float,float) -> a
+    void onEdgeTouched(int,int) -> a
+    boolean onEdgeLock(int) -> b
+    void onEdgeDragStarted(int,int) -> b
+    int getViewHorizontalDragRange(android.view.View) -> a
+    int clampViewPositionHorizontal(android.view.View,int,int) -> a
+    int clampViewPositionVertical(android.view.View,int,int) -> b
+android.support.v4.widget.EdgeEffectCompat -> android.support.v4.widget.e:
+    java.lang.Object mEdgeEffect -> a
+    android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl IMPL -> b
+    void setSize(int,int) -> a
+    boolean isFinished() -> a
+    void finish() -> b
+    boolean onPull(float) -> a
+    boolean onRelease() -> c
+    boolean draw(android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$BaseEdgeEffectImpl -> android.support.v4.widget.f:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectIcsImpl -> android.support.v4.widget.g:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl -> android.support.v4.widget.h:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompatIcs -> android.support.v4.widget.i:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.ScrollerCompat -> android.support.v4.widget.j:
+    java.lang.Object mScroller -> a
+    android.support.v4.widget.ScrollerCompat$ScrollerCompatImpl IMPL -> b
+    boolean isFinished() -> a
+    int getCurrX() -> b
+    int getCurrY() -> c
+    int getFinalX() -> d
+    int getFinalY() -> e
+    boolean computeScrollOffset() -> f
+    void startScroll(int,int,int,int,int) -> a
+    void abortAnimation() -> g
+android.support.v4.widget.ScrollerCompat$ScrollerCompatImpl -> android.support.v4.widget.k:
+    boolean isFinished(java.lang.Object) -> a
+    int getCurrX(java.lang.Object) -> b
+    int getCurrY(java.lang.Object) -> c
+    boolean computeScrollOffset(java.lang.Object) -> d
+    void startScroll(java.lang.Object,int,int,int,int,int) -> a
+    void abortAnimation(java.lang.Object) -> e
+    int getFinalX(java.lang.Object) -> f
+    int getFinalY(java.lang.Object) -> g
+android.support.v4.widget.ScrollerCompat$ScrollerCompatImplBase -> android.support.v4.widget.l:
+    boolean isFinished(java.lang.Object) -> a
+    int getCurrX(java.lang.Object) -> b
+    int getCurrY(java.lang.Object) -> c
+    boolean computeScrollOffset(java.lang.Object) -> d
+    void startScroll(java.lang.Object,int,int,int,int,int) -> a
+    void abortAnimation(java.lang.Object) -> e
+    int getFinalX(java.lang.Object) -> f
+    int getFinalY(java.lang.Object) -> g
+android.support.v4.widget.ScrollerCompat$ScrollerCompatImplGingerbread -> android.support.v4.widget.m:
+    boolean isFinished(java.lang.Object) -> a
+    int getCurrX(java.lang.Object) -> b
+    int getCurrY(java.lang.Object) -> c
+    boolean computeScrollOffset(java.lang.Object) -> d
+    void startScroll(java.lang.Object,int,int,int,int,int) -> a
+    void abortAnimation(java.lang.Object) -> e
+    int getFinalX(java.lang.Object) -> f
+    int getFinalY(java.lang.Object) -> g
+android.support.v4.widget.ScrollerCompat$ScrollerCompatImplIcs -> android.support.v4.widget.n:
+android.support.v4.widget.ScrollerCompatGingerbread -> android.support.v4.widget.o:
+    boolean isFinished(java.lang.Object) -> a
+    int getCurrX(java.lang.Object) -> b
+    int getCurrY(java.lang.Object) -> c
+    boolean computeScrollOffset(java.lang.Object) -> d
+    void startScroll(java.lang.Object,int,int,int,int,int) -> a
+    void abortAnimation(java.lang.Object) -> e
+    int getFinalX(java.lang.Object) -> f
+    int getFinalY(java.lang.Object) -> g
+android.support.v4.widget.SlidingPaneLayout -> android.support.v4.widget.SlidingPaneLayout:
+    int mSliderFadeColor -> b
+    int mCoveredFadeColor -> c
+    android.graphics.drawable.Drawable mShadowDrawable -> d
+    int mOverhangSize -> e
+    boolean mCanSlide -> f
+    android.view.View mSlideableView -> g
+    float mSlideOffset -> h
+    float mParallaxOffset -> i
+    int mSlideRange -> j
+    boolean mIsUnableToDrag -> k
+    int mParallaxBy -> l
+    float mInitialMotionX -> m
+    float mInitialMotionY -> n
+    android.support.v4.widget.SlidingPaneLayout$PanelSlideListener mPanelSlideListener -> o
+    android.support.v4.widget.ViewDragHelper mDragHelper -> p
+    boolean mPreservedOpenState -> q
+    boolean mFirstLayout -> r
+    android.graphics.Rect mTmpRect -> s
+    java.util.ArrayList mPostedRunnables -> t
+    android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImpl IMPL -> a
+    void setParallaxDistance(int) -> setParallaxDistance
+    int getParallaxDistance() -> getParallaxDistance
+    void setSliderFadeColor(int) -> setSliderFadeColor
+    int getSliderFadeColor() -> getSliderFadeColor
+    void setCoveredFadeColor(int) -> setCoveredFadeColor
+    int getCoveredFadeColor() -> getCoveredFadeColor
+    void setPanelSlideListener(android.support.v4.widget.SlidingPaneLayout$PanelSlideListener) -> setPanelSlideListener
+    void updateObscuredViewsVisibility(android.view.View) -> a
+    void setAllChildrenVisible() -> a
+    boolean viewIsOpaque(android.view.View) -> c
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onDetachedFromWindow() -> onDetachedFromWindow
+    void onMeasure(int,int) -> onMeasure
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    void onSizeChanged(int,int,int,int) -> onSizeChanged
+    void requestChildFocus(android.view.View,android.view.View) -> requestChildFocus
+    boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    boolean closePane(android.view.View,int) -> a
+    boolean openPane(android.view.View,int) -> b
+    boolean openPane() -> b
+    boolean closePane() -> c
+    boolean isOpen() -> d
+    boolean isSlideable() -> e
+    void dimChildView(android.view.View,float,int) -> a
+    boolean drawChild(android.graphics.Canvas,android.view.View,long) -> drawChild
+    void invalidateChildRegion(android.view.View) -> d
+    boolean smoothSlideTo(float,int) -> a
+    void computeScroll() -> computeScroll
+    void setShadowDrawable(android.graphics.drawable.Drawable) -> setShadowDrawable
+    void setShadowResource(int) -> setShadowResource
+    void draw(android.graphics.Canvas) -> draw
+    void parallaxOtherViews(float) -> a
+    boolean isDimmed(android.view.View) -> b
+    android.view.ViewGroup$LayoutParams generateDefaultLayoutParams() -> generateDefaultLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.view.ViewGroup$LayoutParams) -> generateLayoutParams
+    boolean checkLayoutParams(android.view.ViewGroup$LayoutParams) -> checkLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet) -> generateLayoutParams
+    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    void access$900(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
+    java.util.ArrayList access$1000(android.support.v4.widget.SlidingPaneLayout) -> a
+android.support.v4.widget.SlidingPaneLayout$1 -> android.support.v4.widget.p:
+android.support.v4.widget.SlidingPaneLayout$DisableLayerRunnable -> android.support.v4.widget.q:
+    android.view.View mChildView -> a
+    android.support.v4.widget.SlidingPaneLayout this$0 -> b
+    void run() -> run
+android.support.v4.widget.SlidingPaneLayout$LayoutParams -> android.support.v4.widget.r:
+    int[] ATTRS -> e
+    float weight -> a
+    boolean slideable -> b
+    boolean dimWhenOffset -> c
+    android.graphics.Paint dimPaint -> d
+android.support.v4.widget.SlidingPaneLayout$PanelSlideListener -> android.support.v4.widget.s:
+android.support.v4.widget.SlidingPaneLayout$SavedState -> android.support.v4.widget.SlidingPaneLayout$SavedState:
+    boolean isOpen -> a
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.widget.SlidingPaneLayout$SavedState$1 -> android.support.v4.widget.t:
+    android.support.v4.widget.SlidingPaneLayout$SavedState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.widget.SlidingPaneLayout$SavedState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImpl -> android.support.v4.widget.u:
+    void invalidateChildRegion(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
+android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImplBase -> android.support.v4.widget.v:
+    void invalidateChildRegion(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
+android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImplJB -> android.support.v4.widget.w:
+    java.lang.reflect.Method mGetDisplayList -> a
+    java.lang.reflect.Field mRecreateDisplayList -> b
+    void invalidateChildRegion(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
+android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImplJBMR1 -> android.support.v4.widget.x:
+    void invalidateChildRegion(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
+android.support.v4.widget.ViewDragHelper -> android.support.v4.widget.y:
+    int mDragState -> a
+    int mTouchSlop -> b
+    int mActivePointerId -> c
+    float[] mInitialMotionX -> d
+    float[] mInitialMotionY -> e
+    float[] mLastMotionX -> f
+    float[] mLastMotionY -> g
+    int[] mInitialEdgesTouched -> h
+    int[] mEdgeDragsInProgress -> i
+    int[] mEdgeDragsLocked -> j
+    int mPointersDown -> k
+    android.view.VelocityTracker mVelocityTracker -> l
+    float mMaxVelocity -> m
+    float mMinVelocity -> n
+    int mEdgeSize -> o
+    int mTrackingEdges -> p
+    android.support.v4.widget.ScrollerCompat mScroller -> q
+    android.support.v4.widget.ViewDragHelper$Callback mCallback -> r
+    android.view.View mCapturedView -> s
+    boolean mReleaseInProgress -> t
+    android.view.ViewGroup mParentView -> u
+    android.view.animation.Interpolator sInterpolator -> v
+    java.lang.Runnable mSetIdleRunnable -> w
+    int getViewDragState() -> a
+    int getEdgeSize() -> b
+    void captureChildView(android.view.View,int) -> a
+    android.view.View getCapturedView() -> c
+    int getTouchSlop() -> d
+    void cancel() -> e
+    void abort() -> f
+    boolean smoothSlideViewTo(android.view.View,int,int) -> a
+    boolean settleCapturedViewAt(int,int) -> a
+    boolean forceSettleCapturedViewAt(int,int,int,int) -> a
+    int computeSettleDuration(android.view.View,int,int,int,int) -> a
+    int computeAxisDuration(int,int,int) -> a
+    int clampMag(int,int,int) -> b
+    float clampMag(float,float,float) -> a
+    float distanceInfluenceForSnapDuration(float) -> a
+    boolean continueSettling(boolean) -> a
+    void dispatchViewReleased(float,float) -> a
+    void clearMotionHistory() -> g
+    void clearMotionHistory(int) -> d
+    void ensureMotionHistorySizeForId(int) -> e
+    void saveInitialMotion(float,float,int) -> a
+    void saveLastMotion(android.view.MotionEvent) -> c
+    boolean isPointerDown(int) -> a
+    void setDragState(int) -> b
+    boolean tryCaptureViewForDrag(android.view.View,int) -> b
+    boolean shouldInterceptTouchEvent(android.view.MotionEvent) -> a
+    void processTouchEvent(android.view.MotionEvent) -> b
+    void reportNewEdgeDrags(float,float,int) -> b
+    boolean checkNewEdgeDrag(float,float,int,int) -> a
+    boolean checkTouchSlop(android.view.View,float,float) -> a
+    boolean checkTouchSlop(int) -> c
+    boolean checkTouchSlop(int,int) -> b
+    void releaseViewForPointerUp() -> h
+    void dragTo(int,int,int,int) -> b
+    boolean isCapturedViewUnder(int,int) -> c
+    boolean isViewUnder(android.view.View,int,int) -> b
+    android.view.View findTopChildUnder(int,int) -> d
+    int getEdgesTouched(int,int) -> e
+android.support.v4.widget.ViewDragHelper$1 -> android.support.v4.widget.z:
+    float getInterpolation(float) -> getInterpolation
+android.support.v4.widget.ViewDragHelper$Callback -> android.support.v4.widget.aa:
+    void onViewDragStateChanged(int) -> a
+    void onViewPositionChanged(android.view.View,int,int,int,int) -> a
+    void onViewCaptured(android.view.View,int) -> b
+    void onViewReleased(android.view.View,float,float) -> a
+    void onEdgeTouched(int,int) -> a
+    boolean onEdgeLock(int) -> b
+    void onEdgeDragStarted(int,int) -> b
+    int getOrderedChildIndex(int) -> c
+    int getViewHorizontalDragRange(android.view.View) -> a
+    int getViewVerticalDragRange(android.view.View) -> b
+    boolean tryCaptureView(android.view.View,int) -> a
+    int clampViewPositionHorizontal(android.view.View,int,int) -> a
+    int clampViewPositionVertical(android.view.View,int,int) -> b
+it.zerofill.soundmapp.HomeActivity -> it.zerofill.soundmapp.HomeActivity:
+    android.widget.Button newSurveyButton -> b
+    android.widget.Button surveyListButton -> c
+    android.widget.Button logoutButton -> d
+    android.view.View loginStatusBar -> e
+    android.view.View mainScrollView -> f
+    android.widget.Spinner layersCombo -> g
+    android.widget.LinearLayout mLayout -> h
+    java.lang.String loggedUser -> i
+    java.lang.String userDataFilePath -> j
+    it.zerofill.soundmapp.controllers.FileEncryptor fileEncr -> k
+    android.content.Context mainContext -> l
+    java.lang.String localDir -> m
+    android.widget.ImageView logoBannerImg -> n
+    int WIDTH -> o
+    int deviceWidth -> p
+    it.zerofill.soundmapp.controllers.FeatureParser featureParser -> q
+    it.zerofill.soundmapp.controllers.AssetsPropertyReader assetsPropertyReader -> r
+    java.util.Properties properties -> s
+    it.zerofill.soundmapp.models.Configuration config -> t
+    it.zerofill.soundmapp.HomeActivity$GetCapabilitiesFromGeoserverTask getCapabilitiesTask -> a
+    java.util.List selectedNameSpaces -> u
+    java.util.HashMap nameSpaceMapByPosition -> v
+    java.lang.String pass -> w
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void init() -> b
+    void disableButtons() -> a
+    void buttonsHandler() -> c
+    void getConfigAttributes() -> d
+    boolean haveNetworkConnection() -> e
+    void showAlert(java.lang.String) -> a
+    void onBackPressed() -> onBackPressed
+    void doLogout() -> f
+    void showProgress(boolean) -> a
+    it.zerofill.soundmapp.models.Configuration access$0(it.zerofill.soundmapp.HomeActivity) -> a
+    boolean access$1(it.zerofill.soundmapp.HomeActivity) -> b
+    java.lang.String access$2(it.zerofill.soundmapp.HomeActivity) -> c
+    it.zerofill.soundmapp.controllers.FileEncryptor access$3(it.zerofill.soundmapp.HomeActivity) -> d
+    java.lang.String access$4(it.zerofill.soundmapp.HomeActivity) -> e
+    java.lang.String access$5(it.zerofill.soundmapp.HomeActivity) -> f
+    void access$6(it.zerofill.soundmapp.HomeActivity,java.lang.String) -> a
+    it.zerofill.soundmapp.controllers.FeatureParser access$7(it.zerofill.soundmapp.HomeActivity) -> g
+    java.util.List access$8(it.zerofill.soundmapp.HomeActivity) -> h
+    void access$9(it.zerofill.soundmapp.HomeActivity,boolean) -> a
+    java.util.HashMap access$10(it.zerofill.soundmapp.HomeActivity) -> i
+    android.content.Context access$11(it.zerofill.soundmapp.HomeActivity) -> j
+    android.widget.Spinner access$12(it.zerofill.soundmapp.HomeActivity) -> k
+    void access$13(it.zerofill.soundmapp.HomeActivity) -> l
+    android.view.View access$14(it.zerofill.soundmapp.HomeActivity) -> m
+    android.view.View access$15(it.zerofill.soundmapp.HomeActivity) -> n
+it.zerofill.soundmapp.HomeActivity$1 -> it.zerofill.soundmapp.a:
+    it.zerofill.soundmapp.HomeActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.HomeActivity$2 -> it.zerofill.soundmapp.b:
+    it.zerofill.soundmapp.HomeActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+it.zerofill.soundmapp.HomeActivity$3 -> it.zerofill.soundmapp.c:
+    it.zerofill.soundmapp.HomeActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+it.zerofill.soundmapp.HomeActivity$4 -> it.zerofill.soundmapp.d:
+    it.zerofill.soundmapp.HomeActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+it.zerofill.soundmapp.HomeActivity$5 -> it.zerofill.soundmapp.e:
+    it.zerofill.soundmapp.HomeActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.HomeActivity$6 -> it.zerofill.soundmapp.f:
+    it.zerofill.soundmapp.HomeActivity this$0 -> a
+    boolean val$show -> b
+    void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
+it.zerofill.soundmapp.HomeActivity$7 -> it.zerofill.soundmapp.g:
+    it.zerofill.soundmapp.HomeActivity this$0 -> a
+    boolean val$show -> b
+    void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
+it.zerofill.soundmapp.HomeActivity$GetCapabilitiesFromGeoserverTask -> it.zerofill.soundmapp.h:
+    java.lang.String message -> b
+    java.util.List layerList -> c
+    it.zerofill.soundmapp.HomeActivity this$0 -> a
+    java.lang.Boolean doInBackground(java.lang.Void[]) -> a
+    void onCancelled() -> onCancelled
+    void onPostExecute(java.lang.Boolean) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+it.zerofill.soundmapp.LoginActivity -> it.zerofill.soundmapp.LoginActivity:
+    java.lang.String email -> a
+    java.lang.String pass -> b
+    android.view.View loginStatusBar -> d
+    android.widget.TextView loginMessageView -> e
+    android.view.View mainScrollView -> f
+    android.widget.EditText emailTextView -> g
+    android.widget.EditText passTextView -> h
+    android.widget.Button loginButton -> i
+    android.widget.Button signupButton -> j
+    android.widget.Spinner configsCombo -> k
+    android.widget.CheckBox rememberMeCB -> l
+    android.widget.LinearLayout mLayout -> m
+    android.view.View getPropertiesFileStatusBar -> n
+    android.widget.TextView getPropertiesFileMessageView -> o
+    android.content.Context mainContext -> p
+    android.widget.ImageView logoBannerImg -> q
+    int WIDTH -> r
+    int deviceWidth -> s
+    java.lang.String loggedUser -> t
+    java.util.List configList -> u
+    it.zerofill.soundmapp.controllers.AttributesExtractor attributeExstractor -> v
+    it.zerofill.soundmapp.controllers.AssetsPropertyReader assetsPropertyReader -> w
+    java.util.Properties properties -> x
+    boolean isFromHome -> y
+    java.lang.String configName -> z
+    boolean fileExist -> A
+    it.zerofill.soundmapp.models.Configuration configuration -> B
+    java.lang.String json -> C
+    java.lang.String userDataFilePath -> D
+    it.zerofill.soundmapp.controllers.FileEncryptor fileEncr -> E
+    java.lang.String localDir -> c
+    it.zerofill.soundmapp.LoginActivity$UserLoginTask authTask -> F
+    it.zerofill.soundmapp.LoginActivity$GetPropertiesFileTask getPropFileTask -> G
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void init() -> d
+    void onBackPressed() -> onBackPressed
+    void buttonsHandler() -> e
+    boolean haveNetworkConnection() -> f
+    void getPropertiesFile() -> a
+    void showAlert() -> b
+    void showGenericAlert(java.lang.String) -> a
+    void attemptLogin() -> c
+    void showProgress(boolean) -> a
+    void showGetPropFileProgress(boolean) -> b
+    void onResume() -> onResume
+    void openHomeActivity() -> g
+    void readPropertiesFile() -> h
+    android.widget.Spinner access$0(it.zerofill.soundmapp.LoginActivity) -> a
+    void access$1(it.zerofill.soundmapp.LoginActivity,java.lang.String) -> a
+    java.lang.String access$3(it.zerofill.soundmapp.LoginActivity) -> b
+    java.lang.String access$4(it.zerofill.soundmapp.LoginActivity) -> c
+    void access$5(it.zerofill.soundmapp.LoginActivity,it.zerofill.soundmapp.models.Configuration) -> a
+    it.zerofill.soundmapp.models.Configuration access$6(it.zerofill.soundmapp.LoginActivity) -> d
+    void access$7(it.zerofill.soundmapp.LoginActivity,it.zerofill.soundmapp.LoginActivity$UserLoginTask) -> a
+    void access$8(it.zerofill.soundmapp.LoginActivity,boolean) -> a
+    java.lang.String access$9(it.zerofill.soundmapp.LoginActivity) -> e
+    java.util.Properties access$10(it.zerofill.soundmapp.LoginActivity) -> f
+    it.zerofill.soundmapp.controllers.FileEncryptor access$11(it.zerofill.soundmapp.LoginActivity) -> g
+    android.widget.CheckBox access$12(it.zerofill.soundmapp.LoginActivity) -> h
+    void access$13(it.zerofill.soundmapp.LoginActivity) -> i
+    android.widget.EditText access$14(it.zerofill.soundmapp.LoginActivity) -> j
+    void access$15(it.zerofill.soundmapp.LoginActivity,boolean) -> b
+    void access$16(it.zerofill.soundmapp.LoginActivity) -> k
+    android.widget.Button access$17(it.zerofill.soundmapp.LoginActivity) -> l
+    android.widget.Button access$18(it.zerofill.soundmapp.LoginActivity) -> m
+    android.content.Context access$20(it.zerofill.soundmapp.LoginActivity) -> n
+    android.view.View access$21(it.zerofill.soundmapp.LoginActivity) -> o
+    android.view.View access$22(it.zerofill.soundmapp.LoginActivity) -> p
+    android.view.View access$23(it.zerofill.soundmapp.LoginActivity) -> q
+it.zerofill.soundmapp.LoginActivity$1 -> it.zerofill.soundmapp.i:
+    it.zerofill.soundmapp.LoginActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.LoginActivity$2 -> it.zerofill.soundmapp.j:
+    it.zerofill.soundmapp.LoginActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+it.zerofill.soundmapp.LoginActivity$3 -> it.zerofill.soundmapp.k:
+    it.zerofill.soundmapp.LoginActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+it.zerofill.soundmapp.LoginActivity$4 -> it.zerofill.soundmapp.l:
+    it.zerofill.soundmapp.LoginActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.LoginActivity$5 -> it.zerofill.soundmapp.m:
+    it.zerofill.soundmapp.LoginActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.LoginActivity$6 -> it.zerofill.soundmapp.n:
+    it.zerofill.soundmapp.LoginActivity this$0 -> a
+    boolean val$show -> b
+    void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
+it.zerofill.soundmapp.LoginActivity$7 -> it.zerofill.soundmapp.o:
+    it.zerofill.soundmapp.LoginActivity this$0 -> a
+    boolean val$show -> b
+    void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
+it.zerofill.soundmapp.LoginActivity$8 -> it.zerofill.soundmapp.p:
+    it.zerofill.soundmapp.LoginActivity this$0 -> a
+    boolean val$show -> b
+    void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
+it.zerofill.soundmapp.LoginActivity$9 -> it.zerofill.soundmapp.q:
+    it.zerofill.soundmapp.LoginActivity this$0 -> a
+    boolean val$show -> b
+    void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
+it.zerofill.soundmapp.LoginActivity$GetPropertiesFileTask -> it.zerofill.soundmapp.r:
+    it.zerofill.soundmapp.LoginActivity this$0 -> a
+    java.lang.Boolean doInBackground(java.lang.Void[]) -> a
+    void onPostExecute(java.lang.Boolean) -> a
+    void onCancelled() -> onCancelled
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+it.zerofill.soundmapp.LoginActivity$UserLoginTask -> it.zerofill.soundmapp.s:
+    java.lang.String errorMessage -> b
+    it.zerofill.soundmapp.LoginActivity this$0 -> a
+    java.lang.Boolean doInBackground(java.lang.Void[]) -> a
+    void onPostExecute(java.lang.Boolean) -> a
+    void onCancelled() -> onCancelled
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+it.zerofill.soundmapp.RecordActivity -> it.zerofill.soundmapp.RecordActivity:
+    it.zerofill.soundmapp.views.AudioAnalyzer audioAnalyzer -> b
+    boolean isRecording -> c
+    boolean isPlaying -> d
+    boolean isDrawing -> e
+    android.widget.TextView dbText -> f
+    it.zerofill.soundmapp.views.BarLevelDrawable mBarLevel -> g
+    android.widget.ImageView logoBannerImg -> h
+    int WIDTH -> i
+    int deviceWidth -> j
+    double mOffsetdB -> k
+    double mGain -> l
+    double mRmsSmoothed -> m
+    double mAlpha -> n
+    android.widget.Button recButton -> o
+    android.widget.Button playButton -> p
+    android.widget.Chronometer chronometer -> q
+    android.widget.TextView audioLenghtLabel -> r
+    android.widget.TextView audioLevelLabel -> s
+    android.widget.TextView audioDecibleListText -> t
+    java.util.List dbList -> u
+    java.util.List locationList -> v
+    int base_di_campionamento -> w
+    java.lang.String audioFileName -> x
+    java.lang.String audioFileNameTemp -> y
+    boolean isNewSurvey -> z
+    java.lang.String layerName -> A
+    java.lang.String xmlFilePath -> B
+    it.zerofill.soundmapp.models.AttributeType audioAttribute -> C
+    java.text.DecimalFormat df -> a
+    android.content.Context mainContext -> D
+    android.media.MediaPlayer mPlayer -> E
+    int TIMEOUT_TIME -> F
+    java.lang.String AUDIO_COMPONENT_DECIBEL -> G
+    java.lang.String AUDIO_COMPONENT_LOCATION -> H
+    java.lang.String AUDIO_COMPONENT_FILE -> I
+    it.zerofill.soundmapp.RecordActivity$SaveAudioFeatureTask saveAudioFeatureTask -> J
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void onBackPressed() -> onBackPressed
+    void buttonsHandler() -> b
+    void convertFile() -> c
+    void startPlaying() -> d
+    void stopPlaying() -> e
+    void timeOut() -> f
+    void showAlert() -> a
+    void processAudioFrame(short[]) -> a
+    void init() -> g
+    void startTime() -> h
+    void stopTime() -> i
+    java.lang.String calcolaLeq() -> j
+    double[] getLocation() -> k
+    java.util.HashMap getMapAudioAssociatedComponent(it.zerofill.soundmapp.models.AttributeType) -> a
+    void saveAudioComponentsToXml() -> l
+    it.zerofill.soundmapp.models.AttributeType access$0(it.zerofill.soundmapp.RecordActivity) -> a
+    java.util.HashMap access$1(it.zerofill.soundmapp.RecordActivity,it.zerofill.soundmapp.models.AttributeType) -> a
+    java.lang.String access$2(it.zerofill.soundmapp.RecordActivity) -> b
+    java.lang.String access$3(it.zerofill.soundmapp.RecordActivity) -> c
+    java.lang.String access$4(it.zerofill.soundmapp.RecordActivity) -> d
+    android.widget.TextView access$5(it.zerofill.soundmapp.RecordActivity) -> e
+    java.util.List access$6(it.zerofill.soundmapp.RecordActivity) -> f
+    void access$7(it.zerofill.soundmapp.RecordActivity,it.zerofill.soundmapp.RecordActivity$SaveAudioFeatureTask) -> a
+    boolean access$8(it.zerofill.soundmapp.RecordActivity) -> g
+    android.widget.Button access$9(it.zerofill.soundmapp.RecordActivity) -> h
+    android.widget.Button access$10(it.zerofill.soundmapp.RecordActivity) -> i
+    void access$11(it.zerofill.soundmapp.RecordActivity) -> j
+    it.zerofill.soundmapp.views.AudioAnalyzer access$12(it.zerofill.soundmapp.RecordActivity) -> k
+    java.lang.String access$13(it.zerofill.soundmapp.RecordActivity) -> l
+    void access$14(it.zerofill.soundmapp.RecordActivity) -> m
+    void access$15(it.zerofill.soundmapp.RecordActivity) -> n
+    void access$16(it.zerofill.soundmapp.RecordActivity) -> o
+    void access$17(it.zerofill.soundmapp.RecordActivity,boolean) -> a
+    boolean access$18(it.zerofill.soundmapp.RecordActivity) -> p
+    void access$19(it.zerofill.soundmapp.RecordActivity) -> q
+    boolean access$20(it.zerofill.soundmapp.RecordActivity) -> r
+    void access$21(it.zerofill.soundmapp.RecordActivity) -> s
+    void access$22(it.zerofill.soundmapp.RecordActivity,boolean) -> b
+    it.zerofill.soundmapp.views.BarLevelDrawable access$23(it.zerofill.soundmapp.RecordActivity) -> t
+    double access$24(it.zerofill.soundmapp.RecordActivity) -> u
+    android.widget.TextView access$25(it.zerofill.soundmapp.RecordActivity) -> v
+    void access$26(it.zerofill.soundmapp.RecordActivity,boolean) -> c
+    android.widget.TextView access$27(it.zerofill.soundmapp.RecordActivity) -> w
+    android.widget.Chronometer access$28(it.zerofill.soundmapp.RecordActivity) -> x
+    int access$29(it.zerofill.soundmapp.RecordActivity) -> y
+    double[] access$30(it.zerofill.soundmapp.RecordActivity) -> z
+    java.util.List access$31(it.zerofill.soundmapp.RecordActivity) -> A
+    android.widget.TextView access$32(it.zerofill.soundmapp.RecordActivity) -> B
+    java.lang.String access$33(it.zerofill.soundmapp.RecordActivity) -> C
+    int access$34(it.zerofill.soundmapp.RecordActivity) -> D
+    void access$35(it.zerofill.soundmapp.RecordActivity) -> E
+it.zerofill.soundmapp.RecordActivity$1 -> it.zerofill.soundmapp.t:
+    it.zerofill.soundmapp.RecordActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.RecordActivity$2 -> it.zerofill.soundmapp.u:
+    it.zerofill.soundmapp.RecordActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+it.zerofill.soundmapp.RecordActivity$3 -> it.zerofill.soundmapp.v:
+    it.zerofill.soundmapp.RecordActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+it.zerofill.soundmapp.RecordActivity$4 -> it.zerofill.soundmapp.w:
+    it.zerofill.soundmapp.RecordActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.RecordActivity$5 -> it.zerofill.soundmapp.x:
+    it.zerofill.soundmapp.RecordActivity this$0 -> a
+    double val$rmsdB -> b
+    void run() -> run
+it.zerofill.soundmapp.RecordActivity$6 -> it.zerofill.soundmapp.y:
+    it.zerofill.soundmapp.RecordActivity this$0 -> a
+    void onChronometerTick(android.widget.Chronometer) -> onChronometerTick
+it.zerofill.soundmapp.RecordActivity$SaveAudioFeatureTask -> it.zerofill.soundmapp.z:
+    it.zerofill.soundmapp.RecordActivity this$0 -> a
+    java.lang.Boolean doInBackground(java.lang.Void[]) -> a
+    void onPostExecute(java.lang.Boolean) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+it.zerofill.soundmapp.RegistrationActivity -> it.zerofill.soundmapp.RegistrationActivity:
+    android.widget.LinearLayout formVariableFieldsLayout -> a
+    android.widget.Button signupButton -> b
+    android.content.Context mainContext -> c
+    android.widget.EditText emailTextView -> d
+    android.widget.EditText passwordTextView -> e
+    android.widget.EditText passwordRepeatTextView -> f
+    android.view.View signupStatusBar -> g
+    android.view.View mainScrollView -> h
+    java.lang.String email -> i
+    java.lang.String pass -> j
+    java.lang.String repPass -> k
+    it.zerofill.soundmapp.controllers.AssetsPropertyReader assetsPropertyReader -> l
+    java.util.Properties properties -> m
+    java.lang.String localDir -> n
+    it.zerofill.soundmapp.controllers.FileEncryptor fileEncr -> o
+    java.lang.String userDataFilePath -> p
+    android.widget.ImageView logoBannerImg -> q
+    int WIDTH -> r
+    int deviceWidth -> s
+    it.zerofill.soundmapp.RegistrationActivity$RegistrationTask registrationTask -> t
+    it.zerofill.soundmapp.controllers.AttributesExtractor attributeExstractor -> u
+    it.zerofill.soundmapp.models.Configuration config -> v
+    java.util.List sortedAttributes -> w
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void onBackPressed() -> onBackPressed
+    void init() -> a
+    void getConfigAttributes() -> b
+    void buttonHandler() -> c
+    void validateAndRegister() -> d
+    void createFieldLayout() -> e
+    void showProgress(boolean) -> a
+    void closeActiviy() -> f
+    void showAlert(java.lang.String,java.lang.String) -> a
+    java.lang.String convertInputStreamToString(java.io.InputStream) -> b
+    java.lang.String access$0(it.zerofill.soundmapp.RegistrationActivity) -> a
+    java.lang.String access$1(it.zerofill.soundmapp.RegistrationActivity) -> b
+    java.lang.String access$2(java.io.InputStream) -> a
+    void access$3(it.zerofill.soundmapp.RegistrationActivity,it.zerofill.soundmapp.RegistrationActivity$RegistrationTask) -> a
+    void access$4(it.zerofill.soundmapp.RegistrationActivity,boolean) -> a
+    void access$5(it.zerofill.soundmapp.RegistrationActivity) -> c
+    android.view.View access$6(it.zerofill.soundmapp.RegistrationActivity) -> d
+    android.view.View access$7(it.zerofill.soundmapp.RegistrationActivity) -> e
+    void access$8(it.zerofill.soundmapp.RegistrationActivity) -> f
+it.zerofill.soundmapp.RegistrationActivity$1 -> it.zerofill.soundmapp.aa:
+    it.zerofill.soundmapp.RegistrationActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.RegistrationActivity$2 -> it.zerofill.soundmapp.ab:
+    it.zerofill.soundmapp.RegistrationActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+it.zerofill.soundmapp.RegistrationActivity$3 -> it.zerofill.soundmapp.ac:
+    it.zerofill.soundmapp.RegistrationActivity this$0 -> a
+    boolean val$show -> b
+    void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
+it.zerofill.soundmapp.RegistrationActivity$4 -> it.zerofill.soundmapp.ad:
+    it.zerofill.soundmapp.RegistrationActivity this$0 -> a
+    boolean val$show -> b
+    void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
+it.zerofill.soundmapp.RegistrationActivity$5 -> it.zerofill.soundmapp.ae:
+    it.zerofill.soundmapp.RegistrationActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.RegistrationActivity$RegistrationTask -> it.zerofill.soundmapp.af:
+    it.zerofill.soundmapp.RegistrationActivity this$0 -> a
+    java.lang.Boolean doInBackground(java.lang.Void[]) -> a
+    void onPostExecute(java.lang.Boolean) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+it.zerofill.soundmapp.ShowFullImageActivity -> it.zerofill.soundmapp.ShowFullImageActivity:
+    void onCreate(android.os.Bundle) -> onCreate
+    void onBackPressed() -> onBackPressed
+    android.graphics.Bitmap decodeFile(java.io.File) -> a
+it.zerofill.soundmapp.SoundmApp -> it.zerofill.soundmapp.SoundmApp:
+    void onCreate() -> onCreate
+it.zerofill.soundmapp.SurveyDetailActivity -> it.zerofill.soundmapp.SurveyDetailActivity:
+    java.lang.String TYPE_COMBO -> d
+    java.lang.String TYPE_STRING -> e
+    java.lang.String TYPE_IMAGE -> f
+    java.lang.String TYPE_AUDIO -> g
+    java.lang.String TYPE_DOUBLE -> h
+    java.lang.String TYPE_INT -> i
+    java.lang.String TYPE_DATE -> j
+    java.lang.String TYPE_POINT -> k
+    java.lang.String TYPE_LINE -> l
+    int base_di_campionamento -> m
+    android.content.Context mainContext -> n
+    android.content.res.Resources resource -> o
+    java.lang.String imgDir -> p
+    java.lang.String soundDir -> q
+    java.lang.String localDir -> r
+    java.lang.String sentReplyDir -> s
+    java.lang.String imgName -> t
+    java.lang.String defaultSurveyName -> u
+    java.lang.String defaultSurveyKey -> v
+    java.lang.String pass -> w
+    android.widget.Button sendButton -> x
+    android.view.View getDescribeFeatureStatusBar -> y
+    android.view.View sendSurveyStatusLayoutBar -> z
+    android.view.View mainLayoutTab -> A
+    it.zerofill.soundmapp.SurveyDetailActivity$GetDescribeFeatureTask getDescribeTask -> B
+    it.zerofill.soundmapp.SurveyDetailActivity$SaveFeatureTask saveFeatureTask -> C
+    it.zerofill.soundmapp.SurveyDetailActivity$SendDataTask sendDataTask -> D
+    java.lang.String loggedUser -> E
+    java.lang.String creatorField -> F
+    java.lang.String currentFileName -> G
+    int snap_img_button_id -> H
+    int snap_img_button_pressed_id -> I
+    int del_img_button_id -> J
+    int del_img_button_pressed_id -> K
+    int wrench_img_button_id -> L
+    int wrench_img_button_pressed_id -> M
+    android.widget.TabHost tabs -> N
+    android.widget.LinearLayout mainlayoutTab -> O
+    android.app.DatePickerDialog$OnDateSetListener dateSetListener -> P
+    int year -> Q
+    int month -> R
+    int day -> S
+    it.zerofill.soundmapp.controllers.FeatureParser featureParser -> T
+    it.zerofill.soundmapp.controllers.AttributesExtractor attributeExstractor -> U
+    it.zerofill.soundmapp.controllers.AssetsPropertyReader assetsPropertyReader -> V
+    java.util.Properties properties -> W
+    it.zerofill.soundmapp.models.Configuration config -> X
+    it.zerofill.soundmapp.models.Layer layer -> Y
+    java.util.HashMap attributesMap -> Z
+    java.lang.String layerName -> aa
+    boolean isNewSurvey -> ab
+    boolean isLocal -> ac
+    java.lang.String surveyName -> ad
+    java.lang.String surveyId -> ae
+    java.util.HashMap describeFeatureMap -> af
+    java.util.List records -> ag
+    java.lang.String localFileHandler -> ah
+    java.util.HashMap mappaImmagini -> ai
+    java.util.HashMap mappaImmaginiView -> aj
+    java.util.HashMap mappaNextImgToShow -> ak
+    java.util.HashMap mappaImgToShow -> al
+    java.util.HashMap mappaImgIsTaken -> am
+    int imgShowed -> an
+    java.util.HashMap mappaImmaginiComponent -> ao
+    java.util.HashMap imgVisibileMap -> ap
+    java.util.HashMap mappaPathImmagini -> aq
+    java.util.HashMap mappaPathAudio -> ar
+    java.util.HashMap mappaPathAudioDecibel -> as
+    java.util.HashMap mappaAudioAttribute -> at
+    java.util.HashMap mappaPathAudioLocation -> au
+    java.util.HashMap mappaDateComponent -> av
+    java.util.HashMap pointsViewDataComponent -> aw
+    java.util.HashMap chronoPointsComponent -> ax
+    java.util.HashMap chronoPointsIsRecording -> ay
+    java.util.HashMap mappaDateComponentId -> az
+    java.util.HashMap mappaCoordinates -> aA
+    java.util.HashMap mappaDeleteAudioButton -> aB
+    java.util.HashMap mappaDeleteImgButton -> aC
+    java.util.HashMap mappaAudioImgButton -> aD
+    int selectedDateComponentId -> aE
+    int selectedAudioCompId -> aF
+    boolean isDateChanged -> aG
+    int WIDTH -> aH
+    int HEIGHT -> aI
+    int deviceWidth -> aJ
+    int deviceHeight -> aK
+    android.widget.LinearLayout$LayoutParams layout_button_params -> aL
+    android.widget.ImageView logoBannerImg -> aM
+    java.util.HashMap mappaValoriAttributi -> aN
+    java.util.HashMap mandatoryFieldMap -> aO
+    java.util.HashMap errorFieldMap -> aP
+    android.widget.LinearLayout$LayoutParams titleViewParams -> aQ
+    it.zerofill.soundmapp.SurveyDetailActivity$WaitTask waitTask -> a
+    java.lang.String currentImageAttrIDComponentSelected -> aR
+    int currentImageIDComponentSelected -> aS
+    int maxPageNumber -> aT
+    int SpinnerID -> aU
+    int FreeTextID -> aV
+    int ImageComponentID -> aW
+    int AudioComponentID -> aX
+    int DateComponentID -> aY
+    int PointsComponentID -> aZ
+    int LineComponentID -> ba
+    int SingleImageComponentID -> bb
+    java.util.HashMap spinnerCompMap -> bc
+    java.util.HashMap freeTextCompMap -> bd
+    java.util.HashMap imageCompMap -> be
+    java.util.HashMap audioCompMap -> bf
+    java.util.HashMap pointsCompMap -> bg
+    java.util.HashMap recordsMap -> bh
+    android.widget.LinearLayout main -> bi
+    java.lang.String currentSurveyName -> bj
+    boolean isSnappedPicture -> bk
+    boolean isRecordedAudio -> bl
+    boolean isSingleImage -> bm
+    java.lang.String AUDIO_COMPONENT_DECIBEL -> bn
+    java.lang.String AUDIO_COMPONENT_LOCATION -> bo
+    java.lang.String AUDIO_COMPONENT_FILE -> bp
+    boolean finish -> bq
+    int tempImgToDeleteParam -> br
+    int tempAudioToDeleteParam -> bs
+    java.text.DecimalFormat df -> b
+    android.app.ProgressDialog dialog -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void init() -> b
+    void getConfigAttributes() -> c
+    void buttonsHandler() -> d
+    void onResume() -> onResume
+    void onResumeProcess() -> a
+    void compressImage() -> e
+    void deleteImage(int) -> c
+    void deleteAudio(int) -> d
+    void saveImageToXml() -> f
+    void setImage() -> g
+    void showNextImgView() -> h
+    void hideNextImgView(int) -> e
+    void snapPicture(int) -> f
+    void createTabs() -> i
+    android.view.View createView() -> j
+    void addSpinner(android.widget.LinearLayout,it.zerofill.soundmapp.models.AttributeType,it.zerofill.soundmapp.models.ObjValue) -> a
+    void addFreeText(android.widget.LinearLayout,it.zerofill.soundmapp.models.AttributeType,it.zerofill.soundmapp.models.ObjValue,java.lang.String) -> a
+    void addDate(android.widget.LinearLayout,it.zerofill.soundmapp.models.AttributeType,it.zerofill.soundmapp.models.ObjValue) -> b
+    void addLine(android.widget.LinearLayout,it.zerofill.soundmapp.models.AttributeType,it.zerofill.soundmapp.models.ObjValue) -> c
+    void addPoint(android.widget.LinearLayout,it.zerofill.soundmapp.models.AttributeType,it.zerofill.soundmapp.models.ObjValue) -> d
+    double[] getLocation(it.zerofill.soundmapp.views.GPSTracker) -> a
+    android.app.Dialog onCreateDialog(int) -> onCreateDialog
+    void addImage(android.widget.LinearLayout,it.zerofill.soundmapp.models.AttributeType,it.zerofill.soundmapp.models.ObjValue,boolean) -> a
+    void addSingleImage(android.widget.LinearLayout,it.zerofill.soundmapp.models.AttributeType,it.zerofill.soundmapp.models.ObjValue) -> e
+    java.util.HashMap getMapAudioAssociatedComponent(it.zerofill.soundmapp.models.AttributeType) -> a
+    void addAudio(android.widget.LinearLayout,it.zerofill.soundmapp.models.AttributeType) -> a
+    void extinOnCancel() -> k
+    void toBeClosed() -> l
+    void onBackPressed() -> onBackPressed
+    void showGenericAlert(java.lang.String,java.lang.String,boolean) -> a
+    void showDataDialog(java.lang.String) -> a
+    void showDeleteImageAlert(int) -> a
+    void showDeleteAudioAlert(int) -> b
+    java.util.HashMap getMapValueByColumnId() -> m
+    android.graphics.Bitmap decodeFile(java.io.File,boolean,boolean) -> a
+    boolean haveNetworkConnection() -> n
+    void updateDateDisplay() -> o
+    void updateDateView(android.widget.EditText,int,int,int) -> a
+    void showProgress(boolean) -> a
+    void showSendingProgress(boolean) -> b
+    void deleteFiles(java.io.File) -> a
+    void deleteSurvey() -> p
+    it.zerofill.soundmapp.models.Configuration access$0(it.zerofill.soundmapp.SurveyDetailActivity) -> a
+    boolean access$1(it.zerofill.soundmapp.SurveyDetailActivity) -> b
+    java.lang.String access$2(it.zerofill.soundmapp.SurveyDetailActivity) -> c
+    java.lang.String access$3(it.zerofill.soundmapp.SurveyDetailActivity) -> d
+    java.lang.String access$4(it.zerofill.soundmapp.SurveyDetailActivity) -> e
+    it.zerofill.soundmapp.controllers.FeatureParser access$5(it.zerofill.soundmapp.SurveyDetailActivity) -> f
+    void access$6(it.zerofill.soundmapp.SurveyDetailActivity,java.util.HashMap) -> a
+    java.util.HashMap access$7(it.zerofill.soundmapp.SurveyDetailActivity) -> g
+    java.util.HashMap access$8(it.zerofill.soundmapp.SurveyDetailActivity) -> h
+    boolean access$9(it.zerofill.soundmapp.SurveyDetailActivity) -> i
+    boolean access$10(it.zerofill.soundmapp.SurveyDetailActivity) -> j
+    java.lang.String access$11(it.zerofill.soundmapp.SurveyDetailActivity) -> k
+    java.lang.String access$12(it.zerofill.soundmapp.SurveyDetailActivity) -> l
+    void access$13(it.zerofill.soundmapp.SurveyDetailActivity,java.util.List) -> a
+    java.util.List access$14(it.zerofill.soundmapp.SurveyDetailActivity) -> m
+    void access$15(it.zerofill.soundmapp.SurveyDetailActivity,java.lang.String) -> a
+    void access$16(it.zerofill.soundmapp.SurveyDetailActivity,it.zerofill.soundmapp.SurveyDetailActivity$GetDescribeFeatureTask) -> a
+    void access$17(it.zerofill.soundmapp.SurveyDetailActivity,boolean) -> a
+    void access$18(it.zerofill.soundmapp.SurveyDetailActivity) -> n
+    void access$19(it.zerofill.soundmapp.SurveyDetailActivity) -> o
+    java.util.HashMap access$20(it.zerofill.soundmapp.SurveyDetailActivity) -> p
+    java.util.HashMap access$21(it.zerofill.soundmapp.SurveyDetailActivity) -> q
+    android.graphics.Bitmap access$22(it.zerofill.soundmapp.SurveyDetailActivity,java.io.File,boolean,boolean) -> a
+    java.lang.String access$23(it.zerofill.soundmapp.SurveyDetailActivity) -> r
+    java.util.HashMap access$24(it.zerofill.soundmapp.SurveyDetailActivity) -> s
+    int access$25(it.zerofill.soundmapp.SurveyDetailActivity) -> t
+    java.util.HashMap access$26(it.zerofill.soundmapp.SurveyDetailActivity) -> u
+    java.util.HashMap access$27(it.zerofill.soundmapp.SurveyDetailActivity,it.zerofill.soundmapp.models.AttributeType) -> a
+    java.lang.String access$28(it.zerofill.soundmapp.SurveyDetailActivity) -> v
+    java.lang.String access$29(it.zerofill.soundmapp.SurveyDetailActivity) -> w
+    void access$30(it.zerofill.soundmapp.SurveyDetailActivity,it.zerofill.soundmapp.SurveyDetailActivity$SaveFeatureTask) -> a
+    android.content.Context access$31(it.zerofill.soundmapp.SurveyDetailActivity) -> x
+    java.lang.String access$32(it.zerofill.soundmapp.SurveyDetailActivity) -> y
+    java.lang.String access$33(it.zerofill.soundmapp.SurveyDetailActivity) -> z
+    void access$34(it.zerofill.soundmapp.SurveyDetailActivity,it.zerofill.soundmapp.SurveyDetailActivity$SendDataTask) -> a
+    void access$35(it.zerofill.soundmapp.SurveyDetailActivity,boolean) -> b
+    void access$36(it.zerofill.soundmapp.SurveyDetailActivity,int) -> a
+    void access$37(it.zerofill.soundmapp.SurveyDetailActivity,int) -> b
+    void access$38(it.zerofill.soundmapp.SurveyDetailActivity,int) -> c
+    void access$39(it.zerofill.soundmapp.SurveyDetailActivity) -> A
+    java.util.HashMap access$40(it.zerofill.soundmapp.SurveyDetailActivity) -> B
+    it.zerofill.soundmapp.models.Layer access$41(it.zerofill.soundmapp.SurveyDetailActivity) -> C
+    it.zerofill.soundmapp.SurveyDetailActivity$SendDataTask access$42(it.zerofill.soundmapp.SurveyDetailActivity) -> D
+    android.view.View access$43(it.zerofill.soundmapp.SurveyDetailActivity) -> E
+    void access$44(it.zerofill.soundmapp.SurveyDetailActivity,java.lang.String) -> b
+    it.zerofill.soundmapp.SurveyDetailActivity$SaveFeatureTask access$45(it.zerofill.soundmapp.SurveyDetailActivity) -> F
+    void access$46(it.zerofill.soundmapp.SurveyDetailActivity) -> G
+    java.util.HashMap access$47(it.zerofill.soundmapp.SurveyDetailActivity) -> H
+    java.util.HashMap access$48(it.zerofill.soundmapp.SurveyDetailActivity) -> I
+    java.util.HashMap access$49(it.zerofill.soundmapp.SurveyDetailActivity) -> J
+    java.util.HashMap access$50(it.zerofill.soundmapp.SurveyDetailActivity) -> K
+    void access$51(it.zerofill.soundmapp.SurveyDetailActivity,int) -> d
+    void access$52(it.zerofill.soundmapp.SurveyDetailActivity,boolean) -> c
+    java.util.HashMap access$53(it.zerofill.soundmapp.SurveyDetailActivity) -> L
+    java.util.HashMap access$54(it.zerofill.soundmapp.SurveyDetailActivity) -> M
+    int access$55(it.zerofill.soundmapp.SurveyDetailActivity) -> N
+    java.util.HashMap access$56(it.zerofill.soundmapp.SurveyDetailActivity) -> O
+    int access$57(it.zerofill.soundmapp.SurveyDetailActivity) -> P
+    double[] access$58(it.zerofill.soundmapp.SurveyDetailActivity,it.zerofill.soundmapp.views.GPSTracker) -> a
+    java.util.HashMap access$59(it.zerofill.soundmapp.SurveyDetailActivity) -> Q
+    java.util.HashMap access$60(it.zerofill.soundmapp.SurveyDetailActivity) -> R
+    java.util.HashMap access$61(it.zerofill.soundmapp.SurveyDetailActivity) -> S
+    java.util.HashMap access$62(it.zerofill.soundmapp.SurveyDetailActivity) -> T
+    int access$63(it.zerofill.soundmapp.SurveyDetailActivity) -> U
+    int access$64(it.zerofill.soundmapp.SurveyDetailActivity) -> V
+    void access$65(it.zerofill.soundmapp.SurveyDetailActivity,boolean) -> d
+    void access$66(it.zerofill.soundmapp.SurveyDetailActivity,boolean) -> e
+    java.util.HashMap access$67(it.zerofill.soundmapp.SurveyDetailActivity) -> W
+    void access$68(it.zerofill.soundmapp.SurveyDetailActivity,java.lang.String) -> c
+    void access$69(it.zerofill.soundmapp.SurveyDetailActivity,int) -> e
+    void access$70(it.zerofill.soundmapp.SurveyDetailActivity,int) -> f
+    int access$71(it.zerofill.soundmapp.SurveyDetailActivity) -> X
+    int access$72(it.zerofill.soundmapp.SurveyDetailActivity) -> Y
+    int access$73(it.zerofill.soundmapp.SurveyDetailActivity) -> Z
+    void access$74(it.zerofill.soundmapp.SurveyDetailActivity,boolean) -> f
+    void access$75(it.zerofill.soundmapp.SurveyDetailActivity,int) -> g
+    int access$76(it.zerofill.soundmapp.SurveyDetailActivity) -> aa
+    java.util.HashMap access$77(it.zerofill.soundmapp.SurveyDetailActivity) -> ab
+    java.util.HashMap access$78(it.zerofill.soundmapp.SurveyDetailActivity) -> ac
+    java.util.HashMap access$79(it.zerofill.soundmapp.SurveyDetailActivity) -> ad
+    void access$80(it.zerofill.soundmapp.SurveyDetailActivity) -> ae
+    int access$81(it.zerofill.soundmapp.SurveyDetailActivity) -> af
+    void access$82(it.zerofill.soundmapp.SurveyDetailActivity,int) -> h
+    boolean access$83(it.zerofill.soundmapp.SurveyDetailActivity) -> ag
+    void access$84(it.zerofill.soundmapp.SurveyDetailActivity,int) -> i
+    int access$85(it.zerofill.soundmapp.SurveyDetailActivity) -> ah
+    void access$86(it.zerofill.soundmapp.SurveyDetailActivity,int) -> j
+    android.view.View access$87(it.zerofill.soundmapp.SurveyDetailActivity) -> ai
+    android.view.View access$88(it.zerofill.soundmapp.SurveyDetailActivity) -> aj
+    android.view.View access$89(it.zerofill.soundmapp.SurveyDetailActivity) -> ak
+it.zerofill.soundmapp.SurveyDetailActivity$1 -> it.zerofill.soundmapp.ag:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.SurveyDetailActivity$10 -> it.zerofill.soundmapp.ah:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+it.zerofill.soundmapp.SurveyDetailActivity$11 -> it.zerofill.soundmapp.ai:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+it.zerofill.soundmapp.SurveyDetailActivity$12 -> it.zerofill.soundmapp.aj:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onChronometerTick(android.widget.Chronometer) -> onChronometerTick
+it.zerofill.soundmapp.SurveyDetailActivity$13 -> it.zerofill.soundmapp.ak:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+it.zerofill.soundmapp.SurveyDetailActivity$14 -> it.zerofill.soundmapp.al:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+it.zerofill.soundmapp.SurveyDetailActivity$15 -> it.zerofill.soundmapp.am:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+it.zerofill.soundmapp.SurveyDetailActivity$16 -> it.zerofill.soundmapp.an:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+it.zerofill.soundmapp.SurveyDetailActivity$17 -> it.zerofill.soundmapp.ao:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+it.zerofill.soundmapp.SurveyDetailActivity$18 -> it.zerofill.soundmapp.ap:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+it.zerofill.soundmapp.SurveyDetailActivity$19 -> it.zerofill.soundmapp.aq:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+it.zerofill.soundmapp.SurveyDetailActivity$2 -> it.zerofill.soundmapp.ar:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onDateSet(android.widget.DatePicker,int,int,int) -> onDateSet
+it.zerofill.soundmapp.SurveyDetailActivity$20 -> it.zerofill.soundmapp.as:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+it.zerofill.soundmapp.SurveyDetailActivity$21 -> it.zerofill.soundmapp.at:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+it.zerofill.soundmapp.SurveyDetailActivity$22 -> it.zerofill.soundmapp.au:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+it.zerofill.soundmapp.SurveyDetailActivity$23 -> it.zerofill.soundmapp.av:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+it.zerofill.soundmapp.SurveyDetailActivity$24 -> it.zerofill.soundmapp.aw:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+it.zerofill.soundmapp.SurveyDetailActivity$25 -> it.zerofill.soundmapp.ax:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+it.zerofill.soundmapp.SurveyDetailActivity$26 -> it.zerofill.soundmapp.ay:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.SurveyDetailActivity$27 -> it.zerofill.soundmapp.az:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.SurveyDetailActivity$28 -> it.zerofill.soundmapp.ba:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.SurveyDetailActivity$29 -> it.zerofill.soundmapp.bb:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.SurveyDetailActivity$3 -> it.zerofill.soundmapp.bc:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+it.zerofill.soundmapp.SurveyDetailActivity$30 -> it.zerofill.soundmapp.bd:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.SurveyDetailActivity$31 -> it.zerofill.soundmapp.be:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.SurveyDetailActivity$32 -> it.zerofill.soundmapp.bf:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    boolean val$show -> b
+    void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
+it.zerofill.soundmapp.SurveyDetailActivity$33 -> it.zerofill.soundmapp.bg:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    boolean val$show -> b
+    void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
+it.zerofill.soundmapp.SurveyDetailActivity$34 -> it.zerofill.soundmapp.bh:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    boolean val$show -> b
+    void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
+it.zerofill.soundmapp.SurveyDetailActivity$35 -> it.zerofill.soundmapp.bi:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    boolean val$show -> b
+    void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
+it.zerofill.soundmapp.SurveyDetailActivity$4 -> it.zerofill.soundmapp.bj:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    android.view.View createTabContent(java.lang.String) -> createTabContent
+it.zerofill.soundmapp.SurveyDetailActivity$5 -> it.zerofill.soundmapp.bk:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onFocusChange(android.view.View,boolean) -> onFocusChange
+it.zerofill.soundmapp.SurveyDetailActivity$6 -> it.zerofill.soundmapp.bl:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void run() -> run
+it.zerofill.soundmapp.SurveyDetailActivity$7 -> it.zerofill.soundmapp.bm:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+it.zerofill.soundmapp.SurveyDetailActivity$8 -> it.zerofill.soundmapp.bn:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onFocusChange(android.view.View,boolean) -> onFocusChange
+it.zerofill.soundmapp.SurveyDetailActivity$9 -> it.zerofill.soundmapp.bo:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+it.zerofill.soundmapp.SurveyDetailActivity$GetDescribeFeatureTask -> it.zerofill.soundmapp.bp:
+    java.lang.String message -> b
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    java.lang.Boolean doInBackground(java.lang.Void[]) -> a
+    void onCancelled() -> onCancelled
+    void onPostExecute(java.lang.Boolean) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+it.zerofill.soundmapp.SurveyDetailActivity$SaveFeatureTask -> it.zerofill.soundmapp.bq:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    java.lang.Boolean doInBackground(java.lang.String[]) -> a
+    void onPostExecute(java.lang.Boolean) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+it.zerofill.soundmapp.SurveyDetailActivity$SaveFileTask -> it.zerofill.soundmapp.br:
+    int id -> b
+    boolean isImage -> c
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    java.lang.Boolean doInBackground(java.lang.String[]) -> a
+    void onPostExecute(java.lang.Boolean) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+it.zerofill.soundmapp.SurveyDetailActivity$SendDataTask -> it.zerofill.soundmapp.bs:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    void onPreExecute() -> onPreExecute
+    java.lang.Boolean doInBackground(java.lang.Void[]) -> a
+    void onProgressUpdate(java.lang.Integer[]) -> a
+    void onPostExecute(java.lang.Boolean) -> a
+    void onCancelled() -> onCancelled
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+    void onProgressUpdate(java.lang.Object[]) -> onProgressUpdate
+it.zerofill.soundmapp.SurveyDetailActivity$WaitTask -> it.zerofill.soundmapp.bt:
+    it.zerofill.soundmapp.SurveyDetailActivity this$0 -> a
+    java.lang.Boolean doInBackground(java.lang.Void[]) -> a
+    void onPostExecute(java.lang.Boolean) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+it.zerofill.soundmapp.SurveyListActivity -> it.zerofill.soundmapp.SurveyListActivity:
+    android.widget.LinearLayout formVariableFieldsLayout -> a
+    android.view.View loginStatusBar -> b
+    android.view.View mainScrollView -> c
+    android.content.Context mainContext -> d
+    it.zerofill.soundmapp.controllers.FeatureParser featureParser -> e
+    java.util.List listaValori -> f
+    java.util.HashMap recordsMapFromLocal -> g
+    it.zerofill.soundmapp.models.Configuration config -> h
+    java.lang.String layerName -> i
+    int WIDTH -> j
+    int HEIGHT -> k
+    int deviceWidth -> l
+    int deviceHeight -> m
+    int goImgButtonId_pressed -> n
+    int goImgButtonId -> o
+    int delImgButtonId_pressed -> p
+    int delImgButtonId -> q
+    android.widget.ImageView logoBannerImg -> r
+    java.lang.String pass -> s
+    java.lang.String firstAttributeForQuery -> t
+    it.zerofill.soundmapp.controllers.AssetsPropertyReader assetsPropertyReader -> u
+    java.util.Properties properties -> v
+    java.lang.String localFilePath -> w
+    java.lang.String loggedUser -> x
+    java.lang.String creatorField -> y
+    java.lang.String selectedSurveyId -> z
+    java.lang.String selectedSurveyName -> A
+    java.lang.String localDir -> B
+    java.lang.String imgDir -> C
+    java.lang.String soundDir -> D
+    java.lang.String localFileHandler -> E
+    it.zerofill.soundmapp.SurveyListActivity$GetSurveyNameTask getSurveyNameTask -> F
+    boolean hasError -> G
+    android.widget.LinearLayout$LayoutParams titleViewParams -> H
+    boolean finish -> I
+    java.util.HashMap mappaId -> J
+    java.util.HashMap mappaSurveyIDname -> K
+    java.util.HashMap mappaIslocal -> L
+    int viewId -> M
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void reloadView() -> a
+    void onResume() -> onResume
+    void onBackPressed() -> onBackPressed
+    void init() -> b
+    void showGenericAlert(java.lang.String,java.lang.String,boolean) -> a
+    void toBeClosed() -> c
+    void buttonHandler() -> d
+    void insertFieldIntoLayout() -> e
+    java.lang.String getNomeSurvey(it.zerofill.soundmapp.models.ObjRecord,java.lang.String) -> a
+    void createView(android.widget.LinearLayout$LayoutParams,java.util.List,boolean) -> a
+    void deleteSurvey() -> f
+    void deleteFiles(java.io.File) -> a
+    void showAlert(java.lang.String) -> a
+    boolean haveNetworkConnection() -> g
+    void showProgress(boolean) -> a
+    it.zerofill.soundmapp.models.Configuration access$0(it.zerofill.soundmapp.SurveyListActivity) -> a
+    boolean access$1(it.zerofill.soundmapp.SurveyListActivity) -> b
+    java.lang.String access$2(it.zerofill.soundmapp.SurveyListActivity) -> c
+    java.lang.String access$3(it.zerofill.soundmapp.SurveyListActivity) -> d
+    java.lang.String access$4(it.zerofill.soundmapp.SurveyListActivity) -> e
+    it.zerofill.soundmapp.controllers.FeatureParser access$5(it.zerofill.soundmapp.SurveyListActivity) -> f
+    java.lang.String access$6(it.zerofill.soundmapp.SurveyListActivity) -> g
+    void access$7(it.zerofill.soundmapp.SurveyListActivity,java.lang.String) -> a
+    java.lang.String access$8(it.zerofill.soundmapp.SurveyListActivity) -> h
+    void access$9(it.zerofill.soundmapp.SurveyListActivity,java.util.List) -> a
+    java.lang.String access$10(it.zerofill.soundmapp.SurveyListActivity) -> i
+    void access$11(it.zerofill.soundmapp.SurveyListActivity,java.util.HashMap) -> a
+    java.util.HashMap access$12(it.zerofill.soundmapp.SurveyListActivity) -> j
+    java.util.List access$13(it.zerofill.soundmapp.SurveyListActivity) -> k
+    void access$14(it.zerofill.soundmapp.SurveyListActivity,it.zerofill.soundmapp.SurveyListActivity$GetSurveyNameTask) -> a
+    void access$15(it.zerofill.soundmapp.SurveyListActivity,boolean) -> a
+    void access$16(it.zerofill.soundmapp.SurveyListActivity) -> l
+    void access$17(it.zerofill.soundmapp.SurveyListActivity) -> m
+    int access$18(it.zerofill.soundmapp.SurveyListActivity) -> n
+    int access$19(it.zerofill.soundmapp.SurveyListActivity) -> o
+    java.util.HashMap access$20(it.zerofill.soundmapp.SurveyListActivity) -> p
+    java.util.HashMap access$21(it.zerofill.soundmapp.SurveyListActivity) -> q
+    java.util.HashMap access$22(it.zerofill.soundmapp.SurveyListActivity) -> r
+    android.content.Context access$23(it.zerofill.soundmapp.SurveyListActivity) -> s
+    int access$24(it.zerofill.soundmapp.SurveyListActivity) -> t
+    int access$25(it.zerofill.soundmapp.SurveyListActivity) -> u
+    void access$26(it.zerofill.soundmapp.SurveyListActivity,java.lang.String) -> b
+    void access$27(it.zerofill.soundmapp.SurveyListActivity,java.lang.String) -> c
+    void access$28(it.zerofill.soundmapp.SurveyListActivity) -> v
+    android.view.View access$29(it.zerofill.soundmapp.SurveyListActivity) -> w
+    android.view.View access$30(it.zerofill.soundmapp.SurveyListActivity) -> x
+it.zerofill.soundmapp.SurveyListActivity$1 -> it.zerofill.soundmapp.bu:
+    it.zerofill.soundmapp.SurveyListActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.SurveyListActivity$2 -> it.zerofill.soundmapp.bv:
+    it.zerofill.soundmapp.SurveyListActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.SurveyListActivity$3 -> it.zerofill.soundmapp.bw:
+    it.zerofill.soundmapp.SurveyListActivity this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+it.zerofill.soundmapp.SurveyListActivity$4 -> it.zerofill.soundmapp.bx:
+    it.zerofill.soundmapp.SurveyListActivity this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+it.zerofill.soundmapp.SurveyListActivity$5 -> it.zerofill.soundmapp.by:
+    it.zerofill.soundmapp.SurveyListActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.SurveyListActivity$6 -> it.zerofill.soundmapp.bz:
+    it.zerofill.soundmapp.SurveyListActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.SurveyListActivity$8 -> it.zerofill.soundmapp.ca:
+    it.zerofill.soundmapp.SurveyListActivity this$0 -> a
+    boolean val$show -> b
+    void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
+it.zerofill.soundmapp.SurveyListActivity$9 -> it.zerofill.soundmapp.cb:
+    it.zerofill.soundmapp.SurveyListActivity this$0 -> a
+    boolean val$show -> b
+    void onAnimationEnd(android.animation.Animator) -> onAnimationEnd
+it.zerofill.soundmapp.SurveyListActivity$GetSurveyNameTask -> it.zerofill.soundmapp.cc:
+    java.lang.String message -> b
+    it.zerofill.soundmapp.SurveyListActivity this$0 -> a
+    java.lang.Boolean doInBackground(java.lang.Void[]) -> a
+    void onCancelled() -> onCancelled
+    void onPostExecute(java.lang.Boolean) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+it.zerofill.soundmapp.controllers.AssetsPropertyReader -> it.zerofill.soundmapp.a.a:
+    android.content.Context context -> a
+    java.util.Properties properties -> b
+    java.util.Properties getProperties(java.lang.String) -> a
+it.zerofill.soundmapp.controllers.AttributesExtractor -> it.zerofill.soundmapp.a.b:
+    java.util.HashMap firstAttributeForQueryMap -> a
+    it.zerofill.soundmapp.controllers.AttributesExtractor instance -> b
+    it.zerofill.soundmapp.controllers.AttributesExtractor getInstance() -> a
+    java.util.List getConfigurationsName(java.lang.String) -> a
+    java.util.HashMap getAttrbiutes(java.lang.String) -> b
+    java.util.List getSortedAttributes(java.util.List) -> a
+    int getMaxPageNumber(it.zerofill.soundmapp.models.Layer) -> a
+it.zerofill.soundmapp.controllers.AuthenticationException -> it.zerofill.soundmapp.a.c:
+    int errorCode -> a
+    int getErrorCode() -> a
+it.zerofill.soundmapp.controllers.EncodeSaveFile -> it.zerofill.soundmapp.a.d:
+    void save(java.lang.String,java.lang.String) -> a
+    java.lang.String getEncodedString(java.lang.String) -> a
+it.zerofill.soundmapp.controllers.FeatureParser -> it.zerofill.soundmapp.a.e:
+    it.zerofill.soundmapp.controllers.AssetsPropertyReader assetsPropertyReader -> a
+    java.util.Properties properties -> b
+    java.lang.String LOCAL_PATH -> c
+    java.lang.String BASE_PATH -> d
+    java.lang.String GET_CAPABILITIES_FILE_NAME -> e
+    java.util.List FeatureElementAttributeList -> f
+    java.util.HashMap recordListByName -> g
+    java.util.List parseGetCapabilitesFile(java.util.List) -> a
+    java.util.HashMap parseDescribeFeature(java.lang.String) -> a
+    void getElement(org.w3c.dom.NodeList,java.lang.String) -> a
+    java.util.List parseGetFeatureFile(java.util.List,boolean,java.lang.String) -> a
+    java.util.List getData(org.w3c.dom.NodeList,java.lang.String,boolean) -> a
+it.zerofill.soundmapp.controllers.FileEncryptor -> it.zerofill.soundmapp.a.f:
+    java.lang.String EncryptionAlgorithm -> a
+    void createEncryptedFile(java.lang.String) -> a
+    void addUSer(java.lang.String,java.lang.String,java.lang.String) -> a
+    java.lang.String getPass(java.lang.String,java.lang.String) -> a
+    java.lang.String getUser(java.lang.String) -> b
+    void emptyFile(java.lang.String) -> c
+    void encrypt(java.lang.String) -> d
+    void decrypt(java.lang.String) -> e
+it.zerofill.soundmapp.controllers.GetXmlFromGeoserver -> it.zerofill.soundmapp.a.g:
+    java.lang.String BASE_URL -> a
+    java.lang.String BASE_PATH -> b
+    java.lang.String GET_CAPABILITIES_FILE_NAME -> c
+    void getCapabilites(java.lang.String,java.lang.String,java.lang.String) -> a
+    void getDescribeFeatureType(java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
+    void getFeature(java.lang.String,java.util.List,java.lang.String,boolean,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
+it.zerofill.soundmapp.controllers.LocalFileHandler -> it.zerofill.soundmapp.a.h:
+    void addSurvey(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
+    void removeSurvey(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> b
+    void updateName(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> c
+    java.util.HashMap getFilePathByUser(java.lang.String,java.lang.String,java.lang.String) -> a
+it.zerofill.soundmapp.controllers.SurveyXmlBuilder -> it.zerofill.soundmapp.a.i:
+    java.lang.String HEADER -> a
+    java.lang.String FOOTER -> b
+    void createFile(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
+    void insertUpdate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,boolean,java.lang.String,java.lang.String) -> a
+it.zerofill.soundmapp.models.AttributeType -> it.zerofill.soundmapp.b.a:
+    java.lang.String id -> a
+    java.lang.String name -> b
+    int ordinal -> c
+    int page -> d
+    java.lang.String type -> e
+    boolean isNullable -> f
+    java.util.List typeConfig -> g
+    java.lang.String getName() -> a
+    void setName(java.lang.String) -> a
+    int getOrdinal() -> b
+    void setOrdinal(int) -> a
+    int getPage() -> c
+    void setPage(int) -> b
+    java.lang.String getId() -> d
+    java.lang.String getType() -> e
+    void setType(java.lang.String) -> b
+    java.util.List getTypeConfig() -> f
+    void setTypeConfig(java.util.List) -> a
+    void setNullable(java.lang.String) -> c
+    boolean isNullable() -> g
+it.zerofill.soundmapp.models.Configuration -> it.zerofill.soundmapp.b.b:
+    java.lang.String name -> a
+    java.util.HashMap urls -> b
+    java.util.List nameSpace -> c
+    java.util.List regConfig -> d
+    java.util.List layers -> e
+    java.lang.String getName() -> a
+    void setName(java.lang.String) -> a
+    java.util.HashMap getUrls() -> b
+    void setUrls(java.util.HashMap) -> a
+    java.util.List getRegConfig() -> c
+    void setRegConfig(java.util.List) -> a
+    java.util.List getLayers() -> d
+    it.zerofill.soundmapp.models.Layer getLayerByName(java.lang.String) -> b
+    void setLayers(java.util.List) -> b
+    java.util.List getNameSpace() -> e
+    void setNameSpace(java.util.List) -> c
+it.zerofill.soundmapp.models.FeatureElementAttribute -> it.zerofill.soundmapp.b.c:
+    java.lang.String name -> a
+    java.lang.String type -> b
+    boolean isNullable -> c
+    java.lang.String getName() -> a
+    boolean isNullable() -> b
+    void setNullable(boolean) -> a
+it.zerofill.soundmapp.models.Layer -> it.zerofill.soundmapp.b.d:
+    java.lang.String id -> a
+    java.lang.String name -> b
+    java.util.List attributes -> c
+    java.lang.String getName() -> a
+    void setName(java.lang.String) -> a
+    java.util.List getAttributes() -> b
+    void setAttributes(java.util.List) -> a
+    void setId(java.lang.String) -> b
+    java.util.HashMap getAttributesMap() -> c
+    java.lang.String getKeyColumn() -> d
+    java.lang.String getNameColumn() -> e
+    java.lang.String getCreatorolumn() -> f
+    java.util.HashMap getAttributesMapByPage() -> g
+it.zerofill.soundmapp.models.Layer$1 -> it.zerofill.soundmapp.b.e:
+    it.zerofill.soundmapp.models.Layer this$0 -> a
+    int compare(it.zerofill.soundmapp.models.AttributeType,it.zerofill.soundmapp.models.AttributeType) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+it.zerofill.soundmapp.models.ObjFeature -> it.zerofill.soundmapp.b.f:
+    java.lang.String featureName -> b
+    java.util.List records -> a
+    void setFeatureName(java.lang.String) -> a
+    java.util.List getRecords() -> a
+    void setRecords(java.util.List) -> a
+it.zerofill.soundmapp.models.ObjRecord -> it.zerofill.soundmapp.b.g:
+    java.lang.String id -> a
+    java.util.List values -> b
+    java.lang.String getId() -> a
+    void setId(java.lang.String) -> a
+    java.util.List getValues() -> b
+    void setValues(java.util.List) -> a
+it.zerofill.soundmapp.models.ObjValue -> it.zerofill.soundmapp.b.h:
+    java.lang.String column_name -> a
+    java.lang.String value -> b
+    java.lang.String getColumn_name() -> a
+    void setColumn_name(java.lang.String) -> a
+    java.lang.String getValue() -> b
+    void setValue(java.lang.String) -> b
+it.zerofill.soundmapp.views.AudioAnalyzer -> it.zerofill.soundmapp.views.a:
+    int mSampleRate -> a
+    int mAudioSource -> b
+    int mChannelConfig -> c
+    int mAudioFormat -> d
+    it.zerofill.soundmapp.views.AudioAnalyzerListener mListener -> e
+    java.lang.Thread mThread -> f
+    boolean mRunning -> g
+    java.io.FileOutputStream os -> h
+    short[] sData -> i
+    int BufferElements2Rec -> j
+    int BytesPerElement -> k
+    android.media.AudioRecord recorder -> l
+    int mTotalSamples -> m
+    void start(java.lang.String) -> a
+    void stop() -> a
+    void run() -> run
+    byte[] short2byte(short[]) -> a
+it.zerofill.soundmapp.views.AudioAnalyzerListener -> it.zerofill.soundmapp.views.b:
+    void processAudioFrame(short[]) -> a
+it.zerofill.soundmapp.views.BarLevelDrawable -> it.zerofill.soundmapp.views.BarLevelDrawable:
+    android.graphics.drawable.ShapeDrawable mDrawable -> c
+    double mLevel -> d
+    int[] segmentColors -> a
+    int segmentOffColor -> b
+    void setLevel(double) -> setLevel
+    double getLevel() -> getLevel
+    void initBarLevelDrawable() -> a
+    void drawBar(android.graphics.Canvas) -> a
+    void onDraw(android.graphics.Canvas) -> onDraw
+it.zerofill.soundmapp.views.GPSTracker -> it.zerofill.soundmapp.views.c:
+    android.content.Context mContext -> h
+    boolean isGPSEnabled -> a
+    boolean isNetworkEnabled -> b
+    boolean canGetLocation -> c
+    android.location.Location location -> d
+    double latitude -> e
+    double longitude -> f
+    android.location.LocationManager locationManager -> g
+    android.location.Location getLocation() -> a
+    double getLatitude() -> b
+    double getLongitude() -> c
+    boolean canGetLocation() -> d
+    void showSettingsAlert() -> e
+    void onLocationChanged(android.location.Location) -> onLocationChanged
+    void onProviderDisabled(java.lang.String) -> onProviderDisabled
+    void onProviderEnabled(java.lang.String) -> onProviderEnabled
+    void onStatusChanged(java.lang.String,int,android.os.Bundle) -> onStatusChanged
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+    android.content.Context access$0(it.zerofill.soundmapp.views.GPSTracker) -> a
+it.zerofill.soundmapp.views.GPSTracker$1 -> it.zerofill.soundmapp.views.d:
+    it.zerofill.soundmapp.views.GPSTracker this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+it.zerofill.soundmapp.views.GPSTracker$2 -> it.zerofill.soundmapp.views.e:
+    it.zerofill.soundmapp.views.GPSTracker this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+org.acra.ACRA -> a.a.a:
+    java.lang.String LOG_TAG -> a
+    org.acra.log.ACRALog log -> b
+    android.app.Application mApplication -> c
+    org.acra.annotation.ReportsCrashes mReportsCrashes -> d
+    org.acra.ErrorReporter errorReporterSingleton -> e
+    android.content.SharedPreferences$OnSharedPreferenceChangeListener mPrefListener -> f
+    org.acra.ACRAConfiguration configProxy -> g
+    void init(android.app.Application) -> a
+    org.acra.ErrorReporter getErrorReporter() -> a
+    boolean shouldDisableACRA(android.content.SharedPreferences) -> b
+    void checkCrashResources() -> b
+    android.content.SharedPreferences getACRASharedPreferences() -> c
+    org.acra.ACRAConfiguration getConfig() -> d
+    org.acra.ACRAConfiguration getNewDefaultConfig(android.app.Application) -> b
+    boolean isDebuggable() -> e
+    android.app.Application getApplication() -> f
+    boolean access$000(android.content.SharedPreferences) -> a
+org.acra.ACRA$1 -> a.a.b:
+    void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String) -> onSharedPreferenceChanged
+org.acra.ACRA$2 -> a.a.c:
+    int[] $SwitchMap$org$acra$ReportingInteractionMode -> a
+org.acra.ACRAConfiguration -> a.a.d:
+    java.lang.String[] mAdditionalDropboxTags -> a
+    java.lang.String[] mAdditionalSharedPreferences -> b
+    java.lang.Integer mConnectionTimeout -> c
+    org.acra.ReportField[] mCustomReportContent -> d
+    java.lang.Boolean mDeleteUnapprovedReportsOnApplicationStart -> e
+    java.lang.Boolean mDeleteOldUnsentReportsOnApplicationStart -> f
+    java.lang.Integer mDropboxCollectionMinutes -> g
+    java.lang.Boolean mForceCloseDialogAfterToast -> h
+    java.lang.String mFormKey -> i
+    java.lang.String mFormUri -> j
+    java.lang.String mFormUriBasicAuthLogin -> k
+    java.lang.String mFormUriBasicAuthPassword -> l
+    java.lang.Boolean mIncludeDropboxSystemTags -> m
+    java.lang.String[] mLogcatArguments -> n
+    java.lang.String mMailTo -> o
+    java.lang.Integer mMaxNumberOfRequestRetries -> p
+    org.acra.ReportingInteractionMode mMode -> q
+    org.acra.annotation.ReportsCrashes mReportsCrashes -> r
+    java.lang.Integer mResDialogCommentPrompt -> s
+    java.lang.Integer mResDialogEmailPrompt -> t
+    java.lang.Integer mResDialogIcon -> u
+    java.lang.Integer mResDialogOkToast -> v
+    java.lang.Integer mResDialogText -> w
+    java.lang.Integer mResDialogTitle -> x
+    java.lang.Integer mResNotifIcon -> y
+    java.lang.Integer mResNotifText -> z
+    java.lang.Integer mResNotifTickerText -> A
+    java.lang.Integer mResNotifTitle -> B
+    java.lang.Integer mResToastText -> C
+    java.lang.Integer mSharedPreferenceMode -> D
+    java.lang.String mSharedPreferenceName -> E
+    java.lang.Integer mSocketTimeout -> F
+    java.lang.Boolean mLogcatFilterByPid -> G
+    java.lang.Boolean mSendReportsInDevMode -> H
+    java.lang.String[] mExcludeMatchingSharedPreferencesKeys -> I
+    java.lang.String[] mExcludeMatchingSettingsKeys -> J
+    java.lang.String mApplicationLogFile -> K
+    java.lang.Integer mApplicationLogFileLines -> L
+    java.lang.String mGoogleFormUrlFormat -> M
+    java.lang.Boolean mDisableSSLCertValidation -> N
+    org.acra.sender.HttpSender$Method mHttpMethod -> O
+    org.acra.sender.HttpSender$Type mReportType -> P
+    java.util.Map mHttpHeaders -> Q
+    java.util.Map getHttpHeaders() -> a
+    java.lang.String[] additionalDropBoxTags() -> b
+    java.lang.String[] additionalSharedPreferences() -> c
+    java.lang.Class annotationType() -> annotationType
+    int connectionTimeout() -> d
+    org.acra.ReportField[] customReportContent() -> e
+    boolean deleteUnapprovedReportsOnApplicationStart() -> f
+    boolean deleteOldUnsentReportsOnApplicationStart() -> g
+    int dropboxCollectionMinutes() -> h
+    boolean forceCloseDialogAfterToast() -> i
+    java.lang.String formKey() -> j
+    java.lang.String formUri() -> k
+    java.lang.String formUriBasicAuthLogin() -> l
+    java.lang.String formUriBasicAuthPassword() -> m
+    boolean includeDropBoxSystemTags() -> n
+    java.lang.String[] logcatArguments() -> o
+    java.lang.String mailTo() -> p
+    int maxNumberOfRequestRetries() -> q
+    org.acra.ReportingInteractionMode mode() -> r
+    int resDialogCommentPrompt() -> s
+    int resDialogEmailPrompt() -> t
+    int resDialogIcon() -> u
+    int resDialogOkToast() -> v
+    int resDialogText() -> w
+    int resDialogTitle() -> x
+    int resNotifIcon() -> y
+    int resNotifText() -> z
+    int resNotifTickerText() -> A
+    int resNotifTitle() -> B
+    int resToastText() -> C
+    int sharedPreferencesMode() -> D
+    java.lang.String sharedPreferencesName() -> E
+    int socketTimeout() -> F
+    boolean logcatFilterByPid() -> G
+    boolean sendReportsInDevMode() -> H
+    java.lang.String[] excludeMatchingSharedPreferencesKeys() -> I
+    java.lang.String[] excludeMatchingSettingsKeys() -> J
+    java.lang.String applicationLogFile() -> K
+    int applicationLogFileLines() -> L
+    java.lang.String googleFormUrlFormat() -> M
+    boolean disableSSLCertValidation() -> N
+    org.acra.sender.HttpSender$Method httpMethod() -> O
+    org.acra.sender.HttpSender$Type reportType() -> P
+    boolean isNull(java.lang.String) -> a
+org.acra.ACRAConfigurationException -> a.a.e:
+org.acra.ACRAConstants -> a.a.f:
+    java.lang.String SILENT_SUFFIX -> a
+    org.acra.ReportField[] DEFAULT_MAIL_REPORT_FIELDS -> b
+    org.acra.ReportField[] DEFAULT_REPORT_FIELDS -> c
+org.acra.CrashReportDialog -> a.a.g:
+    android.content.SharedPreferences prefs -> c
+    android.widget.EditText userComment -> d
+    android.widget.EditText userEmail -> e
+    java.lang.String mReportFileName -> a
+    android.app.AlertDialog mDialog -> b
+    void onCreate(android.os.Bundle) -> onCreate
+    android.view.View buildCustomView(android.os.Bundle) -> a
+    void cancelNotification() -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+    void cancelReports() -> b
+    void sendCrash() -> c
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    void onDismiss(android.content.DialogInterface) -> onDismiss
+org.acra.CrashReportFileNameParser -> a.a.h:
+    boolean isSilent(java.lang.String) -> a
+    boolean isApproved(java.lang.String) -> b
+org.acra.CrashReportFinder -> a.a.i:
+    android.content.Context context -> a
+    java.lang.String[] getCrashReportFiles() -> a
+org.acra.CrashReportFinder$1 -> a.a.j:
+    org.acra.CrashReportFinder this$0 -> a
+    boolean accept(java.io.File,java.lang.String) -> accept
+org.acra.CrashReportPersister -> a.a.k:
+    android.content.Context context -> a
+    org.acra.collector.CrashReportData load(java.lang.String) -> a
+    void store(org.acra.collector.CrashReportData,java.lang.String) -> a
+    boolean isEbcdic(java.io.BufferedInputStream) -> a
+    org.acra.collector.CrashReportData load(java.io.Reader) -> a
+    void dumpString(java.lang.StringBuilder,java.lang.String,boolean) -> a
+org.acra.ErrorReporter -> a.a.l:
+    boolean enabled -> a
+    android.app.Application mContext -> b
+    android.content.SharedPreferences prefs -> c
+    java.util.List mReportSenders -> d
+    org.acra.collector.CrashReportDataFactory crashReportDataFactory -> e
+    org.acra.CrashReportFileNameParser fileNameParser -> f
+    java.lang.Thread$UncaughtExceptionHandler mDfltExceptionHandler -> g
+    java.lang.Thread brokenThread -> h
+    java.lang.Throwable unhandledThrowable -> i
+    android.app.Activity lastActivityCreated -> j
+    boolean toastWaitEnded -> k
+    int mNotificationCounter -> l
+    void addReportSender(org.acra.sender.ReportSender) -> a
+    void removeAllReportSenders() -> a
+    void setReportSender(org.acra.sender.ReportSender) -> b
+    void uncaughtException(java.lang.Thread,java.lang.Throwable) -> uncaughtException
+    void endApplication() -> f
+    void setEnabled(boolean) -> a
+    org.acra.SendWorker startSendingReports(boolean,boolean) -> a
+    void deletePendingReports() -> b
+    void checkReportsOnApplicationStart() -> c
+    void deletePendingNonApprovedReports(boolean) -> b
+    void handleException(java.lang.Throwable,org.acra.ReportingInteractionMode,boolean,boolean) -> a
+    void notifyDialog(java.lang.String) -> a
+    void notifySendReport(java.lang.String) -> b
+    java.lang.String getReportFileName(org.acra.collector.CrashReportData) -> a
+    void saveCrashReportFile(java.lang.String,org.acra.collector.CrashReportData) -> a
+    java.lang.String getLatestNonSilentReport(java.lang.String[]) -> a
+    void deletePendingReports(boolean,boolean,int) -> a
+    boolean containsOnlySilentOrApprovedReports(java.lang.String[]) -> b
+    void setDefaultReportSenders() -> d
+    android.app.Activity access$002(org.acra.ErrorReporter,android.app.Activity) -> a
+    android.app.Application access$100(org.acra.ErrorReporter) -> a
+    boolean access$202(boolean) -> c
+    boolean access$200() -> e
+    void access$300(org.acra.ErrorReporter) -> b
+org.acra.ErrorReporter$1 -> a.a.m:
+    org.acra.ErrorReporter this$0 -> a
+    void onActivityCreated(android.app.Activity,android.os.Bundle) -> a
+    void onActivityStarted(android.app.Activity) -> a
+    void onActivityResumed(android.app.Activity) -> b
+    void onActivityPaused(android.app.Activity) -> c
+    void onActivityStopped(android.app.Activity) -> d
+    void onActivitySaveInstanceState(android.app.Activity,android.os.Bundle) -> b
+    void onActivityDestroyed(android.app.Activity) -> e
+org.acra.ErrorReporter$2 -> a.a.n:
+    org.acra.ErrorReporter this$0 -> a
+    void run() -> run
+org.acra.ErrorReporter$3 -> a.a.o:
+    org.acra.ErrorReporter this$0 -> a
+    void run() -> run
+org.acra.ErrorReporter$4 -> a.a.p:
+    org.acra.SendWorker val$worker -> a
+    boolean val$showDirectDialog -> b
+    java.lang.String val$reportFileName -> c
+    boolean val$endApplication -> d
+    org.acra.ErrorReporter this$0 -> e
+    void run() -> run
+org.acra.ReportField -> a.a.q:
+    org.acra.ReportField REPORT_ID -> a
+    org.acra.ReportField APP_VERSION_CODE -> b
+    org.acra.ReportField APP_VERSION_NAME -> c
+    org.acra.ReportField PACKAGE_NAME -> d
+    org.acra.ReportField FILE_PATH -> e
+    org.acra.ReportField PHONE_MODEL -> f
+    org.acra.ReportField ANDROID_VERSION -> g
+    org.acra.ReportField BUILD -> h
+    org.acra.ReportField BRAND -> i
+    org.acra.ReportField PRODUCT -> j
+    org.acra.ReportField TOTAL_MEM_SIZE -> k
+    org.acra.ReportField AVAILABLE_MEM_SIZE -> l
+    org.acra.ReportField CUSTOM_DATA -> m
+    org.acra.ReportField STACK_TRACE -> n
+    org.acra.ReportField INITIAL_CONFIGURATION -> o
+    org.acra.ReportField CRASH_CONFIGURATION -> p
+    org.acra.ReportField DISPLAY -> q
+    org.acra.ReportField USER_COMMENT -> r
+    org.acra.ReportField USER_APP_START_DATE -> s
+    org.acra.ReportField USER_CRASH_DATE -> t
+    org.acra.ReportField DUMPSYS_MEMINFO -> u
+    org.acra.ReportField DROPBOX -> v
+    org.acra.ReportField LOGCAT -> w
+    org.acra.ReportField EVENTSLOG -> x
+    org.acra.ReportField RADIOLOG -> y
+    org.acra.ReportField IS_SILENT -> z
+    org.acra.ReportField DEVICE_ID -> A
+    org.acra.ReportField INSTALLATION_ID -> B
+    org.acra.ReportField USER_EMAIL -> C
+    org.acra.ReportField DEVICE_FEATURES -> D
+    org.acra.ReportField ENVIRONMENT -> E
+    org.acra.ReportField SETTINGS_SYSTEM -> F
+    org.acra.ReportField SETTINGS_SECURE -> G
+    org.acra.ReportField SETTINGS_GLOBAL -> H
+    org.acra.ReportField SHARED_PREFERENCES -> I
+    org.acra.ReportField APPLICATION_LOG -> J
+    org.acra.ReportField MEDIA_CODEC_LIST -> K
+    org.acra.ReportField THREAD_DETAILS -> L
+    org.acra.ReportField USER_IP -> M
+    org.acra.ReportField[] $VALUES -> N
+    org.acra.ReportField[] values() -> values
+    org.acra.ReportField valueOf(java.lang.String) -> valueOf
+    boolean containsKeyValuePairs() -> a
+org.acra.ReportField$1 -> a.a.r:
+    boolean containsKeyValuePairs() -> a
+org.acra.ReportField$10 -> a.a.s:
+    boolean containsKeyValuePairs() -> a
+org.acra.ReportField$11 -> a.a.t:
+    boolean containsKeyValuePairs() -> a
+org.acra.ReportField$2 -> a.a.u:
+    boolean containsKeyValuePairs() -> a
+org.acra.ReportField$3 -> a.a.v:
+    boolean containsKeyValuePairs() -> a
+org.acra.ReportField$4 -> a.a.w:
+    boolean containsKeyValuePairs() -> a
+org.acra.ReportField$5 -> a.a.x:
+    boolean containsKeyValuePairs() -> a
+org.acra.ReportField$6 -> a.a.y:
+    boolean containsKeyValuePairs() -> a
+org.acra.ReportField$7 -> a.a.z:
+    boolean containsKeyValuePairs() -> a
+org.acra.ReportField$8 -> a.a.aa:
+    boolean containsKeyValuePairs() -> a
+org.acra.ReportField$9 -> a.a.ab:
+    boolean containsKeyValuePairs() -> a
+org.acra.ReportingInteractionMode -> a.a.ac:
+    org.acra.ReportingInteractionMode SILENT -> a
+    org.acra.ReportingInteractionMode NOTIFICATION -> b
+    org.acra.ReportingInteractionMode TOAST -> c
+    org.acra.ReportingInteractionMode DIALOG -> d
+    org.acra.ReportingInteractionMode[] $VALUES -> e
+    org.acra.ReportingInteractionMode[] values() -> values
+    org.acra.ReportingInteractionMode valueOf(java.lang.String) -> valueOf
+org.acra.SendWorker -> a.a.ad:
+    android.content.Context context -> a
+    boolean sendOnlySilentReports -> b
+    boolean approvePendingReports -> c
+    org.acra.CrashReportFileNameParser fileNameParser -> d
+    java.util.List reportSenders -> e
+    void run() -> run
+    void approvePendingReports() -> a
+    void checkAndSendReports(android.content.Context,boolean) -> a
+    void sendCrashReport(org.acra.collector.CrashReportData) -> a
+    void deleteFile(android.content.Context,java.lang.String) -> a
+org.acra.annotation.ReportsCrashes -> a.a.a.a:
+    java.lang.String formKey() -> j
+    java.lang.String formUri() -> k
+    org.acra.ReportingInteractionMode mode() -> r
+    int resDialogCommentPrompt() -> s
+    int resDialogEmailPrompt() -> t
+    int resDialogIcon() -> u
+    int resDialogOkToast() -> v
+    int resDialogText() -> w
+    int resDialogTitle() -> x
+    int resNotifIcon() -> y
+    int resNotifText() -> z
+    int resNotifTickerText() -> A
+    int resNotifTitle() -> B
+    int resToastText() -> C
+    java.lang.String sharedPreferencesName() -> E
+    int sharedPreferencesMode() -> D
+    boolean includeDropBoxSystemTags() -> n
+    java.lang.String[] additionalDropBoxTags() -> b
+    int dropboxCollectionMinutes() -> h
+    java.lang.String[] logcatArguments() -> o
+    java.lang.String formUriBasicAuthLogin() -> l
+    java.lang.String formUriBasicAuthPassword() -> m
+    org.acra.ReportField[] customReportContent() -> e
+    java.lang.String mailTo() -> p
+    boolean deleteUnapprovedReportsOnApplicationStart() -> f
+    boolean deleteOldUnsentReportsOnApplicationStart() -> g
+    int connectionTimeout() -> d
+    int socketTimeout() -> F
+    int maxNumberOfRequestRetries() -> q
+    boolean forceCloseDialogAfterToast() -> i
+    java.lang.String[] additionalSharedPreferences() -> c
+    boolean logcatFilterByPid() -> G
+    boolean sendReportsInDevMode() -> H
+    java.lang.String[] excludeMatchingSharedPreferencesKeys() -> I
+    java.lang.String[] excludeMatchingSettingsKeys() -> J
+    java.lang.String applicationLogFile() -> K
+    int applicationLogFileLines() -> L
+    java.lang.String googleFormUrlFormat() -> M
+    boolean disableSSLCertValidation() -> N
+    org.acra.sender.HttpSender$Method httpMethod() -> O
+    org.acra.sender.HttpSender$Type reportType() -> P
+org.acra.collector.Compatibility -> a.a.b.a:
+    int getAPILevel() -> a
+    java.lang.String getDropBoxServiceName() -> b
+org.acra.collector.ConfigurationCollector -> a.a.b.b:
+    android.util.SparseArray mHardKeyboardHiddenValues -> a
+    android.util.SparseArray mKeyboardValues -> b
+    android.util.SparseArray mKeyboardHiddenValues -> c
+    android.util.SparseArray mNavigationValues -> d
+    android.util.SparseArray mNavigationHiddenValues -> e
+    android.util.SparseArray mOrientationValues -> f
+    android.util.SparseArray mScreenLayoutValues -> g
+    android.util.SparseArray mTouchScreenValues -> h
+    android.util.SparseArray mUiModeValues -> i
+    java.util.HashMap mValueArrays -> j
+    java.lang.String toString(android.content.res.Configuration) -> a
+    java.lang.String getFieldValueName(android.content.res.Configuration,java.lang.reflect.Field) -> a
+    java.lang.String activeFlags(android.util.SparseArray,int) -> a
+    java.lang.String collectConfiguration(android.content.Context) -> a
+org.acra.collector.CrashReportData -> a.a.b.c:
+    java.lang.String getProperty(org.acra.ReportField) -> a
+    org.json.JSONObject toJSON() -> a
+org.acra.collector.CrashReportDataFactory -> a.a.b.d:
+    android.content.Context context -> a
+    android.content.SharedPreferences prefs -> b
+    java.util.Map customParameters -> c
+    android.text.format.Time appStartDate -> d
+    java.lang.String initialConfiguration -> e
+    org.acra.collector.CrashReportData createCrashData(java.lang.Throwable,boolean,java.lang.Thread) -> a
+    java.lang.String createCustomInfoString() -> a
+    java.lang.String getStackTrace(java.lang.Throwable) -> a
+    java.util.List getReportFields() -> b
+org.acra.collector.DeviceFeaturesCollector -> a.a.b.e:
+    java.lang.String getFeatures(android.content.Context) -> a
+org.acra.collector.DisplayManagerCollector -> a.a.b.f:
+    android.util.SparseArray mFlagsNames -> a
+    android.util.SparseArray mDensities -> b
+    java.lang.String collectDisplays(android.content.Context) -> a
+    java.lang.Object collectDisplayData(android.view.Display) -> a
+    java.lang.Object collectIsValid(android.view.Display) -> b
+    java.lang.Object collectRotation(android.view.Display) -> c
+    java.lang.Object collectRectSize(android.view.Display) -> d
+    java.lang.Object collectSize(android.view.Display,java.lang.String) -> a
+    java.lang.String collectCurrentSizeRange(android.view.Display) -> e
+    java.lang.String collectFlags(android.view.Display) -> f
+    java.lang.String collectName(android.view.Display) -> g
+    java.lang.Object collectMetrics(android.view.Display,java.lang.String) -> b
+    java.lang.String activeFlags(android.util.SparseArray,int) -> a
+org.acra.collector.DropBoxCollector -> a.a.b.g:
+    java.lang.String[] SYSTEM_TAGS -> a
+    java.lang.String read(android.content.Context,java.lang.String[]) -> a
+org.acra.collector.DumpSysCollector -> a.a.b.h:
+    java.lang.String collectMemInfo() -> a
+org.acra.collector.LogCatCollector -> a.a.b.i:
+    java.lang.String collectLogCat(java.lang.String) -> a
+org.acra.collector.LogCatCollector$1 -> a.a.b.j:
+    java.lang.Process val$process -> a
+    void run() -> run
+org.acra.collector.LogFileCollector -> a.a.b.k:
+    java.lang.String collectLogFile(android.content.Context,java.lang.String,int) -> a
+org.acra.collector.MediaCodecListCollector -> a.a.b.l:
+    java.lang.String[] MPEG4_TYPES -> a
+    java.lang.String[] AVC_TYPES -> b
+    java.lang.String[] H263_TYPES -> c
+    java.lang.String[] AAC_TYPES -> d
+    java.lang.Class mediaCodecListClass -> e
+    java.lang.reflect.Method getCodecInfoAtMethod -> f
+    java.lang.Class mediaCodecInfoClass -> g
+    java.lang.reflect.Method getNameMethod -> h
+    java.lang.reflect.Method isEncoderMethod -> i
+    java.lang.reflect.Method getSupportedTypesMethod -> j
+    java.lang.reflect.Method getCapabilitiesForTypeMethod -> k
+    java.lang.Class codecCapabilitiesClass -> l
+    java.lang.reflect.Field colorFormatsField -> m
+    java.lang.reflect.Field profileLevelsField -> n
+    java.lang.reflect.Field profileField -> o
+    java.lang.reflect.Field levelField -> p
+    android.util.SparseArray mColorFormatValues -> q
+    android.util.SparseArray mAVCLevelValues -> r
+    android.util.SparseArray mAVCProfileValues -> s
+    android.util.SparseArray mH263LevelValues -> t
+    android.util.SparseArray mH263ProfileValues -> u
+    android.util.SparseArray mMPEG4LevelValues -> v
+    android.util.SparseArray mMPEG4ProfileValues -> w
+    android.util.SparseArray mAACProfileValues -> x
+    java.lang.String collecMediaCodecList() -> a
+    java.lang.String collectCapabilitiesForType(java.lang.Object,java.lang.String) -> a
+    org.acra.collector.MediaCodecListCollector$CodecType identifyCodecType(java.lang.Object) -> a
+org.acra.collector.MediaCodecListCollector$1 -> a.a.b.m:
+    int[] $SwitchMap$org$acra$collector$MediaCodecListCollector$CodecType -> a
+org.acra.collector.MediaCodecListCollector$CodecType -> a.a.b.n:
+    org.acra.collector.MediaCodecListCollector$CodecType AVC -> a
+    org.acra.collector.MediaCodecListCollector$CodecType H263 -> b
+    org.acra.collector.MediaCodecListCollector$CodecType MPEG4 -> c
+    org.acra.collector.MediaCodecListCollector$CodecType AAC -> d
+    org.acra.collector.MediaCodecListCollector$CodecType[] $VALUES -> e
+    org.acra.collector.MediaCodecListCollector$CodecType[] values() -> values
+    org.acra.collector.MediaCodecListCollector$CodecType valueOf(java.lang.String) -> valueOf
+org.acra.collector.ReflectionCollector -> a.a.b.o:
+    java.lang.String collectConstants(java.lang.Class,java.lang.String) -> a
+    java.lang.String collectStaticGettersResults(java.lang.Class) -> a
+    java.lang.String collectConstants(java.lang.Class) -> b
+org.acra.collector.SettingsCollector -> a.a.b.p:
+    java.lang.String collectSystemSettings(android.content.Context) -> a
+    java.lang.String collectSecureSettings(android.content.Context) -> b
+    java.lang.String collectGlobalSettings(android.content.Context) -> c
+    boolean isAuthorized(java.lang.reflect.Field) -> a
+org.acra.collector.SharedPreferencesCollector -> a.a.b.q:
+    java.lang.String collect(android.content.Context) -> a
+    boolean filteredKey(java.lang.String) -> a
+org.acra.collector.ThreadCollector -> a.a.b.r:
+    java.lang.String collect(java.lang.Thread) -> a
+org.acra.jraf.android.util.activitylifecyclecallbackscompat.ActivityLifecycleCallbacksCompat -> a.a.c.a.a.a.a:
+    void onActivityCreated(android.app.Activity,android.os.Bundle) -> a
+    void onActivityStarted(android.app.Activity) -> a
+    void onActivityResumed(android.app.Activity) -> b
+    void onActivityPaused(android.app.Activity) -> c
+    void onActivityStopped(android.app.Activity) -> d
+    void onActivitySaveInstanceState(android.app.Activity,android.os.Bundle) -> b
+    void onActivityDestroyed(android.app.Activity) -> e
+org.acra.jraf.android.util.activitylifecyclecallbackscompat.ActivityLifecycleCallbacksWrapper -> a.a.c.a.a.a.b:
+    org.acra.jraf.android.util.activitylifecyclecallbackscompat.ActivityLifecycleCallbacksCompat mCallback -> a
+    void onActivityCreated(android.app.Activity,android.os.Bundle) -> onActivityCreated
+    void onActivityStarted(android.app.Activity) -> onActivityStarted
+    void onActivityResumed(android.app.Activity) -> onActivityResumed
+    void onActivityPaused(android.app.Activity) -> onActivityPaused
+    void onActivityStopped(android.app.Activity) -> onActivityStopped
+    void onActivitySaveInstanceState(android.app.Activity,android.os.Bundle) -> onActivitySaveInstanceState
+    void onActivityDestroyed(android.app.Activity) -> onActivityDestroyed
+org.acra.jraf.android.util.activitylifecyclecallbackscompat.ApplicationHelper -> a.a.c.a.a.a.c:
+    boolean PRE_ICS -> a
+    void registerActivityLifecycleCallbacks(android.app.Application,org.acra.jraf.android.util.activitylifecyclecallbackscompat.ActivityLifecycleCallbacksCompat) -> a
+    void preIcsRegisterActivityLifecycleCallbacks(org.acra.jraf.android.util.activitylifecyclecallbackscompat.ActivityLifecycleCallbacksCompat) -> a
+    void postIcsRegisterActivityLifecycleCallbacks(android.app.Application,org.acra.jraf.android.util.activitylifecyclecallbackscompat.ActivityLifecycleCallbacksCompat) -> b
+org.acra.jraf.android.util.activitylifecyclecallbackscompat.MainLifecycleDispatcher -> a.a.c.a.a.a.d:
+    org.acra.jraf.android.util.activitylifecyclecallbackscompat.MainLifecycleDispatcher INSTANCE -> a
+    java.util.ArrayList mActivityLifecycleCallbacks -> b
+    org.acra.jraf.android.util.activitylifecyclecallbackscompat.MainLifecycleDispatcher get() -> a
+    void registerActivityLifecycleCallbacks(org.acra.jraf.android.util.activitylifecyclecallbackscompat.ActivityLifecycleCallbacksCompat) -> a
+    java.lang.Object[] collectActivityLifecycleCallbacks() -> b
+    void onActivityCreated(android.app.Activity,android.os.Bundle) -> a
+    void onActivityStarted(android.app.Activity) -> a
+    void onActivityResumed(android.app.Activity) -> b
+    void onActivityPaused(android.app.Activity) -> c
+    void onActivityStopped(android.app.Activity) -> d
+    void onActivitySaveInstanceState(android.app.Activity,android.os.Bundle) -> b
+    void onActivityDestroyed(android.app.Activity) -> e
+org.acra.log.ACRALog -> a.a.d.a:
+    int d(java.lang.String,java.lang.String) -> a
+    int w(java.lang.String,java.lang.String) -> b
+    int w(java.lang.String,java.lang.String,java.lang.Throwable) -> a
+    int e(java.lang.String,java.lang.String) -> c
+    int e(java.lang.String,java.lang.String,java.lang.Throwable) -> b
+org.acra.log.AndroidLogDelegate -> a.a.d.b:
+    int d(java.lang.String,java.lang.String) -> a
+    int w(java.lang.String,java.lang.String) -> b
+    int w(java.lang.String,java.lang.String,java.lang.Throwable) -> a
+    int e(java.lang.String,java.lang.String) -> c
+    int e(java.lang.String,java.lang.String,java.lang.Throwable) -> b
+org.acra.sender.EmailIntentSender -> a.a.e.a:
+    android.content.Context mContext -> a
+    void send(org.acra.collector.CrashReportData) -> a
+    java.lang.String buildBody(org.acra.collector.CrashReportData) -> b
+org.acra.sender.GoogleFormSender -> a.a.e.b:
+    android.net.Uri mFormUri -> a
+    void send(org.acra.collector.CrashReportData) -> a
+    java.util.Map remap(java.util.Map) -> a
+org.acra.sender.GoogleFormSender$1 -> a.a.e.c:
+    int[] $SwitchMap$org$acra$ReportField -> a
+org.acra.sender.HttpSender -> a.a.e.d:
+    android.net.Uri mFormUri -> a
+    java.util.Map mMapping -> b
+    org.acra.sender.HttpSender$Method mMethod -> c
+    org.acra.sender.HttpSender$Type mType -> d
+    void send(org.acra.collector.CrashReportData) -> a
+    java.util.Map remap(java.util.Map) -> a
+org.acra.sender.HttpSender$1 -> a.a.e.e:
+    int[] $SwitchMap$org$acra$sender$HttpSender$Type -> a
+    int[] $SwitchMap$org$acra$sender$HttpSender$Method -> b
+org.acra.sender.HttpSender$Method -> a.a.e.f:
+    org.acra.sender.HttpSender$Method POST -> a
+    org.acra.sender.HttpSender$Method PUT -> b
+    org.acra.sender.HttpSender$Method[] $VALUES -> c
+    org.acra.sender.HttpSender$Method[] values() -> values
+    org.acra.sender.HttpSender$Method valueOf(java.lang.String) -> valueOf
+org.acra.sender.HttpSender$Type -> a.a.e.g:
+    org.acra.sender.HttpSender$Type FORM -> a
+    org.acra.sender.HttpSender$Type JSON -> b
+    org.acra.sender.HttpSender$Type[] $VALUES -> c
+    org.acra.sender.HttpSender$Type[] values() -> values
+    org.acra.sender.HttpSender$Type valueOf(java.lang.String) -> valueOf
+    java.lang.String getContentType() -> a
+org.acra.sender.HttpSender$Type$1 -> a.a.e.h:
+    java.lang.String getContentType() -> a
+org.acra.sender.HttpSender$Type$2 -> a.a.e.i:
+    java.lang.String getContentType() -> a
+org.acra.sender.ReportSender -> a.a.e.j:
+    void send(org.acra.collector.CrashReportData) -> a
+org.acra.sender.ReportSenderException -> a.a.e.k:
+org.acra.util.BoundedLinkedList -> a.a.f.a:
+    int maxSize -> a
+    boolean add(java.lang.Object) -> add
+    void add(int,java.lang.Object) -> add
+    boolean addAll(java.util.Collection) -> addAll
+    boolean addAll(int,java.util.Collection) -> addAll
+    void addFirst(java.lang.Object) -> addFirst
+    void addLast(java.lang.Object) -> addLast
+    java.lang.String toString() -> toString
+org.acra.util.FakeSocketFactory -> a.a.f.b:
+    javax.net.ssl.SSLContext sslcontext -> a
+    javax.net.ssl.SSLContext createEasySSLContext() -> a
+    javax.net.ssl.SSLContext getSSLContext() -> b
+    java.net.Socket connectSocket(java.net.Socket,java.lang.String,int,java.net.InetAddress,int,org.apache.http.params.HttpParams) -> connectSocket
+    java.net.Socket createSocket() -> createSocket
+    boolean isSecure(java.net.Socket) -> isSecure
+    java.net.Socket createSocket(java.net.Socket,java.lang.String,int,boolean) -> createSocket
+org.acra.util.HttpRequest -> a.a.f.c:
+    java.lang.String login -> a
+    java.lang.String password -> b
+    int connectionTimeOut -> c
+    int socketTimeOut -> d
+    int maxNrRetries -> e
+    java.util.Map headers -> f
+    void setLogin(java.lang.String) -> a
+    void setPassword(java.lang.String) -> b
+    void setConnectionTimeOut(int) -> a
+    void setSocketTimeOut(int) -> b
+    void setHeaders(java.util.Map) -> a
+    void setMaxNrRetries(int) -> c
+    void send(java.net.URL,org.acra.sender.HttpSender$Method,java.lang.String,org.acra.sender.HttpSender$Type) -> a
+    org.apache.http.client.HttpClient getHttpClient() -> a
+    org.apache.http.auth.UsernamePasswordCredentials getCredentials() -> b
+    org.apache.http.client.methods.HttpEntityEnclosingRequestBase getHttpRequest(java.net.URL,org.acra.sender.HttpSender$Method,java.lang.String,org.acra.sender.HttpSender$Type) -> b
+    java.lang.String getParamsAsFormString(java.util.Map) -> b
+org.acra.util.HttpRequest$1 -> a.a.f.d:
+    int[] $SwitchMap$org$acra$sender$HttpSender$Method -> a
+org.acra.util.HttpRequest$SocketTimeOutRetryHandler -> a.a.f.e:
+    org.apache.http.params.HttpParams httpParams -> a
+    int maxNrRetries -> b
+    boolean retryRequest(java.io.IOException,int,org.apache.http.protocol.HttpContext) -> retryRequest
+org.acra.util.Installation -> a.a.f.f:
+    java.lang.String sID -> a
+    java.lang.String id(android.content.Context) -> a
+    java.lang.String readInstallationFile(java.io.File) -> a
+    void writeInstallationFile(java.io.File) -> b
+org.acra.util.JSONReportBuilder -> a.a.f.g:
+    org.json.JSONObject buildJSONReport(org.acra.collector.CrashReportData) -> a
+    void addJSONFromProperty(org.json.JSONObject,java.lang.String) -> a
+    java.lang.Object guessType(java.lang.String) -> a
+    void addJSONSubTree(org.json.JSONObject,java.lang.String[],java.lang.Object) -> a
+org.acra.util.JSONReportBuilder$JSONReportException -> a.a.f.h:
+org.acra.util.NaiveTrustManager -> a.a.f.i:
+    java.security.cert.X509Certificate[] getAcceptedIssuers() -> getAcceptedIssuers
+    void checkClientTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkClientTrusted
+    void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkServerTrusted
+org.acra.util.PackageManagerWrapper -> a.a.f.j:
+    android.content.Context context -> a
+    boolean hasPermission(java.lang.String) -> a
+    android.content.pm.PackageInfo getPackageInfo() -> a
+org.acra.util.ReportUtils -> a.a.f.k:
+    long getAvailableInternalMemorySize() -> a
+    long getTotalInternalMemorySize() -> b
+    java.lang.String getDeviceId(android.content.Context) -> a
+    java.lang.String getApplicationFilePath(android.content.Context) -> b
+    java.lang.String getLocalIpAddress() -> c
+org.acra.util.ToastSender -> a.a.f.l:
+    void sendToast(android.content.Context,int,int) -> a
+org.jcaki.Bytes -> a.b.a:
+    byte[] EMPTY_BYTE_ARRAY -> a
+    byte[] toByteArray(int,boolean) -> a
+    byte[] toByteArray(short,boolean) -> a
+org.jcaki.IOs -> a.b.b:
+    java.lang.String LINE_SEPARATOR -> a
+    byte[] bomBytes -> b
+    void closeSilently(java.io.Closeable[]) -> a
+simplesound.pcm.PcmAudioFormat -> b.a.a:
+    int sampleRate -> b
+    int sampleSizeInBits -> c
+    int bytesRequiredPerSample -> d
+    int channels -> e
+    boolean bigEndian -> a
+    boolean signed -> f
+    int getSampleRate() -> a
+    int getChannels() -> b
+    int getSampleSizeInBits() -> c
+    int getBytePerSample() -> d
+    java.lang.String toString() -> toString
+simplesound.pcm.PcmAudioHelper -> b.a.b:
+    void convertRawToWav(simplesound.pcm.WavAudioFormat,java.io.File,java.io.File) -> a
+    void modifyRiffSizeData(java.io.File,int) -> a
+simplesound.pcm.RiffHeaderData -> b.a.c:
+    simplesound.pcm.PcmAudioFormat format -> a
+    int totalSamplesInByte -> b
+    byte[] asByteArray() -> a
+    java.lang.String toString() -> toString
+simplesound.pcm.WavAudioFormat -> b.a.d:
+    boolean bigEndian -> b
+    simplesound.pcm.WavAudioFormat mono16Bit(int) -> a

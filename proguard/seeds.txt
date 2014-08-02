@@ -1,0 +1,261 @@
+android.support.v4.app.BackStackState
+android.support.v4.app.BackStackState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.Fragment$SavedState
+android.support.v4.app.Fragment$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentManagerState
+android.support.v4.app.FragmentManagerState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentState
+android.support.v4.app.FragmentState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentTabHost: void setOnTabChangedListener(android.widget.TabHost$OnTabChangeListener)
+android.support.v4.app.FragmentTabHost$SavedState
+android.support.v4.app.FragmentTabHost$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status[] values()
+android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status valueOf(java.lang.String)
+android.support.v4.view.PagerTabStrip: void setTabIndicatorColor(int)
+android.support.v4.view.PagerTabStrip: void setTabIndicatorColorResource(int)
+android.support.v4.view.PagerTabStrip: int getTabIndicatorColor()
+android.support.v4.view.PagerTabStrip: void setTextSpacing(int)
+android.support.v4.view.PagerTabStrip: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+android.support.v4.view.PagerTabStrip: void setBackgroundColor(int)
+android.support.v4.view.PagerTabStrip: void setBackgroundResource(int)
+android.support.v4.view.PagerTabStrip: void setDrawFullUnderline(boolean)
+android.support.v4.view.PagerTabStrip: boolean getDrawFullUnderline()
+android.support.v4.view.PagerTabStrip: int getMinHeight()
+android.support.v4.view.PagerTitleStrip: void setSingleLineAllCaps(android.widget.TextView)
+android.support.v4.view.PagerTitleStrip: void setTextSpacing(int)
+android.support.v4.view.PagerTitleStrip: int getTextSpacing()
+android.support.v4.view.PagerTitleStrip: void setNonPrimaryAlpha(float)
+android.support.v4.view.PagerTitleStrip: void setTextColor(int)
+android.support.v4.view.PagerTitleStrip: void setGravity(int)
+android.support.v4.view.PagerTitleStrip: int getMinHeight()
+android.support.v4.view.ViewPager: void setScrollState(int)
+android.support.v4.view.ViewPager: void setAdapter(android.support.v4.view.PagerAdapter)
+android.support.v4.view.ViewPager: android.support.v4.view.PagerAdapter getAdapter()
+android.support.v4.view.ViewPager: void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener)
+android.support.v4.view.ViewPager: int getClientWidth()
+android.support.v4.view.ViewPager: void setCurrentItem(int)
+android.support.v4.view.ViewPager: int getCurrentItem()
+android.support.v4.view.ViewPager: void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
+android.support.v4.view.ViewPager: void setChildrenDrawingOrderEnabledCompat(boolean)
+android.support.v4.view.ViewPager: int getOffscreenPageLimit()
+android.support.v4.view.ViewPager: void setOffscreenPageLimit(int)
+android.support.v4.view.ViewPager: void setPageMargin(int)
+android.support.v4.view.ViewPager: int getPageMargin()
+android.support.v4.view.ViewPager: void setPageMarginDrawable(android.graphics.drawable.Drawable)
+android.support.v4.view.ViewPager: void setPageMarginDrawable(int)
+android.support.v4.view.ViewPager: void setScrollingCacheEnabled(boolean)
+android.support.v4.view.ViewPager$SavedState
+android.support.v4.view.ViewPager$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.widget.DrawerLayout: void setScrimColor(int)
+android.support.v4.widget.DrawerLayout: void setDrawerListener(android.support.v4.widget.DrawerLayout$DrawerListener)
+android.support.v4.widget.DrawerLayout: void setDrawerLockMode(int)
+android.support.v4.widget.DrawerLayout$SavedState
+android.support.v4.widget.DrawerLayout$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.widget.SlidingPaneLayout: void setParallaxDistance(int)
+android.support.v4.widget.SlidingPaneLayout: int getParallaxDistance()
+android.support.v4.widget.SlidingPaneLayout: void setSliderFadeColor(int)
+android.support.v4.widget.SlidingPaneLayout: int getSliderFadeColor()
+android.support.v4.widget.SlidingPaneLayout: void setCoveredFadeColor(int)
+android.support.v4.widget.SlidingPaneLayout: int getCoveredFadeColor()
+android.support.v4.widget.SlidingPaneLayout: void setPanelSlideListener(android.support.v4.widget.SlidingPaneLayout$PanelSlideListener)
+android.support.v4.widget.SlidingPaneLayout: void setShadowDrawable(android.graphics.drawable.Drawable)
+android.support.v4.widget.SlidingPaneLayout: void setShadowResource(int)
+android.support.v4.widget.SlidingPaneLayout$SavedState
+android.support.v4.widget.SlidingPaneLayout$SavedState: android.os.Parcelable$Creator CREATOR
+it.zerofill.soundmapp.HomeActivity
+it.zerofill.soundmapp.HomeActivity: HomeActivity()
+it.zerofill.soundmapp.LoginActivity
+it.zerofill.soundmapp.LoginActivity: LoginActivity()
+it.zerofill.soundmapp.R$color: int darker_gray
+it.zerofill.soundmapp.R$color: int defaultBackground
+it.zerofill.soundmapp.R$dimen: int activity_horizontal_margin
+it.zerofill.soundmapp.R$dimen: int activity_vertical_margin
+it.zerofill.soundmapp.R$drawable: int audio_full_ico
+it.zerofill.soundmapp.R$drawable: int audio_ico
+it.zerofill.soundmapp.R$drawable: int background
+it.zerofill.soundmapp.R$drawable: int banner
+it.zerofill.soundmapp.R$drawable: int banner_old_big
+it.zerofill.soundmapp.R$drawable: int calendar_btn
+it.zerofill.soundmapp.R$drawable: int camera
+it.zerofill.soundmapp.R$drawable: int camera_pressed
+it.zerofill.soundmapp.R$drawable: int delete
+it.zerofill.soundmapp.R$drawable: int delete_btn
+it.zerofill.soundmapp.R$drawable: int delete_pressed
+it.zerofill.soundmapp.R$drawable: int ic_launcher
+it.zerofill.soundmapp.R$drawable: int location_off_btn
+it.zerofill.soundmapp.R$drawable: int location_on_btn
+it.zerofill.soundmapp.R$drawable: int mic_ico
+it.zerofill.soundmapp.R$drawable: int noimage
+it.zerofill.soundmapp.R$drawable: int play
+it.zerofill.soundmapp.R$drawable: int play_pressed
+it.zerofill.soundmapp.R$drawable: int rec
+it.zerofill.soundmapp.R$drawable: int rec_pressed
+it.zerofill.soundmapp.R$drawable: int wrench
+it.zerofill.soundmapp.R$drawable: int wrench_pressed
+it.zerofill.soundmapp.R$id: int action_about
+it.zerofill.soundmapp.R$id: int attributesLabel
+it.zerofill.soundmapp.R$id: int audioDbLabel
+it.zerofill.soundmapp.R$id: int audioDecibleListLabel
+it.zerofill.soundmapp.R$id: int audioDecibleListText
+it.zerofill.soundmapp.R$id: int audioLenghtLabel
+it.zerofill.soundmapp.R$id: int audioLevelLabel
+it.zerofill.soundmapp.R$id: int backButton
+it.zerofill.soundmapp.R$id: int bar_level_drawable_view
+it.zerofill.soundmapp.R$id: int buttonsLayout
+it.zerofill.soundmapp.R$id: int buttonslayout
+it.zerofill.soundmapp.R$id: int chronometer
+it.zerofill.soundmapp.R$id: int configsCombo
+it.zerofill.soundmapp.R$id: int emailText
+it.zerofill.soundmapp.R$id: int formLayout
+it.zerofill.soundmapp.R$id: int formVariableFieldsLayout
+it.zerofill.soundmapp.R$id: int getDescribeFeatureLayout
+it.zerofill.soundmapp.R$id: int getDescribeFeatureStatusMessage
+it.zerofill.soundmapp.R$id: int imageFullView
+it.zerofill.soundmapp.R$id: int layersCombo
+it.zerofill.soundmapp.R$id: int legendText
+it.zerofill.soundmapp.R$id: int login
+it.zerofill.soundmapp.R$id: int loginButton
+it.zerofill.soundmapp.R$id: int loginHeaderLabel
+it.zerofill.soundmapp.R$id: int loginStatusLayout
+it.zerofill.soundmapp.R$id: int loginStatusMessage
+it.zerofill.soundmapp.R$id: int logoBannerImg
+it.zerofill.soundmapp.R$id: int logoutButton
+it.zerofill.soundmapp.R$id: int mLayout
+it.zerofill.soundmapp.R$id: int mainBottomLayout
+it.zerofill.soundmapp.R$id: int mainLayout
+it.zerofill.soundmapp.R$id: int mainLayoutTab
+it.zerofill.soundmapp.R$id: int mainScroll
+it.zerofill.soundmapp.R$id: int mainlayoutTab
+it.zerofill.soundmapp.R$id: int newSurveyButton
+it.zerofill.soundmapp.R$id: int passwordRepeatText
+it.zerofill.soundmapp.R$id: int passwordText
+it.zerofill.soundmapp.R$id: int playButton
+it.zerofill.soundmapp.R$id: int propertiesFileStatusLayout
+it.zerofill.soundmapp.R$id: int propertiesFileStatusMessage
+it.zerofill.soundmapp.R$id: int recButton
+it.zerofill.soundmapp.R$id: int recordLabel
+it.zerofill.soundmapp.R$id: int rememberMeCB
+it.zerofill.soundmapp.R$id: int sendButton
+it.zerofill.soundmapp.R$id: int sendSurveyStatusLayout
+it.zerofill.soundmapp.R$id: int sendSurveyStatusMessage
+it.zerofill.soundmapp.R$id: int signupButton
+it.zerofill.soundmapp.R$id: int signupStatusLayout
+it.zerofill.soundmapp.R$id: int signupStatusMessage
+it.zerofill.soundmapp.R$id: int surveyLabel
+it.zerofill.soundmapp.R$id: int surveyListButton
+it.zerofill.soundmapp.R$id: int tabhost
+it.zerofill.soundmapp.R$id: int welcomeHeaderLabel
+it.zerofill.soundmapp.R$layout: int activity_home
+it.zerofill.soundmapp.R$layout: int activity_login
+it.zerofill.soundmapp.R$layout: int activity_record_audio
+it.zerofill.soundmapp.R$layout: int activity_registration
+it.zerofill.soundmapp.R$layout: int activity_show_image
+it.zerofill.soundmapp.R$layout: int activity_survey_attributes
+it.zerofill.soundmapp.R$layout: int activity_survey_detail
+it.zerofill.soundmapp.R$layout: int activity_survey_list
+it.zerofill.soundmapp.R$menu: int login
+it.zerofill.soundmapp.R$string: int NaNError
+it.zerofill.soundmapp.R$string: int action_about
+it.zerofill.soundmapp.R$string: int action_settings
+it.zerofill.soundmapp.R$string: int action_sign_in_short
+it.zerofill.soundmapp.R$string: int app_name
+it.zerofill.soundmapp.R$string: int attributesLabel
+it.zerofill.soundmapp.R$string: int attributesMoreLabel
+it.zerofill.soundmapp.R$string: int audioDb
+it.zerofill.soundmapp.R$string: int audioDbListLabel
+it.zerofill.soundmapp.R$string: int audioFileLabel
+it.zerofill.soundmapp.R$string: int audioFileLength
+it.zerofill.soundmapp.R$string: int audioLevel
+it.zerofill.soundmapp.R$string: int backLabel
+it.zerofill.soundmapp.R$string: int defaultSurveyName
+it.zerofill.soundmapp.R$string: int delImgBeforeSnapMessage
+it.zerofill.soundmapp.R$string: int deleteAudioWarning
+it.zerofill.soundmapp.R$string: int deleteImageWarning
+it.zerofill.soundmapp.R$string: int deleteLabel
+it.zerofill.soundmapp.R$string: int errorLabel
+it.zerofill.soundmapp.R$string: int error_field_passnotmatch
+it.zerofill.soundmapp.R$string: int error_field_required
+it.zerofill.soundmapp.R$string: int error_incorrect_password
+it.zerofill.soundmapp.R$string: int error_invalid_email
+it.zerofill.soundmapp.R$string: int error_invalid_password
+it.zerofill.soundmapp.R$string: int exceededTimeOutLabel
+it.zerofill.soundmapp.R$string: int fileErrorSentMessage
+it.zerofill.soundmapp.R$string: int fileSuccessfullySentMessage
+it.zerofill.soundmapp.R$string: int fileWFSProgressText
+it.zerofill.soundmapp.R$string: int genericAuthenticationError
+it.zerofill.soundmapp.R$string: int invalidBoundariesError
+it.zerofill.soundmapp.R$string: int locationLabel
+it.zerofill.soundmapp.R$string: int loginLabel
+it.zerofill.soundmapp.R$string: int loginProgressText
+it.zerofill.soundmapp.R$string: int logoutLabel
+it.zerofill.soundmapp.R$string: int mandatoryFieldsMissingMessage
+it.zerofill.soundmapp.R$string: int mandatoryFieldslegend
+it.zerofill.soundmapp.R$string: int minuteLabel
+it.zerofill.soundmapp.R$string: int newSurveyLabel
+it.zerofill.soundmapp.R$string: int no
+it.zerofill.soundmapp.R$string: int noConnMessage
+it.zerofill.soundmapp.R$string: int noConnOrGeoserverFileMessage
+it.zerofill.soundmapp.R$string: int noConnOrPropFileMessage
+it.zerofill.soundmapp.R$string: int noNamespaceFoundMessage
+it.zerofill.soundmapp.R$string: int noSurveyNameFoundMessage
+it.zerofill.soundmapp.R$string: int noWfsFoundMessage
+it.zerofill.soundmapp.R$string: int nodesc
+it.zerofill.soundmapp.R$string: int ok
+it.zerofill.soundmapp.R$string: int playLabel
+it.zerofill.soundmapp.R$string: int prompt_email
+it.zerofill.soundmapp.R$string: int prompt_password
+it.zerofill.soundmapp.R$string: int prompt_repeat_password
+it.zerofill.soundmapp.R$string: int prompt_survey_name
+it.zerofill.soundmapp.R$string: int propertiesFileProgressText
+it.zerofill.soundmapp.R$string: int registrationErrorMessage
+it.zerofill.soundmapp.R$string: int registrationLabel
+it.zerofill.soundmapp.R$string: int registrationSuccessMessage
+it.zerofill.soundmapp.R$string: int rememberMeLabel
+it.zerofill.soundmapp.R$string: int saveLabel
+it.zerofill.soundmapp.R$string: int secondLabel
+it.zerofill.soundmapp.R$string: int sendLabel
+it.zerofill.soundmapp.R$string: int sendSurveyProgressText
+it.zerofill.soundmapp.R$string: int serverNotAvailableError
+it.zerofill.soundmapp.R$string: int signupHeaderLabel
+it.zerofill.soundmapp.R$string: int signupLabel
+it.zerofill.soundmapp.R$string: int signupProgressText
+it.zerofill.soundmapp.R$string: int startLabel
+it.zerofill.soundmapp.R$string: int stopLabel
+it.zerofill.soundmapp.R$string: int surveyDetailLabel
+it.zerofill.soundmapp.R$string: int surveyListLabel
+it.zerofill.soundmapp.R$string: int unauthorizedUser
+it.zerofill.soundmapp.R$string: int viewDataLabel
+it.zerofill.soundmapp.R$string: int warningLabel
+it.zerofill.soundmapp.R$string: int welcomeLabel
+it.zerofill.soundmapp.R$string: int yes
+it.zerofill.soundmapp.R$style: int AppBaseTheme
+it.zerofill.soundmapp.R$style: int AppTheme
+it.zerofill.soundmapp.R$style: int bodyText
+it.zerofill.soundmapp.R$style: int headerText
+it.zerofill.soundmapp.RecordActivity
+it.zerofill.soundmapp.RecordActivity: RecordActivity()
+it.zerofill.soundmapp.RegistrationActivity
+it.zerofill.soundmapp.RegistrationActivity: RegistrationActivity()
+it.zerofill.soundmapp.ShowFullImageActivity
+it.zerofill.soundmapp.ShowFullImageActivity: ShowFullImageActivity()
+it.zerofill.soundmapp.SoundmApp
+it.zerofill.soundmapp.SoundmApp: SoundmApp()
+it.zerofill.soundmapp.SurveyDetailActivity
+it.zerofill.soundmapp.SurveyDetailActivity: SurveyDetailActivity()
+it.zerofill.soundmapp.SurveyListActivity
+it.zerofill.soundmapp.SurveyListActivity: SurveyListActivity()
+it.zerofill.soundmapp.views.BarLevelDrawable
+it.zerofill.soundmapp.views.BarLevelDrawable: BarLevelDrawable(android.content.Context,android.util.AttributeSet)
+it.zerofill.soundmapp.views.BarLevelDrawable: BarLevelDrawable(android.content.Context)
+it.zerofill.soundmapp.views.BarLevelDrawable: void setLevel(double)
+it.zerofill.soundmapp.views.BarLevelDrawable: double getLevel()
+org.acra.ReportField: org.acra.ReportField[] values()
+org.acra.ReportField: org.acra.ReportField valueOf(java.lang.String)
+org.acra.ReportingInteractionMode: org.acra.ReportingInteractionMode[] values()
+org.acra.ReportingInteractionMode: org.acra.ReportingInteractionMode valueOf(java.lang.String)
+org.acra.collector.MediaCodecListCollector$CodecType: org.acra.collector.MediaCodecListCollector$CodecType[] values()
+org.acra.collector.MediaCodecListCollector$CodecType: org.acra.collector.MediaCodecListCollector$CodecType valueOf(java.lang.String)
+org.acra.sender.HttpSender$Method: org.acra.sender.HttpSender$Method[] values()
+org.acra.sender.HttpSender$Method: org.acra.sender.HttpSender$Method valueOf(java.lang.String)
+org.acra.sender.HttpSender$Type: org.acra.sender.HttpSender$Type[] values()
+org.acra.sender.HttpSender$Type: org.acra.sender.HttpSender$Type valueOf(java.lang.String)

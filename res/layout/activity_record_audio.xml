@@ -1,0 +1,209 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    >
+
+    <!-- LOGO-BANNER -->
+    <ImageView
+        android:id="@+id/logoBannerImg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" 
+        android:adjustViewBounds="true" 
+        android:contentDescription="@string/nodesc"
+        android:src="@drawable/banner"
+        />
+    
+    
+    <ScrollView
+        android:id="@+id/mainScroll"
+        android:layout_width="match_parent"
+       	android:layout_height="match_parent"
+        >
+    <LinearLayout 
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            >
+            
+            <TextView
+		        android:id="@+id/recordLabel"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/registrationLabel"
+		        android:layout_gravity="center_horizontal"
+		        android:padding="5dp"
+		        android:textAppearance="@style/headerText"
+			/>
+    
+            
+            
+            
+             <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:paddingTop="70dp"
+	            android:paddingBottom="20dp"
+	            android:paddingLeft="40dp"
+	            android:paddingRight="40dp"
+	            >
+                 
+                 
+                 
+                 <LinearLayout 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		             android:layout_gravity="center_horizontal"
+		            android:padding="5dp"
+		            >
+		            
+                     <TextView
+				        android:id="@+id/audioLenghtLabel"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="@string/audioFileLength"
+				        android:layout_gravity="center_horizontal"
+				        android:padding="5dp"
+				        android:textAppearance="@style/bodyText"
+				        />
+                     
+                     <TextView
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="@string/minuteLabel"
+				        android:layout_gravity="center_horizontal"
+				        android:padding="5dp"
+				        android:textAppearance="@style/bodyText"
+				        />
+                     
+                 </LinearLayout>
+                  
+	            
+                  <LinearLayout 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		             android:layout_gravity="left"
+		            android:padding="5dp"
+		            >
+		            
+                      <TextView
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_gravity="left"
+				        android:padding="5dp"
+				        android:textAppearance="@style/bodyText"
+				        android:text="@string/instantDbLevel"
+				        />
+                      
+                      <TextView
+				        android:id="@+id/audioDbLabel"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_gravity="center_horizontal"
+				        android:padding="5dp"
+				        android:textAppearance="@style/bodyText"
+				        />
+                      
+                      <TextView
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="@string/audioDb"
+				        android:layout_gravity="center_horizontal"
+				        android:padding="5dp"
+				        android:textAppearance="@style/bodyText"
+				        />
+                      
+                  </LinearLayout>
+	            
+	            <LinearLayout 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		             android:layout_gravity="left"
+		            android:padding="5dp"
+		            >
+                      
+	                <TextView
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="@string/audioLevel"
+				        android:layout_gravity="left"
+				        android:padding="5dp"
+				        android:textAppearance="@style/bodyText"
+			        />
+	                
+	                <TextView
+			        android:id="@+id/audioLevelLabel"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="center_horizontal"
+			        android:padding="5dp"
+			        android:textAppearance="@style/bodyText"
+			        />
+	                
+	            </LinearLayout>
+	            
+	            
+	            <TextView
+			        android:id="@+id/audioDecibleListLabel"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/audioDbListLabel"
+			        android:layout_gravity="center_horizontal"
+			        android:padding="5dp"
+			        android:textAppearance="@style/bodyText"
+			        />
+	            
+	            <TextView
+			        android:id="@+id/audioDecibleListText"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="center_horizontal"
+			        android:padding="5dp"
+			        android:textAppearance="@style/bodyText"
+			        />
+	            
+	            <view class="it.zerofill.soundmapp.views.BarLevelDrawable"
+			        android:id="@+id/bar_level_drawable_view"
+			        android:layout_width="fill_parent"
+			        android:layout_height="48dp" />
+	             
+	            <Button 
+	                android:id="@+id/recButton"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/startLabel"
+	                android:layout_gravity="center_horizontal"
+	                />
+	            <Button 
+	                android:id="@+id/playButton"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/playLabel"
+	                android:layout_gravity="center_horizontal"
+	                />
+            
+	            
+                 <Chronometer
+                    android:id="@+id/chronometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:gravity="center_horizontal"
+                    android:visibility="invisible"
+                    />
+                 
+             </LinearLayout>
+    
+            
+       </LinearLayout>
+</ScrollView>
+
+</LinearLayout>

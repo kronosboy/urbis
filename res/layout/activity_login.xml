@@ -1,0 +1,183 @@
+<LinearLayout 
+    android:id="@+id/mLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".LoginActivity" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    >
+
+    <!-- LOGO-BANNER -->
+	    <ImageView
+	        android:id="@+id/logoBannerImg"
+	        android:layout_width="match_parent"
+	        android:layout_height="45dp"
+	        android:adjustViewBounds="true" 
+	        android:contentDescription="@string/nodesc"
+	        android:src="@drawable/banner"
+	        />    
+    
+    <!-- Login progress -->
+    <LinearLayout
+        android:id="@+id/loginStatusLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/loginStatusMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/loginProgressText"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+    
+    <!-- GET PROPERTIES FILE PROGRESS -->
+    <LinearLayout
+        android:id="@+id/propertiesFileStatusLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/propertiesFileStatusMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/propertiesFileProgressText"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+    
+    <!-- MAIN SCROLL VIEW -->
+    <ScrollView
+        android:id="@+id/mainScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        
+        
+        <LinearLayout 
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            >
+            
+            <TextView
+		        android:id="@+id/loginHeaderLabel"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/loginLabel"
+		        android:layout_gravity="center_horizontal"
+		        android:padding="5dp"
+		        android:textAppearance="@style/headerText"
+			/>
+            
+            <LinearLayout 
+	            android:id="@+id/formLayout"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:paddingTop="20dp"
+	            android:paddingBottom="20dp"
+	            android:paddingLeft="40dp"
+	            android:paddingRight="40dp"
+	            >
+            
+                <EditText
+	                android:id="@+id/usernameText"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:hint="@string/prompt_user"
+	                android:inputType="text"
+	                android:maxLines="1"
+	                android:singleLine="true" />
+
+	            <EditText
+	                android:id="@+id/passwordText"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:hint="@string/prompt_password"
+	                android:imeActionId="@+id/login"
+	                android:imeActionLabel="@string/action_sign_in_short"
+	                android:imeOptions="actionUnspecified"
+	                android:inputType="textPassword"
+	                android:maxLines="1"
+	                android:singleLine="true" />
+	            
+	            <CheckBox 
+	                android:id="@+id/rememberMeCB"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/rememberMeLabel"
+	                />
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+	            android:id="@+id/buttonsLayout"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:paddingTop="20dp"
+	            android:paddingLeft="40dp"
+	            android:paddingRight="40dp"
+	            >
+                
+                <Spinner 
+                    android:id="@+id/configsCombo"
+		            android:layout_width="120dp"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_horizontal"
+                    />
+                
+                <Button
+		            android:id="@+id/loginButton"
+		            android:layout_width="120dp"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_horizontal"
+		            android:text="@string/loginLabel" />
+
+		        <Button
+		            android:id="@+id/signupButton"
+		            android:layout_width="120dp"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_horizontal"
+		            android:text="@string/signupLabel" />
+		        
+		        
+                
+            </LinearLayout>
+            
+            
+        </LinearLayout>
+        
+    </ScrollView>
+        
+    
+
+</LinearLayout>
