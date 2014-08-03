@@ -165,6 +165,8 @@ public class LoginActivity extends Activity {
     	DisplayMetrics metrics = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(metrics);
 		deviceWidth = metrics.widthPixels;
+		
+		getWindow().setBackgroundDrawableResource(R.drawable.background);
     	
     	configsCombo = (Spinner)findViewById(R.id.configsCombo);
     	loginStatusBar = findViewById(R.id.loginStatusLayout);

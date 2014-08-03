@@ -327,6 +327,8 @@ public class RecordActivity extends Activity implements AudioAnalyzerListener{
 			getWindowManager().getDefaultDisplay().getMetrics(metrics);
 			deviceWidth = metrics.widthPixels;
 			
+			getWindow().setBackgroundDrawableResource(R.drawable.background);
+			
 			dbText = (TextView)findViewById(R.id.audioDbLabel);
 			audioLenghtLabel = (TextView)findViewById(R.id.audioLenghtLabel);
 			audioLevelLabel = (TextView)findViewById(R.id.audioLevelLabel);

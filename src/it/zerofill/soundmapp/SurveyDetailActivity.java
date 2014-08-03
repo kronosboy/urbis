@@ -284,6 +284,9 @@ public class SurveyDetailActivity extends Activity{
     
 	private void init(){
     	mainContext = this;
+    	
+    	getWindow().setBackgroundDrawableResource(R.drawable.background);
+    	
     	DisplayMetrics metrics = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(metrics);
 		deviceWidth = metrics.widthPixels;
@@ -1435,8 +1438,6 @@ public class SurveyDetailActivity extends Activity{
 		lineraTitleTmp.setLayoutParams(paramss);
 		lineraTitleTmp.setOrientation(LinearLayout.HORIZONTAL);
 		
-		
-		//LinearLayout.LayoutParams titleViewParams = new LinearLayout.LayoutParams(200 ,LayoutParams.WRAP_CONTENT); 
 		TextView titleVieww = new TextView(mainContext);
 		titleVieww.setLayoutParams(titleViewParams);
 		if(mandatoryFieldMap.containsKey(attr.getId()))
@@ -1454,7 +1455,6 @@ public class SurveyDetailActivity extends Activity{
 		float FIXED_FREETEXT_WIDTH_PERC = ((float) FIXED_FREETEXT_DIM /WIDTH) * 100;
 		int FIXED_FREETEXT_WIDTH_VALUE = (int)((FIXED_FREETEXT_WIDTH_PERC * deviceWidth) / 100);
 		LinearLayout.LayoutParams dateTextViewParams = new LinearLayout.LayoutParams(FIXED_FREETEXT_WIDTH_VALUE,LayoutParams.WRAP_CONTENT);
-	//	LinearLayout.LayoutParams dateTextViewParams = new LinearLayout.LayoutParams(350,LayoutParams.WRAP_CONTENT);
 		
 		EditText dateTextView = new EditText(mainContext);
 		dateTextView.setLayoutParams(dateTextViewParams);
@@ -1496,10 +1496,6 @@ public class SurveyDetailActivity extends Activity{
         // This will resize button on screen resolutions
         LinearLayout.LayoutParams buttonViewParams = new LinearLayout.LayoutParams(FIXED_BUT_WIDTH_VALUE,FIXED_BUT_HEIGHT_VALUE);
 		        
-//		LinearLayout.LayoutParams buttonViewParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
-	//	LinearLayout.LayoutParams buttonViewParams = new LinearLayout.LayoutParams(65,65);
-        
-
         ImageView dateButtonOpenerImg = new ImageView(mainContext);
         dateButtonOpenerImg.setImageResource(calendar_img_button_id);
         dateButtonOpenerImg.setId(DateComponentID);
@@ -1534,8 +1530,6 @@ public class SurveyDetailActivity extends Activity{
 				return true;
 			}
 		});
-        
-        
         
         ImageView dateResetButtonImg = new ImageView(mainContext);
         dateResetButtonImg.setImageResource(del_img_button_id);
@@ -1576,67 +1570,7 @@ public class SurveyDetailActivity extends Activity{
 			}
 		});
         
-        
-        /*
-		Button dateButtonOpener = new Button(mainContext);
-		dateButtonOpener.setId(DateComponentID);
-		dateButtonOpener.setLayoutParams(buttonViewParams);
-		dateButtonOpener.setBackgroundResource(R.drawable.calendar_btn);
-		dateButtonOpener.setOnClickListener(new View.OnClickListener() {
-			@SuppressWarnings("deprecation")
-			@Override
-			public void onClick(View view) {
-				InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-                selectedDateComponentId = view.getId();
-                isDateChanged = true;
-                
-                String attrId = mappaDateComponentId.get(view.getId());
-                // check if it is in mandatory map and set its value to true
-            	if(mandatoryFieldMap.containsKey(attrId)){
-            		mandatoryFieldMap.put(attrId,true);
-            	}
-                
-                showDialog(999);
-			}
-    	});
-		
-		
-		Button dateResetButton = new Button(mainContext);
-		dateResetButton.setId(DateComponentID);
-		dateResetButton.setLayoutParams(buttonViewParams);
-		dateResetButton.setBackgroundResource(R.drawable.delete_btn);
-		dateResetButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-                selectedDateComponentId = view.getId();
-                String attrId = mappaDateComponentId.get(view.getId());
-                
-                TextView tv = mappaDateComponent.get(selectedDateComponentId);
-                tv.setText("");
-                
-                //delete from XML file
-            	saveFeatureTask = new SaveFeatureTask();
-            	saveFeatureTask.execute(currentFileName,attrId,null);
-                
-                // check if it is in mandatory map and set its value to true
-            	if(mandatoryFieldMap.containsKey(attrId)){
-            		mandatoryFieldMap.put(attrId,false);
-            		errorFieldMap.put(attrId,true);
-            	}
-                
-               
-			}
-    	});
-		*/
-        
-        
 		if(!isLocal){
-//			dateButtonOpener.setEnabled(false);
-//			dateResetButton.setEnabled(false);
-			
 			dateButtonOpenerImg.setEnabled(false);
 			dateButtonOpenerImg.setImageResource(calendar_img_button_disabled_id);
 			dateResetButtonImg.setEnabled(false);
@@ -1645,8 +1579,6 @@ public class SurveyDetailActivity extends Activity{
 		
 		lineraTitleTmp.addView(titleVieww);
 		lineraTitleTmp.addView(dateTextView);
-//		lineraTitleTmp.addView(dateButtonOpener);
-//		lineraTitleTmp.addView(dateResetButton);
 		lineraTitleTmp.addView(dateButtonOpenerImg);
 		lineraTitleTmp.addView(dateResetButtonImg);
 		
@@ -1673,7 +1605,6 @@ public class SurveyDetailActivity extends Activity{
 		lineraTitleTmp.setLayoutParams(paramss);
 		lineraTitleTmp.setOrientation(LinearLayout.HORIZONTAL);
 		
-	//	LinearLayout.LayoutParams titleViewParams = new LinearLayout.LayoutParams(200 ,LayoutParams.WRAP_CONTENT); 
 		TextView titleVieww = new TextView(mainContext);
 		titleVieww.setLayoutParams(titleViewParams);
 		if(mandatoryFieldMap.containsKey(attr.getId()))
@@ -1691,7 +1622,6 @@ public class SurveyDetailActivity extends Activity{
 		float FIXED_FREETEXT_WIDTH_PERC = ((float) FIXED_FREETEXT_DIM /WIDTH) * 100;
 		int FIXED_FREETEXT_WIDTH_VALUE = (int)((FIXED_FREETEXT_WIDTH_PERC * deviceWidth) / 100);
 		LinearLayout.LayoutParams textViewParams = new LinearLayout.LayoutParams(FIXED_FREETEXT_WIDTH_VALUE,LayoutParams.WRAP_CONTENT);
-	//	LinearLayout.LayoutParams textViewParams = new LinearLayout.LayoutParams(350,LayoutParams.WRAP_CONTENT);
 		Button viewPositionButton = new Button(mainContext);
 		viewPositionButton.setLayoutParams(textViewParams);
 		viewPositionButton.setId(LineComponentID);
@@ -1711,14 +1641,12 @@ public class SurveyDetailActivity extends Activity{
 			}
     	});
 		
-//		GPSTracker gps = new GPSTracker(mainContext);
 		Chronometer chronometerPosition = new Chronometer(mainContext);
 		chronometerPosition.setId(LineComponentID);
 		chronometerPosition.setOnChronometerTickListener(new OnChronometerTickListener() {
 			@Override
 			public void onChronometerTick(Chronometer ch) {
 				//GPSTracker gps = gpsComponent.get(ch.getId());
-				
 				long elapsedMillis = SystemClock.elapsedRealtime() - ch.getBase();
 				long elapsedSecs = elapsedMillis / 1000;
 				
@@ -1753,10 +1681,6 @@ public class SurveyDetailActivity extends Activity{
 		LinearLayout.LayoutParams buttonParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
 		chronometerPosition.setLayoutParams(buttonParams);
 		chronometerPosition.setVisibility(View.GONE);
-		
-		
-		
-		
 		
 		ImageView takePositionButtonImg = new ImageView(mainContext);
 		takePositionButtonImg.setLayoutParams(buttonViewParams);
@@ -1817,7 +1741,6 @@ public class SurveyDetailActivity extends Activity{
 				            	if(mandatoryFieldMap.containsKey(attrId)){
 				            		mandatoryFieldMap.put(attrId,true);
 				            	}
-				            	
 								// write data in xml
 								saveFeatureTask = new SaveFeatureTask();
 			                	//saveFeatureTask.execute(currentFileName,attrId,value);
@@ -1831,71 +1754,6 @@ public class SurveyDetailActivity extends Activity{
 				return true;
 			}
 		});
-		
-		
-		/*
-		Button takePositionButton = new Button(mainContext);
-		takePositionButton.setLayoutParams(buttonViewParams);
-		takePositionButton.setId(LineComponentID);
-		takePositionButton.setBackgroundResource(R.drawable.location_off_btn);
-		takePositionButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				boolean isRecordingPosition = chronoPointsIsRecording.get(view.getId());
-				Chronometer chronometer = chronoPointsComponent.get(view.getId());
-				String attrId = pointsCompMap.get(view.getId());
-				
-				if(!isRecordingPosition){
-					((Button)view).setBackgroundResource(R.drawable.location_on_btn);
-					// disable view data button while is recording GSP location
-					pointsViewDataComponent.get(view.getId()).setEnabled(false);
-					chronometer.setBase(SystemClock.elapsedRealtime());
-					chronometer.start();
-				}else{
-					((Button)view).setBackgroundResource(R.drawable.location_off_btn);
-					chronometer.stop();
-					
-					if(mappaCoordinates.containsKey(view.getId())){
-						String value = "";
-						List<double[]> list = mappaCoordinates.get(view.getId());
-						if(list.size()==1){
-							double[] tmp = list.get(0);
-							list.add(tmp);
-						}
-						else if(list.size()>2){
-							double[] tmp0 = list.get(0);
-							double[] tmp1 = list.get(1);
-							if(tmp0[0]==tmp1[0] && tmp0[1]==tmp1[1])
-								list.remove(0);
-						}
-								
-						for(double[] coord : list){
-							// 2014-07-08 inverted longitude and latitude (the new value will be [longitude, latitude])
-//							value += coord[0]+","+coord[1] + " ";
-							value += coord[1]+","+coord[0] + " ";
-						}
-						//value = value.substring(0, value.length()-1);
-
-						if(!value.equals("")){
-							// if there are points enable button to show data
-							pointsViewDataComponent.get(view.getId()).setEnabled(true);
-							
-							// check if it is in mandatory map and set its value to true
-			            	if(mandatoryFieldMap.containsKey(attrId)){
-			            		mandatoryFieldMap.put(attrId,true);
-			            	}
-			            	
-							// write data in xml
-							saveFeatureTask = new SaveFeatureTask();
-		                	//saveFeatureTask.execute(currentFileName,attrId,value);
-		                	saveFeatureTask.execute(currentFileName,attrId,TYPE_LINE,value);
-						}
-					}
-				}
-				chronoPointsIsRecording.put(view.getId(), !isRecordingPosition);
-			}
-    	});
-    	*/
 		
 		// if it is mandatory insert it in the map
 		if(describeFeatureMap.containsKey(attr.getId())){
@@ -1939,7 +1797,6 @@ public class SurveyDetailActivity extends Activity{
 					coordList.add(location);
 				}
 			}
-			
 			
 			mappaCoordinates.put(LineComponentID, coordList);
 			
@@ -1992,37 +1849,6 @@ public class SurveyDetailActivity extends Activity{
 			}
 		});
 		
-		/*
-		Button pointsResetButton = new Button(mainContext);
-		pointsResetButton.setId(LineComponentID);
-		pointsResetButton.setLayoutParams(buttonViewParams);
-		pointsResetButton.setBackgroundResource(R.drawable.delete_btn);
-		pointsResetButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-                int selectedPComponentId = view.getId();
-                String attrId = pointsCompMap.get(view.getId());
-                
-                if(mappaCoordinates.containsKey(selectedPComponentId)){
-                	mappaCoordinates.remove(selectedPComponentId);
-                	
-                	// disable view data button
-                	pointsViewDataComponent.get(selectedPComponentId).setEnabled(false);
-                	
-                	//delete from XML file
-                	saveFeatureTask = new SaveFeatureTask();
-                	saveFeatureTask.execute(currentFileName,attrId,null);
-                    
-                    // check if it is in mandatory map and set its value to true
-                	if(mandatoryFieldMap.containsKey(attrId)){
-                		mandatoryFieldMap.put(attrId,false);
-                	}
-                }
-			}
-    	});
-		*/
 		
 		pointsCompMap.put(LineComponentID, attr.getId());
 		pointsViewDataComponent.put(LineComponentID, viewPositionButton);

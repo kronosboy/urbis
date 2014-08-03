@@ -155,6 +155,8 @@ public class HomeActivity extends Activity{
     	DisplayMetrics metrics = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(metrics);
 		deviceWidth = metrics.widthPixels;
+		
+		getWindow().setBackgroundDrawableResource(R.drawable.background);
     	
     	assetsPropertyReader = new AssetsPropertyReader(mainContext);
     	properties = assetsPropertyReader.getProperties("settings.properties");

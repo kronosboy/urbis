@@ -181,6 +181,9 @@ public class SurveyListActivity extends Activity{
     private boolean hasError;
     private void init(){
     	mainContext = this;
+    	
+    	getWindow().setBackgroundDrawableResource(R.drawable.background);
+    	
     	formVariableFieldsLayout = (LinearLayout)findViewById(R.id.formVariableFieldsLayout);
     	loginStatusBar = findViewById(R.id.loginStatusLayout);
     	mainScrollView = findViewById(R.id.mainScroll);

@@ -145,6 +145,8 @@ public class RegistrationActivity extends Activity{
     	DisplayMetrics metrics = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(metrics);
 		deviceWidth = metrics.widthPixels;
+		
+		getWindow().setBackgroundDrawableResource(R.drawable.background);
     	
 		userTextView = (EditText)findViewById(R.id.userText);
     	emailTextView = (EditText)findViewById(R.id.emailText);
