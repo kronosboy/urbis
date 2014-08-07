@@ -370,7 +370,7 @@ public class SurveyListActivity extends Activity{
         		
         		mappaSurveyIDname.put(viewId, nomeSegn);
         		
-        		tvTemp.setText(nomeSegn+ " ID: "+record.getId());
+        		tvTemp.setText(nomeSegn);
         		tvTemp.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
         		tvTemp.setGravity(Gravity.CENTER_HORIZONTAL);
         		
@@ -655,10 +655,6 @@ public class SurveyListActivity extends Activity{
 			
 			// Parsing the file (got from geoserver) if can't parse and list is empty show alert
 			listaValori = featureParser.parseGetFeatureFile(layers, false, null);
-//			if(listaValori.size()==0){ //, config.getLayerByName(layerName).getNameColumn()
-//				message = getString(R.string.noConnOrPropFileMessage); 
-//				return false;
-//			}
 			
 			List<ObjFeature> dbList = featureParser.parseGetFeatureFile(layers, false, null);
 			if(dbList!=null && dbList.size()>0 && dbList.get(0).getRecords()!=null && dbList.get(0).getRecords().size()>1){
@@ -698,13 +694,6 @@ public class SurveyListActivity extends Activity{
 			}
 			oFeatureTemp.setRecords(oRecordList);
 			recordsFromLocal.add(oFeatureTemp);
-//			listaValori.get(0).getRecords().addAll(oRecordList);
-//			
-//			Collections.sort(listaValori.get(0).getRecords(), new Comparator<ObjRecord>() {
-//			    public int compare(ObjRecord object1, ObjRecord object2) {
-//			    	return object2.getId().compareToIgnoreCase(object1.getId());
-//			    }
-//			});
 			
 			Collections.sort(oRecordList, new Comparator<ObjRecord>() {
 			    public int compare(ObjRecord object1, ObjRecord object2) {
@@ -712,20 +701,6 @@ public class SurveyListActivity extends Activity{
 			    }
 			});
 			listaValori.get(0).getRecords().addAll(0, oRecordList);
-			
-			
-			
-			
-			// 
-			// recordsFromFileMap = process file
-			
-			// Argument of intent LIST SURVEY is featureParser.getRecordListByName, so get from mappa.keySet() name of survey to show and then give to selected survey intent mappa.get(key=name of survey)
-			//recordsMap = featureParser.getRecordListByName();
-			/*
-			HashMap<String, List<ObjFeature>> rmap = featureParser.getRecordListByName();
-			setMap(rmap,listaValori);
-			*/
-			
 			
 			return true;
 		}
