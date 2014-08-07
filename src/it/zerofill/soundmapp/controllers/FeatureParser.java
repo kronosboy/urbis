@@ -268,6 +268,7 @@ public class FeatureParser {
 				      if(!isLocal){
 				    	  Node nodeid = attributes.getNamedItem("gml:id");
 				    	  ID = nodeid.getNodeValue();
+				    	  ID = ID.substring(ID.indexOf(".")+1, ID.length());
 				      }else{
 				    	  ID = ""; //prendere il nome del campo ID da configurationFile
 				      }

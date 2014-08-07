@@ -370,7 +370,7 @@ public class SurveyListActivity extends Activity{
         		
         		mappaSurveyIDname.put(viewId, nomeSegn);
         		
-        		tvTemp.setText(nomeSegn);
+        		tvTemp.setText(nomeSegn+ " ID: "+record.getId());
         		tvTemp.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
         		tvTemp.setGravity(Gravity.CENTER_HORIZONTAL);
         		
@@ -660,6 +660,24 @@ public class SurveyListActivity extends Activity{
 //				return false;
 //			}
 			
+			List<ObjFeature> dbList = featureParser.parseGetFeatureFile(layers, false, null);
+			if(dbList!=null && dbList.size()>0 && dbList.get(0).getRecords()!=null && dbList.get(0).getRecords().size()>1){
+				Collections.sort(dbList.get(0).getRecords(), new Comparator<ObjRecord>() {
+				    public int compare(ObjRecord object1, ObjRecord object2) {
+				    	int id01 = 0;
+				    	int id02 = 0;
+				    	try{
+				    		id01 = Integer.parseInt(object1.getId());
+				    		id02 = Integer.parseInt(object2.getId());
+				    	}catch(Exception e){}
+				    	if(id01==id02) return 0;
+				    	if(id01<id02) return -1;
+				    	else return 1;
+				    }
+				});	
+			}
+			listaValori = dbList;
+			
 			recordsMapFromLocal = LocalFileHandler.getFilePathByUser(localFilePath,loggedUser, layerName);
 			
 			List<ObjFeature> recordsFromLocal = new ArrayList<ObjFeature>();
@@ -680,13 +698,24 @@ public class SurveyListActivity extends Activity{
 			}
 			oFeatureTemp.setRecords(oRecordList);
 			recordsFromLocal.add(oFeatureTemp);
-			listaValori.get(0).getRecords().addAll(oRecordList);
+//			listaValori.get(0).getRecords().addAll(oRecordList);
+//			
+//			Collections.sort(listaValori.get(0).getRecords(), new Comparator<ObjRecord>() {
+//			    public int compare(ObjRecord object1, ObjRecord object2) {
+//			    	return object2.getId().compareToIgnoreCase(object1.getId());
+//			    }
+//			});
 			
-			Collections.sort(listaValori.get(0).getRecords(), new Comparator<ObjRecord>() {
+			Collections.sort(oRecordList, new Comparator<ObjRecord>() {
 			    public int compare(ObjRecord object1, ObjRecord object2) {
 			    	return object2.getId().compareToIgnoreCase(object1.getId());
 			    }
 			});
+			listaValori.get(0).getRecords().addAll(0, oRecordList);
+			
+			
+			
+			
 			// 
 			// recordsFromFileMap = process file
 			
