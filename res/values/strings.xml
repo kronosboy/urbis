@@ -79,6 +79,7 @@
     <string name="fileErrorSentMessage">File not sent!</string>
     <string name="registrationSuccessMessage">Registered successfully</string>
     <string name="registrationErrorMessage">Registration error</string>
+    <string name="registrationAnagErrorMessage">Registration anagraphic in GeoServer error</string>
     <string name="delImgBeforeSnapMessage">Delete current image before to take anoter one</string>
     <string name="logoutMessage">Logout?</string>
     

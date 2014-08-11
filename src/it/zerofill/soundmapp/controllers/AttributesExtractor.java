@@ -21,6 +21,7 @@ public class AttributesExtractor {
 	private static final String REGISTRATIONCONFIG = "registrationConfig";
 	private static final String LAYERS = "layers";
 	private static final String NAMESPACE = "namespace";
+	private static final String ANAGLAYER = "anagLayer";
 	
 	private static final String GEOSLAYER = "geoserverLayer";
 	private static final String FEATCONFIG = "featuresConfig";
@@ -160,8 +161,11 @@ public class AttributesExtractor {
        					}
 		       			config.setNameSpace(namespace);
 		       		}
-
 		       		
+	       			if(key.equals(ANAGLAYER)){
+		       			config.setAnagLayer(jsonConfig.optString(key));
+		       		}
+
 		       		
 		       		if(key.equals(REGISTRATIONCONFIG)){
 		       			List<AttributeType> regConfig = new ArrayList<AttributeType>();
@@ -177,6 +181,14 @@ public class AttributesExtractor {
 		       				attrTemp.setName(name);
 		       				int ordinal = jsonElement.optInt(ORDIANL);
 		       				attrTemp.setOrdinal(ordinal);
+		       				
+		       				if(jsonElement.has(NULLABLE)){
+		       					String nullable = jsonElement.optString(NULLABLE);
+    		       				attrTemp.setNullable(nullable);
+		       				}else{
+		       					attrTemp.setNullable("true");
+		       				}
+		       				
 		       				String type = jsonElement.optString(TYPE);
 		       				attrTemp.setType(type);
 		       				if(jsonElement.has(TYPE_CONF)){

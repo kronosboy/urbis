@@ -42,6 +42,40 @@
             android:textAppearance="?android:attr/textAppearanceMedium" />
     </LinearLayout>
     
+    
+    <!-- get describe feature progress -->
+    <LinearLayout
+        android:id="@+id/getDescribeFeatureLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/getDescribeFeatureStatusMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/fileWFSProgressText"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+    
+    
+    <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
     <!-- MAIN SCROLL VIEW -->
     <ScrollView
         android:id="@+id/mainScroll"
@@ -132,15 +166,20 @@
 	            android:layout_height="wrap_content"
 	            android:orientation="vertical"
 	            android:paddingTop="20dp"
-	            android:paddingLeft="30dp"
-	            android:paddingRight="30dp"
 	            >
 	            
                 <!-- Set of TEXTVIEW and COMBOBOX inserted programmatically -->
                 
             </LinearLayout>
             
-            <LinearLayout 
+            
+            
+            
+        </LinearLayout>
+        
+    </ScrollView>
+    </LinearLayout>
+        <LinearLayout 
 	            android:id="@+id/buttonsLayout"
 	            android:layout_width="match_parent"
 	            android:layout_height="wrap_content"
@@ -156,12 +195,6 @@
 		            android:layout_gravity="center_horizontal"
 		            android:text="@string/signupLabel" />
             </LinearLayout>
-            
-            
-        </LinearLayout>
-        
-    </ScrollView>
-        
     
 
 </LinearLayout>

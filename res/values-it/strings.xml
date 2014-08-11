@@ -79,6 +79,7 @@
     <string name="fileErrorSentMessage">File non inviato!</string>
     <string name="registrationSuccessMessage">Registrazione avvenuta con successo</string>
     <string name="registrationErrorMessage">Errore durante la registrazione</string>
+     <string name="registrationAnagErrorMessage">Errore durante la registrazione anagrafica in GeoServer</string>
     <string name="delImgBeforeSnapMessage">Prima di scattare un\'altra foto cancellare la foto corrente</string>
     <string name="logoutMessage">Effettuare il logout?</string>
     

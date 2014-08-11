@@ -44,6 +44,21 @@ public class SurveyXmlBuilder {
 		}
 	}
 	
+	public static void createFile(String filePath, String namespace, String layerName, String serverAddress, String columnName, String value){
+		String header = ((HEADER.replace("NAMESPACE", namespace)).replace("SERVERADDRESS", serverAddress).replace("LAYERNAME", layerName));
+		String footer = (FOOTER.replace("LAYERNAME", layerName)).replace("NAMESPACE", namespace);
+		String body = ""; 
+		String fileString = header + body + footer;
+		try{
+			File file = new File(filePath);
+			BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+	        writer.write(fileString.toString());
+	        writer.close();	
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+	
 	public static void insertUpdate(String filePath, String namespace, String layerName, String columnName, boolean isPath, boolean isPoints, String typePoint, String value){
 		try{
 			String element = "<"+namespace+":"+columnName+">";

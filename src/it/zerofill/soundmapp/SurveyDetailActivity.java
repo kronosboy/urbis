@@ -157,16 +157,6 @@ public class SurveyDetailActivity extends Activity{
 	private int location_img_button_pressed_id;
 	private int location_img_button_disabled_id;
 	
-//	private int play_img_button_id;
-//	private int play_img_button_pressed_id;
-//	private int play_img_button_disabled_id;
-//	
-//	private int rec_img_button_id;
-//	private int rec_img_button_pressed_id;
-//	private int rec_img_button_disabled_id;
-	
-	
-	
 	private TabHost tabs;
 	private LinearLayout mainlayoutTab;
 	
@@ -318,7 +308,6 @@ public class SurveyDetailActivity extends Activity{
     	chronoPointsIsRecording = new HashMap<Integer, Boolean>();
     	chronoPointsComponent = new HashMap<Integer, Chronometer>();
     	pointsViewDataComponent = new HashMap<Integer, Button>();
-    //	gpsComponent = new HashMap<Integer, GPSTracker>();
     	mappaDateComponentId = new HashMap<Integer, String>();
     	mandatoryFieldMap = new HashMap<String, Boolean>();
     	errorFieldMap = new HashMap<String, Boolean>();
@@ -330,7 +319,6 @@ public class SurveyDetailActivity extends Activity{
         spinnerCompMap = new HashMap<Integer, String>();
         freeTextCompMap = new HashMap<Integer, String>();
         pointsCompMap = new HashMap<Integer, String>();
-//        LineCompMap = new HashMap<Integer, String>();
         imageCompMap = new HashMap<Integer, String>();
         audioCompMap = new HashMap<Integer, String>();
         
@@ -377,14 +365,6 @@ public class SurveyDetailActivity extends Activity{
 		location_img_button_id = resource.getIdentifier("location_off_btn", "drawable","it.zerofill.soundmapp");
 		location_img_button_pressed_id = resource.getIdentifier("location_on_btn", "drawable","it.zerofill.soundmapp");
 		location_img_button_disabled_id = resource.getIdentifier("location_off_btn_disabled", "drawable","it.zerofill.soundmapp");
-		
-//		play_img_button_id = resource.getIdentifier("play", "drawable","it.zerofill.soundmapp");
-//		play_img_button_pressed_id = resource.getIdentifier("play_pressed", "drawable","it.zerofill.soundmapp");
-//		play_img_button_disabled_id = resource.getIdentifier("play_disabled", "drawable","it.zerofill.soundmapp");
-//		
-//		rec_img_button_id = resource.getIdentifier("rec", "drawable","it.zerofill.soundmapp");
-//		rec_img_button_pressed_id = resource.getIdentifier("rec_pressed", "drawable","it.zerofill.soundmapp");
-//		rec_img_button_disabled_id = resource.getIdentifier("rec_disabled", "drawable","it.zerofill.soundmapp");
 		
 		final int FIXED_TITLE_DIM = 200;
 		float FIXED_TITLE_WIDTH_PERC = ((float) FIXED_TITLE_DIM /WIDTH) * 100;
@@ -465,21 +445,12 @@ public class SurveyDetailActivity extends Activity{
 	            updateDateDisplay();
 	        }
 	    };
-	    
     	
     	imgDir = getExternalFilesDir(null).getAbsolutePath().toString() + "/" + properties.getProperty("homeDirectory") + "/" + properties.getProperty("picturesDirectory") + "/" + surveyId ;
 		soundDir = getExternalFilesDir(null).getAbsolutePath().toString() + "/" + properties.getProperty("homeDirectory") + "/" + properties.getProperty("soundsDirectory") + "/" + surveyId;
 		localDir = getExternalFilesDir(null).getAbsolutePath().toString() + "/" + properties.getProperty("homeDirectory") + "/"+ properties.getProperty("localDirectory") + "/" + surveyId;
 		sentReplyDir = getExternalFilesDir(null).getAbsolutePath().toString() + "/" + properties.getProperty("homeDirectory") + "/"+ properties.getProperty("localDirectory") + "/"+ properties.getProperty("sentReplyDirectory");
 		localFileHandler = getExternalFilesDir(null).getAbsolutePath().toString() + "/" + properties.getProperty("homeDirectory") + "/"+  properties.getProperty("localFileHandler");
-//		imgDir = Environment.getExternalStorageDirectory().toString() + "/" + properties.getProperty("homeDirectory") + "/" + properties.getProperty("picturesDirectory") + "/" + surveyId ;
-//		soundDir = Environment.getExternalStorageDirectory().toString() + "/" + properties.getProperty("homeDirectory") + "/" + properties.getProperty("soundsDirectory") + "/" + surveyId;
-//		localDir = Environment.getExternalStorageDirectory().toString() + "/" + properties.getProperty("homeDirectory") + "/"+ properties.getProperty("localDirectory") + "/" + surveyId;
-//		sentReplyDir = Environment.getExternalStorageDirectory().toString() + "/" + properties.getProperty("homeDirectory") + "/"+ properties.getProperty("localDirectory") + "/"+ properties.getProperty("sentReplyDirectory");
-//		localFileHandler = Environment.getExternalStorageDirectory().toString() + "/" + properties.getProperty("homeDirectory") + "/"+  properties.getProperty("localFileHandler");
-		
-//		fileEncr = new FileEncryptor();
-//		userDataFilePath = localDir+"/"+properties.getProperty("userDataFile");
 		
 		File newLocaldir = new File(localDir);
 		if(isNewSurvey) //&& !newLocaldir.exists()
@@ -643,19 +614,6 @@ public class SurveyDetailActivity extends Activity{
         		bos.close();
     		}
     	}catch(Exception e){}
-    	
-    	//Bitmap bitmap = Bitmap.createScaledBitmap(capturedImage, width, height, true);
-    	
-//    	byte[] data = null;
-//        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-//        bi.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-//        data = baos.toByteArray();
-    	
-//    	Bitmap bmp = BitmapFactory.decodeFile(miFoto);
-//		ByteArrayOutputStream bos = new ByteArrayOutputStream();
-//		bmp.compress(CompressFormat.JPEG, 70, bos);
-//		InputStream in = new ByteArrayInputStream(bos.toByteArray());
-//		ContentBody foto = new InputStreamBody(in, "image/jpeg", "filename");
     }
     
     
@@ -706,8 +664,6 @@ public class SurveyDetailActivity extends Activity{
         		errorFieldMap.put(attrId,true);
         	}
         	
-        //	isSingleImage = false;
-        	
 		}catch(Exception e){}
 	}
     
@@ -724,7 +680,6 @@ public class SurveyDetailActivity extends Activity{
 			saveFeatureTask.execute(currentFileName,attrId,"audioDelete",null);
 			
 			audioFile.delete();
-		//	mappaPathAudio.remove(audioId);
 			
 			mappaDeleteAudioButton.get(selectedAudioCompId).setEnabled(false);
 			int audioimg_id = resource.getIdentifier("audio_ico", "drawable","it.zerofill.soundmapp");
@@ -744,7 +699,6 @@ public class SurveyDetailActivity extends Activity{
     private int currentImageIDComponentSelected;
     private void saveImageToXml(){
     	String path = mappaPathImmagini.get(currentImageIDComponentSelected);
-    	//String selectedItem = EncodeSaveFile.getEncodedString(path);
     	if(path!=null && !"".equals(path)){
     		saveFeatureTask = new SaveFeatureTask();
     		saveFeatureTask.execute(currentFileName,currentImageAttrIDComponentSelected,"img",path);
@@ -805,9 +759,6 @@ public class SurveyDetailActivity extends Activity{
 			int childNumber = parent.getChildCount();
 			parent.removeView(llToShow);
 			parent.addView(llToShow, childNumber-1);
-		//	parent.addView(llToShow, parent.getChildCount()-1);
-		//	parent.addView(llToShow, mainImgComponentLayout.getChildCount()-1);
-			
 		}
 		
 		int imgComponentShowed = 0;
@@ -826,11 +777,9 @@ public class SurveyDetailActivity extends Activity{
 	
 //	@SuppressLint("SimpleDateFormat")
 	private void snapPicture(int imgid){
-		
 //		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
 //    	String currentDateandTime = sdf.format(new Date());
 //		imgName = currentDateandTime + ".jpg";
-		
 		imgName = currentImageAttrIDComponentSelected + "_" + surveyId + ".jpg";
 		
 		String file = imgDir+"/"+imgName;
@@ -857,7 +806,6 @@ public class SurveyDetailActivity extends Activity{
     	tabs = (TabHost) findViewById(R.id.tabhost);
 		tabs.setup();
 		TabHost.TabSpec spec = tabs.newTabSpec("maintab");
-		//spec.setContent(R.id.mainlayoutTab);
 		spec.setContent(mainlayoutTab.getId());
 		spec.setIndicator("Main");
 		tabs.addTab(spec);
@@ -915,11 +863,9 @@ public class SurveyDetailActivity extends Activity{
     private HashMap<Integer, String> imageCompMap;
     private HashMap<Integer, String> audioCompMap;
     private HashMap<Integer, String> pointsCompMap;
-//    private HashMap<Integer, String> LineCompMap;
     private HashMap<String, ObjValue> recordsMap;
     
     private LinearLayout main;
-  //  private LinearLayout mainImgComponentLayout;
     private String currentSurveyName;
     private View createView(){
         
@@ -961,16 +907,6 @@ public class SurveyDetailActivity extends Activity{
 				surveyId = defaultSurveyKey;
 			}else{
 				segnName.setText(surveyName);
-				/*
-				  
-				// get surveyname from records where column = config.getLayerByName(layerName).getNameColumn();
-				if(recordsMap.containsKey(config.getLayerByName(layerName).getNameColumn())){
-					String sn = recordsMap.get(config.getLayerByName(layerName).getNameColumn()).getValue();
-					segnName.setText(sn);
-				}else
-					segnName.setText(surveyName);
-					
-				*/
 			}
 			
 			currentSurveyName = segnName.getText().toString();
@@ -999,8 +935,6 @@ public class SurveyDetailActivity extends Activity{
 				            	currentSurveyName = text.trim();
 				            	((EditText)v).setText(text.trim());
 				            	LocalFileHandler.updateName(localFileHandler, surveyId, text.trim(), loggedUser, layerName);
-				            	//LocalFileHandler.updateName(localFileHandler, previousSurveyName, text.trim(), loggedUser);
-			            	
 			            	
 			            		currentFileName = surveyId;
 			            		saveFeatureTask = new SaveFeatureTask();
@@ -1060,7 +994,6 @@ public class SurveyDetailActivity extends Activity{
 			}
 			
 			else if(attribute.getType().equalsIgnoreCase(TYPE_IMAGE) && describeFeatureMap.containsKey(attribute.getId()) && attribute.getTypeConfig()!=null && attribute.getTypeConfig().size()>0){
-			//	imgVisibileMap.put(ImageComponentID, true);
 				
 				LinearLayout mainImgComponentLayout = new LinearLayout(mainContext);
 				mainImgComponentLayout.setLayoutParams(par);
@@ -1078,7 +1011,6 @@ public class SurveyDetailActivity extends Activity{
 				
 				main.addView(mainImgComponentLayout);
 				addImage(mainImgComponentLayout, attribute, valore, false);
-			//	imgShowed ++;
 				if(attribute.getTypeConfig()!=null){
 					for(String idNextImg : attribute.getTypeConfig()){
 						if(describeFeatureMap.containsKey(idNextImg)){
@@ -1137,7 +1069,6 @@ public class SurveyDetailActivity extends Activity{
 				addLine(main, attribute, valore);
 			}
 			
-			
 			// else if(attr!=null && attr.getType().equals(" OTHERS TYPE ")){}
 		}
 			
@@ -1150,8 +1081,6 @@ public class SurveyDetailActivity extends Activity{
 					setImage();
 			}
 		}, 500);
-//		if(!isNewSurvey)
-//			setImage();
 		
 		scrollMainTmp.addView(main);
 		return scrollMainTmp;
@@ -1207,7 +1136,6 @@ public class SurveyDetailActivity extends Activity{
 		lineraTitleTmp.setLayoutParams(paramss);
 		lineraTitleTmp.setOrientation(LinearLayout.HORIZONTAL);
 		
-	//	LinearLayout.LayoutParams titleViewParams = new LinearLayout.LayoutParams(200 ,LayoutParams.WRAP_CONTENT); 
 		TextView titleVieww = new TextView(mainContext);
 		titleVieww.setLayoutParams(titleViewParams);
 		if(mandatoryFieldMap.containsKey(attr.getId()))
@@ -1225,7 +1153,6 @@ public class SurveyDetailActivity extends Activity{
 		float FIXED_SPINNER_WIDTH_PERC = ((float) FIXED_SPINNER_DIM /WIDTH) * 100;
 		int FIXED_SPINNER_WIDTH_VALUE = (int)((FIXED_SPINNER_WIDTH_PERC * deviceWidth) / 100);
 		LinearLayout.LayoutParams spinnerViewParams = new LinearLayout.LayoutParams(FIXED_SPINNER_WIDTH_VALUE,LayoutParams.WRAP_CONTENT);
-//		LinearLayout.LayoutParams spinnerViewParams = new LinearLayout.LayoutParams(350,LayoutParams.WRAP_CONTENT);
 		Spinner spinnerView = new Spinner(mainContext);
 		spinnerView.setId(SpinnerID);
 		spinnerCompMap.put(SpinnerID, attr.getId());
@@ -1239,20 +1166,17 @@ public class SurveyDetailActivity extends Activity{
 		spinnerView.setSelection(elemPos);
 		if(!isLocal) spinnerView.setEnabled(false);
 		
-		
 		spinnerView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
                 String selectedItem = parent.getItemAtPosition(pos).toString();
                 String attrId = spinnerCompMap.get(parent.getId());
                 mappaValoriAttributi.put(attrId,selectedItem);
                 if(!"".equals(selectedItem.trim())){
-                	
                 	// check if it is in mandatory map and set its value to true
                 	if(mandatoryFieldMap.containsKey(attrId)){
                 		mandatoryFieldMap.put(attrId,true);
                 		errorFieldMap.put(attrId,false);
                 	}
-                	
                 	saveFeatureTask = new SaveFeatureTask();
                 	saveFeatureTask.execute(currentFileName,attrId,selectedItem);
                 }else{
@@ -1849,29 +1773,19 @@ public class SurveyDetailActivity extends Activity{
 			}
 		});
 		
-		
 		pointsCompMap.put(LineComponentID, attr.getId());
 		pointsViewDataComponent.put(LineComponentID, viewPositionButton);
 		chronoPointsComponent.put(LineComponentID, chronometerPosition);
-//		gpsComponent.put(LineComponentID, gps);
 		chronoPointsIsRecording.put(LineComponentID, false);
-		
 		if(!isLocal){
-//			takePositionButton.setEnabled(false);
-//			pointsResetButton.setEnabled(false);
-			
 			takePositionButtonImg.setEnabled(false);
 			takePositionButtonImg.setImageResource(location_img_button_disabled_id);
 			pointsResetButtonImg.setEnabled(false);
 			pointsResetButtonImg.setImageResource(del_img_button_disabled_id);
-			
-			
 		}
 		
 		lineraTitleTmp.addView(titleVieww);
 		lineraTitleTmp.addView(viewPositionButton);
-//		lineraTitleTmp.addView(takePositionButton);
-//		lineraTitleTmp.addView(pointsResetButton);
 		lineraTitleTmp.addView(takePositionButtonImg);
 		lineraTitleTmp.addView(pointsResetButtonImg);
 		lineraTitleTmp.addView(chronometerPosition);
@@ -1935,8 +1849,6 @@ public class SurveyDetailActivity extends Activity{
 			}
     	});
 		
-	//	GPSTracker gps = new GPSTracker(mainContext);
-		
 		// Fixed dimension for a button (on default screen it will be 150x150)
 		final int FIXED_BUT_DIM = 65;
 		float FIXED_BUT_WIDTH_PERC = ((float) FIXED_BUT_DIM /WIDTH) * 100;
@@ -1987,38 +1899,6 @@ public class SurveyDetailActivity extends Activity{
 				return true;
 			}
 		});
-        
-        /*
-        Button takePositionButton = new Button(mainContext);
-		takePositionButton.setLayoutParams(buttonViewParams);
-		takePositionButton.setId(PointsComponentID);
-		takePositionButton.setBackgroundResource(R.drawable.location_off_btn);
-		takePositionButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				
-				//GPSTracker gps = gpsComponent.get(view.getId());
-				try{
-					GPSTracker gps = new GPSTracker(mainContext);
-					double[] location = getLocation(gps);
-					List<double[]> l = new ArrayList<double[]>();
-					l.add(location);
-					mappaCoordinates.put(view.getId(), l);
-					pointsViewDataComponent.get(view.getId()).setEnabled(true);
-					
-					String attrId = pointsCompMap.get(view.getId());
-					// write data in xml
-					saveFeatureTask = new SaveFeatureTask();
-//	            	saveFeatureTask.execute(currentFileName,attrId,TYPE_POINT,location[0] + "," + location[1]);
-					// 2014-07-08 inverted longitude and latitude (the new value will be [longitude, latitude])
-	            	saveFeatureTask.execute(currentFileName,attrId,TYPE_POINT,location[1] + "," + location[0]);
-	            	
-				}catch(Exception e){
-					e.printStackTrace();
-				}
-			}
-    	});
-    	*/
 		
 		// if it is mandatory insert it in the map
 		if(describeFeatureMap.containsKey(attr.getId())){
@@ -2100,46 +1980,10 @@ public class SurveyDetailActivity extends Activity{
 			}
 		});
 		
-		/*
-		Button pointsResetButton = new Button(mainContext);
-		pointsResetButton.setId(PointsComponentID);
-		pointsResetButton.setLayoutParams(buttonViewParams);
-		pointsResetButton.setBackgroundResource(R.drawable.delete_btn);
-		pointsResetButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-                int selectedPComponentId = view.getId();
-                String attrId = pointsCompMap.get(view.getId());
-                
-                if(mappaCoordinates.containsKey(selectedPComponentId)){
-                	mappaCoordinates.remove(selectedPComponentId);
-                	
-                	// disable view data button
-                	pointsViewDataComponent.get(selectedPComponentId).setEnabled(false);
-                	
-                	//delete from XML file
-                	saveFeatureTask = new SaveFeatureTask();
-                	saveFeatureTask.execute(currentFileName,attrId,null);
-                    
-                    // check if it is in mandatory map and set its value to true
-                	if(mandatoryFieldMap.containsKey(attrId)){
-                		mandatoryFieldMap.put(attrId,false);
-                	}
-                }
-			}
-    	});
-    	*/
-		
 		pointsCompMap.put(PointsComponentID, attr.getId());
 		pointsViewDataComponent.put(PointsComponentID, viewPositionButton);
-	//	gpsComponent.put(PointsComponentID, gps);
 		
 		if(!isLocal){
-//			takePositionButton.setEnabled(false);
-//			pointsResetButton.setEnabled(false);
-			
 			takePositionButtonImg.setEnabled(false);
 			takePositionButtonImg.setImageResource(location_img_button_disabled_id);
 			pointsResetButtonImg.setEnabled(false);
@@ -2148,8 +1992,6 @@ public class SurveyDetailActivity extends Activity{
 		
 		lineraTitleTmp.addView(titleVieww);
 		lineraTitleTmp.addView(viewPositionButton);
-//		lineraTitleTmp.addView(takePositionButton);
-//		lineraTitleTmp.addView(pointsResetButton);
 		lineraTitleTmp.addView(takePositionButtonImg);
 		lineraTitleTmp.addView(pointsResetButtonImg);
 	
@@ -2214,21 +2056,6 @@ public class SurveyDetailActivity extends Activity{
 		mappaImmaginiView.put(ImageComponentID, lineraOuterTmp);
 		mappaImmaginiComponent.put(attr.getId(), ImageComponentID);
 		
-	//	LinearLayout.LayoutParams titleViewParams = new LinearLayout.LayoutParams(200 ,LayoutParams.WRAP_CONTENT);
-		/*
-		if(!visibilityGone){
-			TextView titleVieww = new TextView(mainContext);
-			titleVieww.setLayoutParams(titleViewParams);
-			if(mandatoryFieldMap.containsKey(attr.getId()))
-				titleVieww.setText("* " + attr.getName()+ " ");
-			else
-				titleVieww.setText(attr.getName()+ " ");
-			
-			lineraOuterTmp.addView(titleVieww);	
-		}
-		*/
-		 
-		
 		LinearLayout lineraTitleTmp = new LinearLayout(mainContext);
 		lineraTitleTmp.setLayoutParams(paramss);
 		lineraTitleTmp.setOrientation(LinearLayout.HORIZONTAL);
@@ -2246,7 +2073,6 @@ public class SurveyDetailActivity extends Activity{
         // This will resize button on screen resolutions
         LinearLayout.LayoutParams imageViewParams = new LinearLayout.LayoutParams(FIXED_BUT_WIDTH_VALUE,FIXED_BUT_HEIGHT_VALUE);
         
-//		LinearLayout.LayoutParams imageViewParams = new LinearLayout.LayoutParams(160,160);
 		ImageView imageView = new ImageView(mainContext);
 		imageView.setLayoutParams(imageViewParams);
 		imageView.setId(ImageComponentID);
@@ -2371,7 +2197,6 @@ public class SurveyDetailActivity extends Activity{
 			del_img_button.setEnabled(true);
 			del_img_button.setImageResource(del_img_button_id);
 			mappaImgIsTaken.put(ImageComponentID,true);
-			//String imgFileName = imgDir+"/"+surveyName+".jpg";
 			String imgFileName = imgDir+"/"+attr.getId() + "_" + surveyId + ".jpg";
 			mappaPathImmagini.put(ImageComponentID, imgFileName);
 			
@@ -2410,22 +2235,8 @@ public class SurveyDetailActivity extends Activity{
 			imgShowed++;
 		}
 		
-		
-		
-		
-	//	main.addView(lineraTitleTmp);
 		ImageComponentID++;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	private void addSingleImage(LinearLayout main, AttributeType attr, ObjValue objv){
@@ -2472,7 +2283,6 @@ public class SurveyDetailActivity extends Activity{
         // This will resize button on screen resolutions
         LinearLayout.LayoutParams imageViewParams = new LinearLayout.LayoutParams(FIXED_BUT_WIDTH_VALUE,FIXED_BUT_HEIGHT_VALUE);
         
-//		LinearLayout.LayoutParams imageViewParams = new LinearLayout.LayoutParams(160,160);
 		ImageView imageView = new ImageView(mainContext);
 		imageView.setLayoutParams(imageViewParams);
 		imageView.setId(SingleImageComponentID);
@@ -2630,10 +2440,6 @@ public class SurveyDetailActivity extends Activity{
 	private boolean isSingleImage;
 	
 	
-	
-	
-	
-	
 	public void closeKeyboard(){
 		try{
 			InputMethodManager inputManager = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -2647,10 +2453,6 @@ public class SurveyDetailActivity extends Activity{
 			 e.printStackTrace();
 		}
 	}
-	
-	
-	
-	
 	
 	
 	
@@ -2686,7 +2488,6 @@ public class SurveyDetailActivity extends Activity{
 		lineraOuterTmp.setId(ImageComponentID);
 		lineraOuterTmp.setPadding(5, 25, 5, 25);
 		
-//		LinearLayout.LayoutParams titleViewParams = new LinearLayout.LayoutParams(200 ,LayoutParams.WRAP_CONTENT); 
 		TextView titleVieww = new TextView(mainContext);
 		titleVieww.setLayoutParams(titleViewParams);
 		if(mandatoryFieldMap.containsKey(attr.getId()))
@@ -2715,7 +2516,6 @@ public class SurveyDetailActivity extends Activity{
         // This will resize button on screen resolutions
         LinearLayout.LayoutParams imageViewParams = new LinearLayout.LayoutParams(FIXED_BUT_WIDTH_VALUE,FIXED_BUT_HEIGHT_VALUE);
         
-	//	LinearLayout.LayoutParams imageViewParams = new LinearLayout.LayoutParams(160,160);
 		ImageView audioImageView = new ImageView(mainContext);
 		audioImageView.setLayoutParams(imageViewParams);
 		int audioimg_id = resource.getIdentifier("audio_ico", "drawable","it.zerofill.soundmapp");
@@ -2755,7 +2555,6 @@ public class SurveyDetailActivity extends Activity{
 				String location = recordsMap.get(map.get(AUDIO_COMPONENT_LOCATION)).getValue();
 				mappaPathAudioLocation.put(AudioComponentID, location);
 			}
-			
 			
 		}
 		
@@ -2823,8 +2622,6 @@ public class SurveyDetailActivity extends Activity{
 						String location = "";
 						if(mappaPathAudioLocation.containsKey(audioId))
 							location = mappaPathAudioLocation.get(audioId);
-	//						if(isNewSurvey)
-	//							audioFileName = soundDir+"/"+attr.getId() + "_" + surveyId + ".mp4";
 						
 						Intent i = new Intent(mainContext, RecordActivity.class);
 						i.putExtra("audioFileName", audioFileName);
@@ -3037,8 +2834,6 @@ public class SurveyDetailActivity extends Activity{
     
     
     /* 
-     * DO NOT DELETE, for future review
-     * 
     private List<ObjValue> orderRecords(int index){
     	List<AttributeType> attr = layer.getAttributes();
     	
@@ -3220,11 +3015,9 @@ public class SurveyDetailActivity extends Activity{
 			mainLayoutTab.setVisibility(show ? View.GONE : View.VISIBLE);
 		}
 	}
+
 	
 	
-  	
-  	
-  	
   	
   	public class GetDescribeFeatureTask extends AsyncTask<Void, Void, Boolean> {
     	private String message = "";
@@ -3247,12 +3040,6 @@ public class SurveyDetailActivity extends Activity{
         		}else{
         			BufferedReader reader = new BufferedReader(new FileReader(checksumFile));
         			surveyId = reader.readLine();
-        			/*
-        			String line;
-        			while((line = reader.readLine()) != null) {
-        				surveyId = line;
-        			}
-        			*/
         			reader.close();
         		}
     		}catch(Exception e){
@@ -3368,32 +3155,28 @@ public class SurveyDetailActivity extends Activity{
     }
   	
   	private void deleteFiles(File file){
-    //	try{
-    		if(file.isDirectory()){
-        		//directory is empty, then delete it
-        		if(file.list().length==0){
-        		   file.delete();
-        		}else{
-        		   //list all the directory contents
-            	   String files[] = file.list();
-            	   for (String temp : files) {
-            	      //construct the file structure
-            	      File fileDelete = new File(file, temp);
-            	      //recursive delete
-            	      deleteFiles(fileDelete);
-            	   }
-            	   //check the directory again, if empty then delete it
-            	   if(file.list().length==0){
-               	     file.delete();
-            	   }
-        		}
-        	}else{
-        		//if file, then delete it
-        		file.delete();
-        	}
-   // 	}catch(Exception e){
-   // 		e.printStackTrace();
-    //	}
+		if(file.isDirectory()){
+    		//directory is empty, then delete it
+    		if(file.list().length==0){
+    		   file.delete();
+    		}else{
+    		   //list all the directory contents
+        	   String files[] = file.list();
+        	   for (String temp : files) {
+        	      //construct the file structure
+        	      File fileDelete = new File(file, temp);
+        	      //recursive delete
+        	      deleteFiles(fileDelete);
+        	   }
+        	   //check the directory again, if empty then delete it
+        	   if(file.list().length==0){
+           	     file.delete();
+        	   }
+    		}
+    	}else{
+    		//if file, then delete it
+    		file.delete();
+    	}
     }
   	
   	
@@ -3417,7 +3200,6 @@ public class SurveyDetailActivity extends Activity{
 		@Override
 		protected void onPostExecute(final Boolean success) {
 			//saveFileTask = null;
-			
 			if (success) {
 				if(isImage){
 					String path = mappaPathImmagini.get(id);
@@ -3426,13 +3208,8 @@ public class SurveyDetailActivity extends Activity{
 					Bitmap myBitmap = decodeFile(imgFile,false,true);
 					item.setImageBitmap(myBitmap);	
 				}
-				//setImage();
-				
-			} else {
-				
-			}
+			} else {}
 		}
-  		
   	}
   	
   	
@@ -3487,13 +3264,9 @@ public class SurveyDetailActivity extends Activity{
   				}else
   					SurveyXmlBuilder.insertUpdate(filePath, namespace, layer, columnName, false, false,"", value);
   			}else{
-  				//String value = loggedUser + "." + surveyId;
   				String value = defaultSurveyName;
   				String columnForNameAttr = config.getLayerByName(layerName).getNameColumn();
   				SurveyXmlBuilder.createFile(filePath, namespace, layer, geoserverAddress, columnName, columnForNameAttr, value, creatorField, loggedUserFilter);
-  				//LocalFileHandler.addSurvey(localFileHandler, surveyId, loggedUser);
-  				//LocalFileHandler.addSurvey(localFileHandler, surveyName, loggedUser);
-  				//LocalFileHandler.addSurvey(localFileHandler, defaultSurveyName, loggedUser);
   				LocalFileHandler.addSurvey(localFileHandler, surveyId, defaultSurveyName, loggedUser, layerName);
   			}
 			
@@ -3503,11 +3276,8 @@ public class SurveyDetailActivity extends Activity{
 		@Override
 		protected void onPostExecute(final Boolean success) {
 			saveFeatureTask = null;
-			
 			if (success) {
-				
 			} else {
-				
 			}
 		}
   	}
@@ -3520,10 +3290,6 @@ public class SurveyDetailActivity extends Activity{
 			LocalFileHandler.removeSurvey(localFileHandler, surveyId,currentSurveyName, loggedUser, layerName);
 			
 			// delete directories
-			
-//			String filePath = localDir + "/" + currentFileName + ".xml";
-//			File file = new File(filePath);
-//			file.delete();
 			String pathLocal = localDir; // + "/" +currentFileName;
         	File localD = new File(pathLocal);
         	if(localD.exists())
@@ -3548,24 +3314,19 @@ public class SurveyDetailActivity extends Activity{
   	
   	
   	public class WaitTask extends AsyncTask<Void, Void, Boolean> {
-
 		@Override
 		protected Boolean doInBackground(Void... arg0) {
-
 			try{
 				Thread.sleep(100);
 			}catch(Exception e){}
-			
 			return true;
 		}
-		
 		@Override
 		protected void onPostExecute(final Boolean success) {
 			showProgress(false);
 			waitTask = null;
 			onResumeProcess();
 		}
-  		
   	}
   	
   	
@@ -3592,7 +3353,6 @@ public class SurveyDetailActivity extends Activity{
   				if(config!=null && config.getUrls()!=null && config.getUrls().containsKey("wfs")){
   					geoserverUrl = config.getUrls().get("wfs")+"/wfs?service=wfs";
   				}else{
-  					//message = getString(R.string.noWfsFoundMessage);
   					return false;
   				}
   				
@@ -3600,26 +3360,11 @@ public class SurveyDetailActivity extends Activity{
   				if(sessionId!=null && sessionId.length()>0)
   					geoserverUrl += "&session="+sessionId;
   				
-	  			//String BASE_URL = "http://kronosboy.no-ip.org:8080/geoserver/wfs";
 	  			HttpURLConnection httpCon = null;
 				URL url = new URL(geoserverUrl);
 				httpCon = (HttpURLConnection) url.openConnection();
-	//			StringBuffer myWFSRequest = new StringBuffer();
 				
 				String filePath = localDir + "/" + currentFileName + ".xml";
-				/*
-				FileInputStream f = new FileInputStream(filePath);
-				DataInputStream i = new DataInputStream(f);
-				BufferedReader buffer = new BufferedReader(new InputStreamReader(i));
-				String line = "";
-				String fileString = "";
-				while ((line = buffer.readLine()) != null){
-					fileString += line + "\n";
-				}
-				buffer.close();
-				*/
-				
-	//			myWFSRequest.append(fileString);
 				httpCon.setDoOutput(true);
 				httpCon.setDoInput(true);
 				httpCon.setRequestMethod("POST");
@@ -3630,9 +3375,6 @@ public class SurveyDetailActivity extends Activity{
     			httpCon.setRequestProperty("Authorization", "Basic " + authStringEnc);
 				
 				httpCon.setRequestProperty("Content-type", "application/xml");
-	//			OutputStreamWriter out = new OutputStreamWriter(httpCon.getOutputStream());
-	//			out.write(myWFSRequest.toString());
-	//			out.close();
 				
 				// NEW 
 				File file = new File(filePath);
@@ -3656,7 +3398,6 @@ public class SurveyDetailActivity extends Activity{
 	            publishProgress(99);
 	            
 				int responseCode = httpCon.getResponseCode(); // codice di risposta http
-				// more strict controls, show reply to user
 				if(responseCode!=200)
 					return false;
 

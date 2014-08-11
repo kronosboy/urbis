@@ -11,6 +11,7 @@ public class Configuration implements Serializable{
 	private HashMap<String, String> urls;
 	private List<String> appSettings;
 	private List<String> nameSpace;
+	private String anagLayer;
 	
 	private List<AttributeType> regConfig;
 	private List<Layer> layers;
@@ -49,7 +50,15 @@ public class Configuration implements Serializable{
 	public List<AttributeType> getRegConfig() {
 		return regConfig;
 	}
-
+	
+	public HashMap<String, AttributeType> getRegConfigMap(){
+		HashMap<String, AttributeType> res = new HashMap<String, AttributeType>();
+		for(AttributeType attr : regConfig){
+			res.put(attr.getId(),attr);
+		}
+		return res;
+	}
+	
 	public void setRegConfig(List<AttributeType> regConfig) {
 		this.regConfig = regConfig;
 	}
@@ -78,5 +87,14 @@ public class Configuration implements Serializable{
 	public void setNameSpace(List<String> nameSpace) {
 		this.nameSpace = nameSpace;
 	}
+
+	public String getAnagLayer() {
+		return anagLayer;
+	}
+
+	public void setAnagLayer(String anagLayer) {
+		this.anagLayer = anagLayer;
+	}
+	
 
 }
